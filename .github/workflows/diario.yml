@@ -1,0 +1,54 @@
+name: Pipeline satelital diario
+
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Calcular indices en GEE
+        env:
+          GEE_SA_KEY: ${{ secrets.GEE_SA_KEY }}
+          GEE_SA_EMAIL: ${{ secrets.GEE_SA_EMAIL }}
+          GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+        run: python scripts/pipeline_diario.py
+
+      - name: Subir resultados al repo
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add site/tiles.json site/mapa_ndvi.png
+          git commit -m "Actualizacion diaria" || echo "sin cambios"
+          git push
+
+      - name: Enviar por WhatsApp
+        env:
+          TWILIO_SID: ${{ secrets.TWILIO_SID }}
+          TWILIO_TOKEN: ${{ secrets.TWILIO_TOKEN }}
+          WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+          PNG_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/site/mapa_ndvi.png
+        run: python scripts/enviar_whatsapp.py
+        continue-on-error: true
+
+      - name: Publicar en LinkedIn
+        env:
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: python scripts/publicar_linkedin.py
+        continue-on-error: true

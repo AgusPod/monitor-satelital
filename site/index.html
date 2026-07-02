@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitor Satelital Argentina</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; background: #0f1419; color: #e6e8ea; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  header { background: #161b22; border-bottom: 1px solid #2a313a; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; z-index: 1001; }
+  header h1 { font-size: 17px; font-weight: 600; }
+  header h1 span { color: #4ade80; }
+  #fecha-info { font-size: 12.5px; color: #9aa4af; }
+  #contenedor { flex: 1; display: flex; min-height: 0; }
+  #panel { width: 260px; background: #161b22; border-right: 1px solid #2a313a; padding: 16px; overflow-y: auto; flex-shrink: 0; }
+  #panel h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #9aa4af; margin: 14px 0 8px; }
+  #panel h2:first-child { margin-top: 0; }
+  .capa-btn { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: transparent; border: 1px solid transparent; color: #cfd6dd; padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 13.5px; margin-bottom: 3px; }
+  .capa-btn:hover { background: #1e2630; }
+  .capa-btn.activa { background: #1a2f24; border-color: #2f6b47; color: #7ee2a8; }
+  .capa-btn .punto { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .control-fila { margin: 10px 0; }
+  .control-fila label { font-size: 12.5px; color: #9aa4af; display: flex; justify-content: space-between; margin-bottom: 5px; }
+  input[type="range"] { width: 100%; accent-color: #4ade80; }
+  .check-fila { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #cfd6dd; margin: 8px 0; cursor: pointer; }
+  .check-fila input { accent-color: #4ade80; }
+  #leyenda { margin-top: 14px; }
+  #leyenda-barra { height: 12px; border-radius: 6px; margin: 6px 0 4px; }
+  #leyenda-rangos { display: flex; justify-content: space-between; font-size: 11.5px; color: #9aa4af; }
+  #leyenda-titulo { font-size: 12.5px; color: #cfd6dd; }
+  #mapa { flex: 1; background: #0a0e12; }
+  #aviso { position: absolute; top: 70px; left: 50%; transform: translateX(-50%); background: #2a1f0e; border: 1px solid #6b5320; color: #fbbf24; padding: 10px 18px; border-radius: 10px; font-size: 13px; z-index: 2000; max-width: 90%; text-align: center; display: none; }
+  #info-depto { position: absolute; bottom: 16px; right: 16px; background: rgba(22,27,34,.94); border: 1px solid #2a313a; border-radius: 10px; padding: 10px 14px; font-size: 13px; z-index: 1000; display: none; max-width: 240px; }
+  #info-depto b { color: #7ee2a8; }
+  footer { background: #161b22; border-top: 1px solid #2a313a; padding: 6px 20px; font-size: 11.5px; color: #6b7480; }
+  @media (max-width: 720px) {
+    #contenedor { flex-direction: column; }
+    #panel { width: 100%; max-height: 38vh; border-right: none; border-bottom: 1px solid #2a313a; }
+  }
+  .leaflet-container { background: #0a0e12; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Monitor Satelital <span>Argentina</span></h1>
+  <div id="fecha-info">Cargando datos...</div>
+</header>
+<div id="contenedor">
+  <aside id="panel">
+    <h2>Indices de vegetacion</h2>
+    <div id="grupo-indices"></div>
+    <h2>Agua y humedad</h2>
+    <div id="grupo-agua"></div>
+    <h2>Precipitaciones</h2>
+    <div id="grupo-lluvia"></div>
+    <h2>Controles</h2>
+    <div class="control-fila">
+      <label>Opacidad de la capa <span id="opacidad-valor">80%</span></label>
+      <input type="range" id="opacidad" min="10" max="100" value="80">
+    </div>
+    <label class="check-fila">
+      <input type="checkbox" id="toggle-deptos"> Limites de departamentos
+    </label>
+    <div id="leyenda">
+      <div id="leyenda-titulo">-</div>
+      <div id="leyenda-barra"></div>
+      <div id="leyenda-rangos"><span id="ley-min"></span><span id="ley-max"></span></div>
+    </div>
+  </aside>
+  <div style="flex:1; position:relative; min-height:0;">
+    <div id="mapa"></div>
+    <div id="aviso"></div>
+    <div id="info-depto"></div>
+  </div>
+</div>
+<footer>Datos: Sentinel-2, Landsat 8/9, MODIS, CHIRPS, ERA5-Land via Google Earth Engine - Compuesto de los ultimos 15 dias</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const CAPAS = {
+  NDVI_s2:       { nombre: "NDVI (Sentinel-2)",  grupo: "grupo-indices", color: "#22c55e", min: -0.2, max: 0.9,  grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
+  EVI_s2:        { nombre: "EVI (Sentinel-2)",   grupo: "grupo-indices", color: "#84cc16", min: 0,    max: 0.8,  grad: "linear-gradient(90deg,#ffffcc,#41ab5d,#005a32)", unidad: "" },
+  NDVI_modis:    { nombre: "NDVI (MODIS)",       grupo: "grupo-indices", color: "#16a34a", min: -0.2, max: 0.9,  grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
+  NDWI_s2:       { nombre: "NDWI (Sentinel-2)",  grupo: "grupo-agua",    color: "#38bdf8", min: -0.5, max: 0.5,  grad: "linear-gradient(90deg,#8c510a,#f5f5f5,#01665e)", unidad: "" },
+  MNDWI_s2:      { nombre: "MNDWI (Sentinel-2)", grupo: "grupo-agua",    color: "#0ea5e9", min: -0.5, max: 0.5,  grad: "linear-gradient(90deg,#8c510a,#f5f5f5,#0571b0)", unidad: "" },
+  lluvia_chirps: { nombre: "Lluvia CHIRPS",      grupo: "grupo-lluvia",  color: "#3b82f6", min: 0,    max: 150,  grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
+  lluvia_era5:   { nombre: "Lluvia ERA5-Land",   grupo: "grupo-lluvia",  color: "#6366f1", min: 0,    max: 150,  grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
+};
+const mapa = L.map("mapa", { zoomControl: true }).setView([-38.5, -64.5], 4);
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+  attribution: "&copy; OpenStreetMap &copy; CARTO",
+  maxZoom: 18,
+}).addTo(mapa);
+let capaActiva = null;
+let claveActiva = null;
+let tilesConfig = null;
+let capaDeptos = null;
+async function cargarConfig() {
+  try {
+    const r = await fetch("tiles.json", { cache: "no-store" });
+    if (!r.ok) throw new Error("no encontrado");
+    tilesConfig = await r.json();
+    document.getElementById("fecha-info").textContent =
+      "Actualizado: " + tilesConfig.fecha + " - ventana " + tilesConfig.ventana_dias + " dias";
+  } catch (e) {
+    tilesConfig = { tiles: {} };
+    document.getElementById("fecha-info").textContent = "Sin datos cargados";
+    mostrarAviso("No se encontro tiles.json - el mapa base funciona, pero faltan las capas satelitales. Corre el pipeline y volve a cargar.");
+  }
+  construirBotones();
+}
+function mostrarAviso(txt) {
+  const a = document.getElementById("aviso");
+  a.textContent = txt;
+  a.style.display = "block";
+  setTimeout(() => (a.style.display = "none"), 9000);
+}
+function construirBotones() {
+  for (const [clave, cfg] of Object.entries(CAPAS)) {
+    const btn = document.createElement("button");
+    btn.className = "capa-btn";
+    btn.id = "btn-" + clave;
+    btn.innerHTML = '<span class="punto" style="background:' + cfg.color + '"></span>' + cfg.nombre;
+    btn.onclick = () => activarCapa(clave);
+    document.getElementById(cfg.grupo).appendChild(btn);
+  }
+  const primera = Object.keys(CAPAS).find(k => tilesConfig.tiles[k]);
+  if (primera) activarCapa(primera);
+}
+function activarCapa(clave) {
+  const cfg = CAPAS[clave];
+  const url = tilesConfig.tiles[clave];
+  if (!url) {
+    mostrarAviso('La capa "' + cfg.nombre + '" no esta en tiles.json todavia.');
+    return;
+  }
+  if (capaActiva) mapa.removeLayer(capaActiva);
+  document.querySelectorAll(".capa-btn").forEach(b => b.classList.remove("activa"));
+  document.getElementById("btn-" + clave).classList.add("activa");
+  const op = document.getElementById("opacidad").value / 100;
+  capaActiva = L.tileLayer(url, { opacity: op, maxZoom: 14 }).addTo(mapa);
+  claveActiva = clave;
+  document.getElementById("leyenda-titulo").textContent = cfg.nombre;
+  document.getElementById("leyenda-barra").style.background = cfg.grad;
+  document.getElementById("ley-min").textContent = cfg.min + cfg.unidad;
+  document.getElementById("ley-max").textContent = cfg.max + cfg.unidad;
+}
+document.getElementById("opacidad").addEventListener("input", e => {
+  document.getElementById("opacidad-valor").textContent = e.target.value + "%";
+  if (capaActiva) capaActiva.setOpacity(e.target.value / 100);
+});
+document.getElementById("toggle-deptos").addEventListener("change", async e => {
+  if (e.target.checked) {
+    if (!capaDeptos) {
+      try {
+        const r = await fetch("departamentos.geojson");
+        if (!r.ok) throw new Error();
+        const gj = await r.json();
+        capaDeptos = L.geoJSON(gj, {
+          style: { color: "#94a3b8", weight: 0.7, fillOpacity: 0, opacity: 0.6 },
+          onEachFeature: (f, layer) => {
+            layer.on("mouseover", () => {
+              const nombre = f.properties.nam || f.properties.NAME || f.properties.ADM2_NAME || "Departamento";
+              const info = document.getElementById("info-depto");
+              info.innerHTML = "<b>" + nombre + "</b>";
+              info.style.display = "block";
+              layer.setStyle({ color: "#4ade80", weight: 1.5 });
+            });
+            layer.on("mouseout", () => {
+              document.getElementById("info-depto").style.display = "none";
+              capaDeptos.resetStyle(layer);
+            });
+          },
+        });
+      } catch {
+        mostrarAviso("No se encontro departamentos.geojson. Descargalo del IGN y subilo junto al index.html.");
+        e.target.checked = false;
+        return;
+      }
+    }
+    capaDeptos.addTo(mapa);
+  } else if (capaDeptos) {
+    mapa.removeLayer(capaDeptos);
+  }
+});
+cargarConfig();
+</script>
+</body>
+</html>

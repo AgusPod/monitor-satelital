@@ -1,5 +1,16 @@
 """Pipeline diario: calcula indices y lluvia en GEE, escribe site/tiles.json
-y descarga un PNG del NDVI nacional para compartir por WhatsApp/LinkedIn."""
+y descarga un PNG del NDVI nacional para compartir por WhatsApp/LinkedIn.
+
+Modulos:
+  - Indices opticos (Sentinel-2, MODIS) y lluvias acumuladas (CHIRPS, ERA5)
+  - Reporte de granizo del dia anterior (GOES-19, tope de nube < -58 C)
+  - Reporte de heladas de la ultima madrugada disponible (ERA5-Land horario):
+    temperatura minima a 2 m, humedad relativa, cielo despejado (GOES) y
+    temperatura minima por departamento para el aviso agronomico del dashboard
+  - Reporte de inundaciones: lluvia 72 h (GPM IMERG), agua detectada por radar
+    (Sentinel-1, funciona con nubes), agua nueva (fuera de cuerpos permanentes
+    JRC) y zonas bajas anegables (HAND de MERIT Hydro)
+"""
 
 import datetime as dt
 import json
@@ -31,6 +42,9 @@ PALETAS = {
     "NDWI":   {"min": -0.5, "max": 0.5, "palette": ["8c510a", "f5f5f5", "01665e"]},
     "MNDWI":  {"min": -0.5, "max": 0.5, "palette": ["8c510a", "f5f5f5", "0571b0"]},
     "lluvia": {"min": 0,    "max": 300, "palette": ["ffffff", "4292c6", "08306b"]},
+    "tmin":   {"min": -8,   "max": 10,  "palette": ["7f00ff", "0000ff", "00bfff", "ffffff", "ffff99", "ff8c00"]},
+    "hr":     {"min": 20,   "max": 100, "palette": ["d73027", "fee090", "e0f3f8", "4575b4"]},
+    "imerg":  {"min": 0,    "max": 120, "palette": ["ffffff", "74c476", "2171b5", "6a51a3", "cb181d"]},
 }
 
 
@@ -96,18 +110,20 @@ def url_tiles(imagen, banda, vis):
     return imagen.select(banda).getMapId(vis)["tile_fetcher"].url_format
 
 
+def temperatura_goes(img):
+    """CMI_C13 (10.3 um) a temperatura de brillo en Kelvin."""
+    esc = ee.Number(img.get("CMI_C13_scale"))
+    off = ee.Number(img.get("CMI_C13_offset"))
+    return img.select("CMI_C13").multiply(esc).add(off).rename("T")
+
+
 def reporte_granizo(region, departamentos):
     """Revisa todas las imagenes GOES-19 de ayer y marca donde el tope de nube
     bajo de -58 C (215 K): conveccion severa con posible granizo."""
     ayer = (HOY - dt.timedelta(days=1)).isoformat()
     col = ee.ImageCollection("NOAA/GOES/19/MCMIPF").filterDate(ayer, FIN)
 
-    def temp(img):
-        esc = ee.Number(img.get("CMI_C13_scale"))
-        off = ee.Number(img.get("CMI_C13_offset"))
-        return img.select("CMI_C13").multiply(esc).add(off).rename("T")
-
-    tmin = col.map(temp).min().clip(region)
+    tmin = col.map(temperatura_goes).min().clip(region)
     stats = tmin.reduceRegions(collection=departamentos, reducer=ee.Reducer.min(), scale=4000)
     afectados = stats.filter(ee.Filter.lt("min", 215))
     lista = afectados.reduceColumns(
@@ -123,6 +139,169 @@ def reporte_granizo(region, departamentos):
     ]
     deps.sort(key=lambda d: d["tmin_c"])
     return {"fecha": ayer, "umbral_c": -58, "departamentos": deps}, url
+
+
+def reporte_heladas(region, departamentos):
+    """Heladas de la ultima madrugada disponible en ERA5-Land (horario).
+
+    ERA5-Land llega con ~5 dias de retraso; se toma la ultima madrugada
+    completa disponible y se declara la fecha honestamente en el JSON.
+    Ventana: 03 a 13 UTC (00 a 10 hora argentina), que cubre la minima
+    del amanecer. Devuelve:
+      - tile de temperatura minima a 2 m
+      - tile de humedad relativa minima de la madrugada
+      - temperatura minima por departamento (para el aviso agronomico,
+        el umbral por cultivo se aplica en el dashboard)
+      - fraccion de cielo cubierto esa noche segun GOES (el enfriamiento
+        radiativo que causa helada necesita cielo despejado)
+    """
+    col = ee.ImageCollection("ECMWF/ERA5_LAND/HOURLY").select(
+        ["temperature_2m", "dewpoint_temperature_2m"]
+    )
+    ultima = ee.Date(
+        col.filterDate((HOY - dt.timedelta(days=15)).isoformat(), FIN)
+        .limit(1, "system:time_start", False).first().get("system:time_start")
+    )
+    # Si la ultima imagen es anterior a las 13 UTC, la madrugada completa es la del dia previo
+    fecha = ee.Date(ee.Algorithms.If(ultima.get("hour").lt(13), ultima.advance(-1, "day"), ultima))
+    fecha_str = fecha.format("YYYY-MM-dd").getInfo()
+    ini = ee.Date(fecha_str).advance(3, "hour")
+    fin = ee.Date(fecha_str).advance(13, "hour")
+
+    madrugada = col.filterDate(ini, fin)
+
+    def celsius(img):
+        t = img.select("temperature_2m").subtract(273.15).rename("tmin")
+        td = img.select("dewpoint_temperature_2m").subtract(273.15)
+        # Humedad relativa por formula de Magnus
+        hr = td.multiply(17.625).divide(td.add(243.04)).exp().divide(
+            t.multiply(17.625).divide(t.add(243.04)).exp()
+        ).multiply(100).rename("hr")
+        return t.addBands(hr)
+
+    horas = madrugada.map(celsius)
+    tmin = horas.select("tmin").min().clip(region)
+    hr_min = horas.select("hr").min().clip(region)
+
+    # Nubosidad nocturna GOES (1 imagen por hora): 0 = despejado, 1 = cubierto
+    try:
+        goes = (
+            ee.ImageCollection("NOAA/GOES/19/MCMIPF")
+            .filterDate(ini, fin)
+            .filter(ee.Filter.calendarRange(0, 9, "minute"))
+        )
+        nubosidad = goes.map(lambda i: temperatura_goes(i).lt(283)).mean().rename("nub").clip(region)
+    except Exception:
+        nubosidad = ee.Image.constant(-1).rename("nub").clip(region)
+
+    combinado = tmin.rename("tmin").addBands(hr_min.rename("hr")).addBands(nubosidad)
+    reducer = ee.Reducer.min().combine(ee.Reducer.mean(), sharedInputs=True)
+    stats = combinado.reduceRegions(collection=departamentos, reducer=reducer, scale=11000)
+    lista = stats.reduceColumns(
+        ee.Reducer.toList(5), ["ADM2_NAME", "ADM1_NAME", "tmin_min", "hr_min", "nub_mean"]
+    ).get("list").getInfo()
+
+    deps = []
+    for x in lista:
+        if x[2] is None:
+            continue
+        deps.append({
+            "departamento": x[0],
+            "provincia": x[1],
+            "tmin_c": round(x[2], 1),
+            "hr_pct": round(x[3]) if x[3] is not None else None,
+            "despejado": (x[4] is not None and 0 <= x[4] < 0.35),
+        })
+    deps.sort(key=lambda d: d["tmin_c"])
+
+    url_tmin = url_tiles(tmin, "tmin", PALETAS["tmin"])
+    url_hr = url_tiles(hr_min, "hr", PALETAS["hr"])
+    reporte = {
+        "fecha": fecha_str,
+        "ventana_utc": "03 a 13 UTC (00 a 10 hora argentina)",
+        "fuente": "ERA5-Land horario (llega con ~5 dias de retraso)",
+        "departamentos": deps,
+    }
+    return reporte, url_tmin, url_hr
+
+
+def reporte_inundaciones(region, departamentos):
+    """Riesgo y deteccion de inundaciones (metodologia tipo ARSET/NASA):
+      - Lluvia acumulada de 72 h con GPM IMERG (casi tiempo real)
+      - Agua en superficie con radar Sentinel-1 (VV < -16 dB, ve a traves de nubes)
+      - Agua nueva: la que no figura como cuerpo permanente en JRC Global Surface Water
+      - Zonas bajas anegables: HAND < 5 m (MERIT Hydro), capa estatica de riesgo
+    """
+    ini72 = (HOY - dt.timedelta(days=3)).isoformat()
+    imerg = (
+        ee.ImageCollection("NASA/GPM_L3/IMERG_V07")
+        .filterDate(ini72, FIN)
+        .select("precipitation")
+    )
+    # mm/h cada media hora -> mm acumulados
+    lluvia72 = imerg.sum().multiply(0.5).rename("mm72").clip(region)
+
+    s1 = (
+        ee.ImageCollection("COPERNICUS/S1_GRD")
+        .filterBounds(region)
+        .filter(ee.Filter.listContains("transmitterReceiverPolarisation", "VV"))
+        .filter(ee.Filter.eq("instrumentMode", "IW"))
+        .select("VV")
+    )
+    vv_actual = s1.filterDate((HOY - dt.timedelta(days=12)).isoformat(), FIN).median()
+    agua = vv_actual.lt(-16).selfMask().rename("agua").clip(region)
+
+    hand = ee.Image("MERIT/Hydro/v1_0_1").select("hnd")
+    zonas_bajas = hand.lt(5).selfMask().rename("bajas").clip(region)
+
+    permanente = ee.Image("JRC/GSW1_4/GlobalSurfaceWater").select("occurrence").unmask(0).gte(50)
+    agua_nueva = (
+        vv_actual.lt(-16).And(permanente.Not()).And(hand.lt(10))
+        .selfMask().rename("nueva").clip(region)
+    )
+
+    tiles = {
+        "lluvia_imerg72": url_tiles(lluvia72, "mm72", PALETAS["imerg"]),
+        "agua_s1": url_tiles(agua, "agua", {"min": 0, "max": 1, "palette": ["0ea5e9"]}),
+        "agua_nueva": url_tiles(agua_nueva, "nueva", {"min": 0, "max": 1, "palette": ["f43f5e"]}),
+        "zonas_bajas": url_tiles(zonas_bajas, "bajas", {"min": 0, "max": 1, "palette": ["a78bfa"]}),
+    }
+
+    # Estadistica por departamento: hectareas de agua nueva + lluvia maxima de 72 h
+    area_ha = agua_nueva.unmask(0).multiply(ee.Image.pixelArea()).divide(10000).rename("ha")
+    combinado = area_ha.addBands(lluvia72.rename("mm72"))
+    reducer = ee.Reducer.sum().combine(ee.Reducer.max(), sharedInputs=True)
+    stats = combinado.reduceRegions(collection=departamentos, reducer=reducer, scale=300)
+    lista = stats.reduceColumns(
+        ee.Reducer.toList(4), ["ADM2_NAME", "ADM1_NAME", "ha_sum", "mm72_max"]
+    ).get("list").getInfo()
+
+    deps = []
+    for x in lista:
+        ha = round(x[2]) if x[2] is not None else 0
+        mm = round(x[3]) if x[3] is not None else 0
+        if ha >= 200 or mm >= 80:
+            deps.append({
+                "departamento": x[0], "provincia": x[1],
+                "agua_nueva_ha": ha, "lluvia_72h_mm": mm,
+            })
+    deps.sort(key=lambda d: -d["agua_nueva_ha"])
+
+    reporte = {
+        "fecha": FIN,
+        "criterio": "agua nueva >= 200 ha (Sentinel-1, ultimos 12 dias) o lluvia 72 h >= 80 mm (IMERG)",
+        "departamentos": deps[:40],
+    }
+    return reporte, tiles
+
+
+def actualizar_historial(nombre, registro, clave_fecha="fecha", maximo=60):
+    path = pathlib.Path("site/" + nombre)
+    historial = json.loads(path.read_text()) if path.exists() else []
+    historial = [h for h in historial if h.get(clave_fecha) != registro[clave_fecha]]
+    historial.append(registro)
+    historial = historial[-maximo:]
+    path.write_text(json.dumps(historial, indent=2))
 
 
 def main():
@@ -182,15 +361,40 @@ def main():
         granizo, url_granizo = reporte_granizo(arg, departamentos)
         tiles["granizo_ayer"] = url_granizo
         salida["granizo"] = granizo
-        hist_path = pathlib.Path("site/historial_granizo.json")
-        historial = json.loads(hist_path.read_text()) if hist_path.exists() else []
-        historial = [h for h in historial if h.get("fecha") != granizo["fecha"]]
-        historial.append(granizo)
-        historial = historial[-60:]
-        hist_path.write_text(json.dumps(historial, indent=2))
+        salida["rangos"]["granizo_ayer"] = granizo["fecha"]
+        actualizar_historial("historial_granizo.json", granizo)
         print("granizo:", len(granizo["departamentos"]), "departamentos afectados ayer")
     except Exception as e:
         print("reporte granizo omitido:", e)
+
+    try:
+        heladas, url_tmin, url_hr = reporte_heladas(arg, departamentos)
+        tiles["tmin_heladas"] = url_tmin
+        tiles["hr_madrugada"] = url_hr
+        salida["heladas"] = heladas
+        salida["rangos"]["tmin_heladas"] = "madrugada del " + heladas["fecha"]
+        salida["rangos"]["hr_madrugada"] = "madrugada del " + heladas["fecha"]
+        resumen = {
+            "fecha": heladas["fecha"],
+            "departamentos": [d for d in heladas["departamentos"] if d["tmin_c"] <= 3],
+        }
+        actualizar_historial("historial_heladas.json", resumen)
+        n_helada = sum(1 for d in heladas["departamentos"] if d["tmin_c"] <= 0)
+        print("heladas:", n_helada, "departamentos con minima <= 0 C el", heladas["fecha"])
+    except Exception as e:
+        print("reporte heladas omitido:", e)
+
+    try:
+        inundacion, tiles_inund = reporte_inundaciones(arg, departamentos)
+        tiles.update(tiles_inund)
+        salida["inundacion"] = inundacion
+        salida["rangos"]["lluvia_imerg72"] = (HOY - dt.timedelta(days=3)).isoformat() + " a " + FIN
+        salida["rangos"]["agua_s1"] = (HOY - dt.timedelta(days=12)).isoformat() + " a " + FIN
+        salida["rangos"]["agua_nueva"] = (HOY - dt.timedelta(days=12)).isoformat() + " a " + FIN
+        salida["rangos"]["zonas_bajas"] = "capa estatica (HAND, MERIT Hydro)"
+        print("inundacion:", len(inundacion["departamentos"]), "departamentos con senal")
+    except Exception as e:
+        print("reporte inundaciones omitido:", e)
 
     media = (
         mod.select("NDVI")

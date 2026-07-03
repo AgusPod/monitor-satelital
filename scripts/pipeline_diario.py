@@ -23,13 +23,14 @@ HOY = dt.date.today()
 VENTANA = 15
 FIN = HOY.isoformat()
 INICIO = (HOY - dt.timedelta(days=VENTANA)).isoformat()
+INICIO_LLUVIA = (HOY - dt.timedelta(days=60)).isoformat()  # CHIRPS/ERA5 llegan con retraso
 
 PALETAS = {
     "NDVI":   {"min": -0.2, "max": 0.9, "palette": ["a50026", "ffffbf", "006837"]},
     "EVI":    {"min": 0.0,  "max": 0.8, "palette": ["ffffcc", "41ab5d", "005a32"]},
     "NDWI":   {"min": -0.5, "max": 0.5, "palette": ["8c510a", "f5f5f5", "01665e"]},
     "MNDWI":  {"min": -0.5, "max": 0.5, "palette": ["8c510a", "f5f5f5", "0571b0"]},
-    "lluvia": {"min": 0,    "max": 150, "palette": ["ffffff", "4292c6", "08306b"]},
+    "lluvia": {"min": 0,    "max": 300, "palette": ["ffffff", "4292c6", "08306b"]},
 }
 
 
@@ -80,12 +81,12 @@ def modis(region):
 def lluvias(region):
     chirps = (
         ee.ImageCollection("UCSB-CHG/CHIRPS/DAILY")
-        .filterDate(INICIO, FIN).select("precipitation")
+        .filterDate(INICIO_LLUVIA, FIN).select("precipitation")
         .sum().rename("CHIRPS_mm").clip(region)
     )
     era5 = (
         ee.ImageCollection("ECMWF/ERA5_LAND/DAILY_AGGR")
-        .filterDate(INICIO, FIN).select("total_precipitation_sum")
+        .filterDate(INICIO_LLUVIA, FIN).select("total_precipitation_sum")
         .sum().multiply(1000).rename("ERA5_mm").clip(region)
     )
     return chirps, era5
@@ -108,19 +109,24 @@ def main():
     mod = modis(arg)
     chirps, era5 = lluvias(arg)
 
-    salida = {
-        "fecha": FIN,
-        "ventana_dias": VENTANA,
-        "tiles": {
-            "NDVI_s2":       url_tiles(s2, "NDVI", PALETAS["NDVI"]),
-            "EVI_s2":        url_tiles(s2, "EVI", PALETAS["EVI"]),
-            "NDWI_s2":       url_tiles(s2, "NDWI", PALETAS["NDWI"]),
-            "MNDWI_s2":      url_tiles(s2, "MNDWI", PALETAS["MNDWI"]),
-            "NDVI_modis":    url_tiles(mod, "NDVI", PALETAS["NDVI"]),
-            "lluvia_chirps": url_tiles(chirps, "CHIRPS_mm", PALETAS["lluvia"]),
-            "lluvia_era5":   url_tiles(era5, "ERA5_mm", PALETAS["lluvia"]),
-        },
-    }
+    tiles = {}
+    capas = [
+        ("NDVI_s2", s2, "NDVI", PALETAS["NDVI"]),
+        ("EVI_s2", s2, "EVI", PALETAS["EVI"]),
+        ("NDWI_s2", s2, "NDWI", PALETAS["NDWI"]),
+        ("MNDWI_s2", s2, "MNDWI", PALETAS["MNDWI"]),
+        ("NDVI_modis", mod, "NDVI", PALETAS["NDVI"]),
+        ("lluvia_chirps", chirps, "CHIRPS_mm", PALETAS["lluvia"]),
+        ("lluvia_era5", era5, "ERA5_mm", PALETAS["lluvia"]),
+    ]
+    for nombre, img, banda, vis in capas:
+        try:
+            tiles[nombre] = url_tiles(img, banda, vis)
+            print("capa lista:", nombre)
+        except Exception as e:
+            print("capa omitida:", nombre, "-", e)
+
+    salida = {"fecha": FIN, "ventana_dias": VENTANA, "tiles": tiles}
 
     media = (
         mod.select("NDVI")

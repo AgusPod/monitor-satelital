@@ -96,6 +96,35 @@ def url_tiles(imagen, banda, vis):
     return imagen.select(banda).getMapId(vis)["tile_fetcher"].url_format
 
 
+def reporte_granizo(region, departamentos):
+    """Revisa todas las imagenes GOES-19 de ayer y marca donde el tope de nube
+    bajo de -58 C (215 K): conveccion severa con posible granizo."""
+    ayer = (HOY - dt.timedelta(days=1)).isoformat()
+    col = ee.ImageCollection("NOAA/GOES/19/MCMIPF").filterDate(ayer, FIN)
+
+    def temp(img):
+        esc = ee.Number(img.get("CMI_C13_scale"))
+        off = ee.Number(img.get("CMI_C13_offset"))
+        return img.select("CMI_C13").multiply(esc).add(off).rename("T")
+
+    tmin = col.map(temp).min().clip(region)
+    stats = tmin.reduceRegions(collection=departamentos, reducer=ee.Reducer.min(), scale=4000)
+    afectados = stats.filter(ee.Filter.lt("min", 215))
+    lista = afectados.reduceColumns(
+        ee.Reducer.toList(3), ["ADM2_NAME", "ADM1_NAME", "min"]
+    ).get("list").getInfo()
+    url = url_tiles(
+        tmin.updateMask(tmin.lt(215)), "T",
+        {"min": 185, "max": 215, "palette": ["ff00ff", "ff0000", "ffa500", "ffff00"]},
+    )
+    deps = [
+        {"departamento": x[0], "provincia": x[1], "tmin_c": round(x[2] - 273.15, 1)}
+        for x in lista
+    ]
+    deps.sort(key=lambda d: d["tmin_c"])
+    return {"fecha": ayer, "umbral_c": -58, "departamentos": deps}, url
+
+
 def main():
     inicializar()
 
@@ -148,6 +177,20 @@ def main():
         "lluvia_chirps": INICIO_LLUVIA + " a " + FIN,
         "lluvia_era5": INICIO_LLUVIA + " a " + FIN,
     }
+
+    try:
+        granizo, url_granizo = reporte_granizo(arg, departamentos)
+        tiles["granizo_ayer"] = url_granizo
+        salida["granizo"] = granizo
+        hist_path = pathlib.Path("site/historial_granizo.json")
+        historial = json.loads(hist_path.read_text()) if hist_path.exists() else []
+        historial = [h for h in historial if h.get("fecha") != granizo["fecha"]]
+        historial.append(granizo)
+        historial = historial[-60:]
+        hist_path.write_text(json.dumps(historial, indent=2))
+        print("granizo:", len(granizo["departamentos"]), "departamentos afectados ayer")
+    except Exception as e:
+        print("reporte granizo omitido:", e)
 
     media = (
         mod.select("NDVI")

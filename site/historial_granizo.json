@@ -1,0 +1,73 @@
+[
+  {
+    "fecha": "2026-07-02",
+    "umbral_c": -58,
+    "departamentos": [
+      {
+        "departamento": "Montecarlo",
+        "provincia": "Misiones",
+        "tmin_c": -70.7
+      },
+      {
+        "departamento": "Eldorado",
+        "provincia": "Misiones",
+        "tmin_c": -69.2
+      },
+      {
+        "departamento": "San Pedro",
+        "provincia": "Misiones",
+        "tmin_c": -68.4
+      },
+      {
+        "departamento": "Ushuaia",
+        "provincia": "Tierra Del Fuego",
+        "tmin_c": -67.4
+      },
+      {
+        "departamento": "Rio Grande",
+        "provincia": "Tierra Del Fuego",
+        "tmin_c": -67.2
+      },
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "Misiones",
+        "tmin_c": -64.6
+      },
+      {
+        "departamento": "Libertador General San  Martin",
+        "provincia": "Misiones",
+        "tmin_c": -63.0
+      },
+      {
+        "departamento": "San Ignacio",
+        "provincia": "Misiones",
+        "tmin_c": -63.0
+      },
+      {
+        "departamento": "Guarani",
+        "provincia": "Misiones",
+        "tmin_c": -62.8
+      },
+      {
+        "departamento": "Iguazu",
+        "provincia": "Misiones",
+        "tmin_c": -62.7
+      },
+      {
+        "departamento": "Cainguas",
+        "provincia": "Misiones",
+        "tmin_c": -62.1
+      },
+      {
+        "departamento": "General Manuel Belgrano",
+        "provincia": "Misiones",
+        "tmin_c": -62.1
+      },
+      {
+        "departamento": "Obera",
+        "provincia": "Misiones",
+        "tmin_c": -62.1
+      }
+    ]
+  }
+]

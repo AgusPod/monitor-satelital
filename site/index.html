@@ -14,22 +14,42 @@
   header h1 span { color: #4ade80; }
   #fecha-info { font-size: 12.5px; color: #9aa4af; }
   #contenedor { flex: 1; display: flex; min-height: 0; }
-  #panel { width: 270px; background: #161b22; border-right: 1px solid #2a313a; padding: 16px; overflow-y: auto; flex-shrink: 0; }
+  #panel { width: 300px; background: #161b22; border-right: 1px solid #2a313a; display: flex; flex-direction: column; flex-shrink: 0; min-height: 0; }
+  #pestanas { display: flex; flex-wrap: wrap; border-bottom: 1px solid #2a313a; padding: 8px 8px 0; gap: 2px; }
+  .pestana { background: transparent; border: none; border-bottom: 2px solid transparent; color: #9aa4af; padding: 7px 9px; font-size: 12.5px; cursor: pointer; border-radius: 6px 6px 0 0; }
+  .pestana:hover { color: #cfd6dd; background: #1e2630; }
+  .pestana.activa { color: #7ee2a8; border-bottom-color: #4ade80; }
+  #panel-scroll { flex: 1; overflow-y: auto; padding: 14px 16px; min-height: 0; }
+  .tab-content { display: none; }
+  .tab-content.visible { display: block; }
   #panel h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #9aa4af; margin: 16px 0 8px; }
-  #panel h2:first-child { margin-top: 0; }
+  .tab-content h2:first-child, #zona-comun h2:first-child { margin-top: 0; }
   .capa-btn { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: transparent; border: 1px solid transparent; color: #cfd6dd; padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 13.5px; margin-bottom: 3px; }
   .capa-btn:hover { background: #1e2630; }
   .capa-btn.activa { background: #1a2f24; border-color: #2f6b47; color: #7ee2a8; }
   .capa-btn .punto { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   .control-fila { margin: 10px 0; }
   .control-fila label { font-size: 12.5px; color: #9aa4af; display: flex; justify-content: space-between; margin-bottom: 5px; }
-  .control-fila input[type="date"], .control-fila select { width: 100%; background: #0f1419; color: #e6e8ea; border: 1px solid #2a313a; border-radius: 8px; padding: 7px 9px; font-size: 13px; }
+  .control-fila input[type="date"], .control-fila input[type="number"], .control-fila select { width: 100%; background: #0f1419; color: #e6e8ea; border: 1px solid #2a313a; border-radius: 8px; padding: 7px 9px; font-size: 13px; }
   input[type="range"] { width: 100%; accent-color: #4ade80; }
   .check-fila { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #cfd6dd; margin: 8px 0; cursor: pointer; }
   .check-fila input { accent-color: #4ade80; }
   .boton-accion { width: 100%; background: #1a2f24; border: 1px solid #2f6b47; color: #7ee2a8; padding: 9px 10px; border-radius: 8px; cursor: pointer; font-size: 13.5px; margin-top: 4px; }
   .boton-accion:hover { background: #22402f; }
-  #estado-serie { font-size: 12px; color: #9aa4af; margin-top: 8px; min-height: 16px; }
+  .nota { font-size: 11.5px; color: #6b7480; margin: 6px 0 2px; line-height: 1.45; }
+  .estado { font-size: 12px; color: #9aa4af; margin-top: 8px; min-height: 16px; }
+  .lista-alerta { margin-top: 8px; max-height: 230px; overflow-y: auto; border: 1px solid #2a313a; border-radius: 10px; }
+  .lista-alerta:empty { display: none; }
+  .item-alerta { padding: 7px 10px; border-bottom: 1px solid #20262e; font-size: 12.5px; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .item-alerta:last-child { border-bottom: none; }
+  .item-alerta .lugar { color: #cfd6dd; }
+  .item-alerta .lugar small { color: #6b7480; display: block; }
+  .item-alerta .dato { color: #7ee2a8; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .item-alerta .dato.frio { color: #93c5fd; }
+  .item-alerta .dato.rojo { color: #fda4af; }
+  .badge { display: inline-block; background: #1a2f24; border: 1px solid #2f6b47; color: #7ee2a8; border-radius: 999px; padding: 2px 10px; font-size: 12px; margin: 6px 0; }
+  .badge.alerta { background: #2a1215; border-color: #7f2d3a; color: #fda4af; }
+  .badge.frio { background: #0f2036; border-color: #29527f; color: #93c5fd; }
   #leyenda { margin-top: 14px; }
   #leyenda-barra { height: 12px; border-radius: 6px; margin: 6px 0 4px; }
   #leyenda-rangos { display: flex; justify-content: space-between; font-size: 11.5px; color: #9aa4af; }
@@ -37,7 +57,7 @@
   #leyenda-rango { font-size: 11.5px; color: #6b7480; margin-top: 4px; }
   #mapa { position: absolute; inset: 0; background: #0a0e12; }
   #aviso { position: absolute; top: 70px; left: 50%; transform: translateX(-50%); background: #2a1f0e; border: 1px solid #6b5320; color: #fbbf24; padding: 10px 18px; border-radius: 10px; font-size: 13px; z-index: 2000; max-width: 90%; text-align: center; display: none; }
-  #info-depto { position: absolute; bottom: 16px; right: 16px; background: rgba(22,27,34,.94); border: 1px solid #2a313a; border-radius: 10px; padding: 10px 14px; font-size: 13px; z-index: 1000; display: none; max-width: 240px; }
+  #info-depto { position: absolute; bottom: 16px; right: 16px; background: rgba(22,27,34,.94); border: 1px solid #2a313a; border-radius: 10px; padding: 10px 14px; font-size: 13px; z-index: 1000; display: none; max-width: 260px; }
   #info-depto b { color: #7ee2a8; }
   #panel-grafico { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 18px; width: min(760px, 92%); background: rgba(22,27,34,.97); border: 1px solid #2a313a; border-radius: 12px; padding: 12px 14px 16px; z-index: 1500; }
   #grafico-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
@@ -47,7 +67,7 @@
   footer { background: #161b22; border-top: 1px solid #2a313a; padding: 6px 20px; font-size: 11.5px; color: #6b7480; }
   @media (max-width: 720px) {
     #contenedor { flex-direction: column; }
-    #panel { width: 100%; max-height: 42vh; border-right: none; border-bottom: 1px solid #2a313a; }
+    #panel { width: 100%; max-height: 46vh; border-right: none; border-bottom: 1px solid #2a313a; }
   }
   .leaflet-container { background: #0a0e12; }
 </style>
@@ -59,45 +79,115 @@
 </header>
 <div id="contenedor">
   <aside id="panel">
-    <h2>Indices de vegetacion</h2>
-    <div id="grupo-indices"></div>
-    <h2>Agua y humedad</h2>
-    <div id="grupo-agua"></div>
-    <h2>Precipitaciones</h2>
-    <div id="grupo-lluvia"></div>
-    <h2>Controles</h2>
-    <div class="control-fila">
-      <label>Opacidad de la capa <span id="opacidad-valor">80%</span></label>
-      <input type="range" id="opacidad" min="10" max="100" value="80">
+    <nav id="pestanas">
+      <button class="pestana activa" data-tab="tab-veg">Vegetacion</button>
+      <button class="pestana" data-tab="tab-agua">Agua</button>
+      <button class="pestana" data-tab="tab-lluvia">Lluvias</button>
+      <button class="pestana" data-tab="tab-heladas">Heladas</button>
+      <button class="pestana" data-tab="tab-granizo">Granizo</button>
+      <button class="pestana" data-tab="tab-lote">Mi lote</button>
+    </nav>
+    <div id="panel-scroll">
+
+      <div class="tab-content visible" id="tab-veg">
+        <h2>Indices de vegetacion</h2>
+        <div id="grupo-veg"></div>
+      </div>
+
+      <div class="tab-content" id="tab-agua">
+        <h2>Indices de agua</h2>
+        <div id="grupo-agua"></div>
+        <h2>Inundaciones</h2>
+        <div id="grupo-inundacion"></div>
+        <div class="nota">Agua por radar Sentinel-1: funciona aunque este nublado. "Agua nueva" excluye rios y lagunas permanentes (JRC). "Zonas bajas" es la capa estatica de terreno anegable (HAND &lt; 5 m).</div>
+        <div id="badge-inundacion"></div>
+        <div class="lista-alerta" id="lista-inundacion"></div>
+      </div>
+
+      <div class="tab-content" id="tab-lluvia">
+        <h2>Precipitaciones</h2>
+        <div id="grupo-lluvia"></div>
+        <div class="nota">CHIRPS y ERA5: acumulado de 60 dias. IMERG (GPM): acumulado de las ultimas 72 horas, casi en tiempo real, ideal para eventos.</div>
+      </div>
+
+      <div class="tab-content" id="tab-heladas">
+        <h2>Mapas de la madrugada</h2>
+        <div id="grupo-heladas"></div>
+        <div class="nota" id="nota-heladas">La temperatura minima y la humedad salen de ERA5-Land (temperatura del aire a 2 m), que llega con unos 5 dias de retraso; la fecha exacta se declara arriba de la lista.</div>
+        <h2>Aviso agronomico</h2>
+        <div class="control-fila">
+          <label>Cultivo y etapa</label>
+          <select id="cultivo"></select>
+        </div>
+        <div class="control-fila" id="fila-umbral" style="display:none;">
+          <label>Umbral de dano (grados C)</label>
+          <input type="number" id="umbral-custom" step="0.5" value="0">
+        </div>
+        <label class="check-fila">
+          <input type="checkbox" id="margen-canopia" checked>
+          Sumar 2 C de margen (la hoja se enfria mas que el aire)
+        </label>
+        <div class="nota">Umbrales orientativos de bibliografia: la temperatura critica real depende de la variedad, el estado del cultivo y la duracion del frio. Ajustalo a tu lote.</div>
+        <div id="badge-heladas"></div>
+        <label class="check-fila">
+          <input type="checkbox" id="pintar-heladas">
+          Pintar departamentos por minima
+        </label>
+        <div class="lista-alerta" id="lista-heladas"></div>
+        <h2>Historial</h2>
+        <div class="lista-alerta" id="historial-heladas"></div>
+      </div>
+
+      <div class="tab-content" id="tab-granizo">
+        <h2>Reporte de ayer</h2>
+        <div id="grupo-granizo"></div>
+        <div class="nota">Mancha donde el tope de nube bajo de -58 C durante el dia de ayer (GOES-19, una imagen cada 10 minutos): conveccion severa con posible granizo. Es un indicio para ir a revisar el lote, no una confirmacion.</div>
+        <div id="badge-granizo"></div>
+        <div class="lista-alerta" id="lista-granizo"></div>
+        <h2>Tiempo real GOES</h2>
+        <button id="btn-goes" class="boton-accion">Cargar ultima imagen GOES</button>
+        <div id="grupo-goes" style="margin-top:6px;"></div>
+        <div class="estado" id="estado-goes"></div>
+        <h2>Historial</h2>
+        <div class="lista-alerta" id="historial-granizo"></div>
+      </div>
+
+      <div class="tab-content" id="tab-lote">
+        <h2>Analisis de lote</h2>
+        <div class="control-fila"><label>Desde</label><input type="date" id="fecha-inicio"></div>
+        <div class="control-fila"><label>Hasta</label><input type="date" id="fecha-fin"></div>
+        <div class="control-fila"><label>Variable</label>
+          <select id="indice-serie">
+            <option value="NDVI">NDVI (optico, sin nubes)</option>
+            <option value="EVI">EVI (optico, sin nubes)</option>
+            <option value="NDWI">NDWI (optico, sin nubes)</option>
+            <option value="NDMI">NDMI (optico, sin nubes)</option>
+            <option value="RVI">RVI (radar Sentinel-1)</option>
+            <option value="TEMP">Temperatura media (ERA5)</option>
+          </select>
+        </div>
+        <button id="btn-dibujar" class="boton-accion">Dibujar lote y graficar</button>
+        <div class="estado" id="estado-serie"></div>
+      </div>
+
+      <div id="zona-comun">
+        <h2>Controles</h2>
+        <div class="control-fila">
+          <label>Opacidad de la capa <span id="opacidad-valor">80%</span></label>
+          <input type="range" id="opacidad" min="10" max="100" value="80">
+        </div>
+        <label class="check-fila">
+          <input type="checkbox" id="toggle-deptos"> Limites de departamentos
+        </label>
+        <div id="leyenda">
+          <div id="leyenda-titulo">-</div>
+          <div id="leyenda-barra"></div>
+          <div id="leyenda-rangos"><span id="ley-min"></span><span id="ley-max"></span></div>
+          <div id="leyenda-rango"></div>
+        </div>
+      </div>
+
     </div>
-    <label class="check-fila">
-      <input type="checkbox" id="toggle-deptos"> Limites de departamentos
-    </label>
-    <div id="leyenda">
-      <div id="leyenda-titulo">-</div>
-      <div id="leyenda-barra"></div>
-      <div id="leyenda-rangos"><span id="ley-min"></span><span id="ley-max"></span></div>
-      <div id="leyenda-rango"></div>
-    </div>
-    <h2>Analisis de lote</h2>
-    <div class="control-fila"><label>Desde</label><input type="date" id="fecha-inicio"></div>
-    <div class="control-fila"><label>Hasta</label><input type="date" id="fecha-fin"></div>
-    <div class="control-fila"><label>Variable</label>
-      <select id="indice-serie">
-        <option value="NDVI">NDVI (optico, sin nubes)</option>
-        <option value="EVI">EVI (optico, sin nubes)</option>
-        <option value="NDWI">NDWI (optico, sin nubes)</option>
-        <option value="NDMI">NDMI (optico, sin nubes)</option>
-        <option value="RVI">RVI (radar Sentinel-1)</option>
-        <option value="TEMP">Temperatura media (ERA5)</option>
-      </select>
-    </div>
-    <button id="btn-dibujar" class="boton-accion">Dibujar lote y graficar</button>
-    <div id="estado-serie"></div>
-    <h2>Tiempo real GOES</h2>
-    <button id="btn-goes" class="boton-accion">Cargar ultima imagen GOES</button>
-    <div id="grupo-goes" style="margin-top:6px;"></div>
-    <div id="estado-goes" style="font-size:12px;color:#9aa4af;margin-top:6px;min-height:16px;"></div>
   </aside>
   <div style="flex:1; position:relative; min-height:0;">
     <div id="mapa"></div>
@@ -109,26 +199,57 @@
     </div>
   </div>
 </div>
-<footer>Datos: Sentinel-1, Sentinel-2, MODIS, CHIRPS, ERA5-Land via Google Earth Engine - Cada capa declara su rango de fechas</footer>
+<footer>Datos: Sentinel-1, Sentinel-2, MODIS, GOES-19, CHIRPS, GPM IMERG, ERA5-Land, JRC GSW, MERIT Hydro via Google Earth Engine - Cada capa declara su rango de fechas</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 const CAPAS = {
-  NDVI_s2:       { nombre: "NDVI (Sentinel-2)",  grupo: "grupo-indices", color: "#22c55e", min: -0.2, max: 0.9,  grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
-  EVI_s2:        { nombre: "EVI (Sentinel-2)",   grupo: "grupo-indices", color: "#84cc16", min: 0,    max: 0.8,  grad: "linear-gradient(90deg,#ffffcc,#41ab5d,#005a32)", unidad: "" },
-  NDVI_modis:    { nombre: "NDVI (MODIS)",       grupo: "grupo-indices", color: "#16a34a", min: -0.2, max: 0.9,  grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
-  NDWI_s2:       { nombre: "NDWI (Sentinel-2)",  grupo: "grupo-agua",    color: "#38bdf8", min: -0.5, max: 0.5,  grad: "linear-gradient(90deg,#8c510a,#f5f5f5,#01665e)", unidad: "" },
-  MNDWI_s2:      { nombre: "MNDWI (Sentinel-2)", grupo: "grupo-agua",    color: "#0ea5e9", min: -0.5, max: 0.5,  grad: "linear-gradient(90deg,#8c510a,#f5f5f5,#0571b0)", unidad: "" },
-  lluvia_chirps: { nombre: "Lluvia CHIRPS",      grupo: "grupo-lluvia",  color: "#3b82f6", min: 0,    max: 300,  grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
-  lluvia_era5:   { nombre: "Lluvia ERA5-Land",   grupo: "grupo-lluvia",  color: "#6366f1", min: 0,    max: 300,  grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
+  NDVI_s2:        { nombre: "NDVI (Sentinel-2)",        grupo: "grupo-veg",        color: "#22c55e", min: -0.2, max: 0.9, grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
+  EVI_s2:         { nombre: "EVI (Sentinel-2)",         grupo: "grupo-veg",        color: "#84cc16", min: 0,    max: 0.8, grad: "linear-gradient(90deg,#ffffcc,#41ab5d,#005a32)", unidad: "" },
+  NDVI_modis:     { nombre: "NDVI (MODIS)",             grupo: "grupo-veg",        color: "#16a34a", min: -0.2, max: 0.9, grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
+  NDWI_s2:        { nombre: "NDWI (Sentinel-2)",        grupo: "grupo-agua",       color: "#38bdf8", min: -0.5, max: 0.5, grad: "linear-gradient(90deg,#8c510a,#f5f5f5,#01665e)", unidad: "" },
+  MNDWI_s2:       { nombre: "MNDWI (Sentinel-2)",       grupo: "grupo-agua",       color: "#0ea5e9", min: -0.5, max: 0.5, grad: "linear-gradient(90deg,#8c510a,#f5f5f5,#0571b0)", unidad: "" },
+  agua_s1:        { nombre: "Agua actual (radar S1)",   grupo: "grupo-inundacion", color: "#0ea5e9", min: 0,    max: 1,   grad: "linear-gradient(90deg,#0f1419,#0ea5e9)", unidad: "" },
+  agua_nueva:     { nombre: "Agua nueva (inundacion?)", grupo: "grupo-inundacion", color: "#f43f5e", min: 0,    max: 1,   grad: "linear-gradient(90deg,#0f1419,#f43f5e)", unidad: "" },
+  zonas_bajas:    { nombre: "Zonas bajas anegables",    grupo: "grupo-inundacion", color: "#a78bfa", min: 0,    max: 1,   grad: "linear-gradient(90deg,#0f1419,#a78bfa)", unidad: "" },
+  lluvia_chirps:  { nombre: "Lluvia CHIRPS (60 dias)",  grupo: "grupo-lluvia",     color: "#3b82f6", min: 0,    max: 300, grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
+  lluvia_era5:    { nombre: "Lluvia ERA5 (60 dias)",    grupo: "grupo-lluvia",     color: "#6366f1", min: 0,    max: 300, grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
+  lluvia_imerg72: { nombre: "Lluvia IMERG (72 horas)",  grupo: "grupo-lluvia",     color: "#22d3ee", min: 0,    max: 120, grad: "linear-gradient(90deg,#ffffff,#74c476,#2171b5,#6a51a3,#cb181d)", unidad: " mm" },
+  tmin_heladas:   { nombre: "Temperatura minima (2 m)", grupo: "grupo-heladas",    color: "#93c5fd", min: -8,   max: 10,  grad: "linear-gradient(90deg,#7f00ff,#0000ff,#00bfff,#ffffff,#ffff99,#ff8c00)", unidad: " C" },
+  hr_madrugada:   { nombre: "Humedad relativa minima",  grupo: "grupo-heladas",    color: "#4575b4", min: 20,   max: 100, grad: "linear-gradient(90deg,#d73027,#fee090,#e0f3f8,#4575b4)", unidad: " %" },
+  granizo_ayer:   { nombre: "Mancha de granizo (ayer)", grupo: "grupo-granizo",    color: "#f43f5e", min: -88,  max: -58, grad: "linear-gradient(90deg,#ff00ff,#ff0000,#ffa500,#ffff00)", unidad: " C" },
 };
+const CULTIVOS = [
+  { n: "Helada meteorologica (aire a 0 C)", u: 0 },
+  { n: "Trigo en espigazon / floracion", u: 2 },
+  { n: "Trigo en macollaje", u: -4 },
+  { n: "Maiz de emergencia a V6", u: 0 },
+  { n: "Soja vegetativa", u: -1 },
+  { n: "Soja en floracion / llenado", u: 2 },
+  { n: "Girasol en emergencia", u: -2 },
+  { n: "Vid brotada", u: 0 },
+  { n: "Citricos en floracion", u: -1 },
+  { n: "Papa", u: -1 },
+  { n: "Umbral personalizado...", u: null },
+];
 const mapa = L.map("mapa", { zoomControl: true }).setView([-38.5, -64.5], 4);
 L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
   attribution: "&copy; OpenStreetMap &copy; CARTO", maxZoom: 18,
 }).addTo(mapa);
 let capaActiva = null, claveActiva = null, tilesConfig = null, capaDeptos = null;
-let capaLote = null, chartSerie = null;
+let capaLote = null, chartSerie = null, capaChoropleth = null, geojsonDeptos = null;
+
+// ---------- Pestanas ----------
+document.querySelectorAll(".pestana").forEach(function (p) {
+  p.addEventListener("click", function () {
+    document.querySelectorAll(".pestana").forEach(x => x.classList.remove("activa"));
+    document.querySelectorAll(".tab-content").forEach(x => x.classList.remove("visible"));
+    p.classList.add("activa");
+    document.getElementById(p.dataset.tab).classList.add("visible");
+  });
+});
+
 async function cargarConfig() {
   try {
     const r = await fetch("tiles.json", { cache: "no-store" });
@@ -142,6 +263,11 @@ async function cargarConfig() {
     mostrarAviso("No se encontro tiles.json - el mapa base funciona, pero faltan las capas satelitales.");
   }
   construirBotones();
+  construirHeladas();
+  construirGranizo();
+  construirInundacion();
+  cargarHistorial("historial_granizo.json", "historial-granizo", "granizo");
+  cargarHistorial("historial_heladas.json", "historial-heladas", "heladas");
 }
 function mostrarAviso(txt) {
   const a = document.getElementById("aviso");
@@ -163,6 +289,11 @@ function activarCapa(clave) {
   const cfg = CAPAS[clave];
   const url = tilesConfig.tiles[clave];
   if (!url) { mostrarAviso('La capa "' + cfg.nombre + '" no esta en tiles.json todavia.'); return; }
+  if (capaActiva && claveActiva === clave) {
+    mapa.removeLayer(capaActiva); capaActiva = null; claveActiva = null;
+    document.getElementById("btn-" + clave).classList.remove("activa");
+    return;
+  }
   if (capaActiva) mapa.removeLayer(capaActiva);
   document.querySelectorAll(".capa-btn").forEach(b => b.classList.remove("activa"));
   document.getElementById("btn-" + clave).classList.add("activa");
@@ -180,13 +311,18 @@ document.getElementById("opacidad").addEventListener("input", e => {
   document.getElementById("opacidad-valor").textContent = e.target.value + "%";
   if (capaActiva) capaActiva.setOpacity(e.target.value / 100);
 });
+async function traerDeptos() {
+  if (geojsonDeptos) return geojsonDeptos;
+  const r = await fetch("departamentos.geojson");
+  if (!r.ok) throw new Error();
+  geojsonDeptos = await r.json();
+  return geojsonDeptos;
+}
 document.getElementById("toggle-deptos").addEventListener("change", async e => {
   if (e.target.checked) {
     if (!capaDeptos) {
       try {
-        const r = await fetch("departamentos.geojson");
-        if (!r.ok) throw new Error();
-        const gj = await r.json();
+        const gj = await traerDeptos();
         capaDeptos = L.geoJSON(gj, {
           filter: f => f.geometry && String(f.geometry.type).includes("Polygon"),
           style: { color: "#94a3b8", weight: 0.7, fillOpacity: 0, opacity: 0.6 },
@@ -213,6 +349,155 @@ document.getElementById("toggle-deptos").addEventListener("change", async e => {
     capaDeptos.addTo(mapa);
   } else if (capaDeptos) { mapa.removeLayer(capaDeptos); }
 });
+
+// ---------- Heladas: aviso agronomico ----------
+const selCultivo = document.getElementById("cultivo");
+CULTIVOS.forEach(function (c, i) {
+  const o = document.createElement("option");
+  o.value = i; o.textContent = c.n + (c.u === null ? "" : " (" + c.u + " C)");
+  selCultivo.appendChild(o);
+});
+selCultivo.addEventListener("change", actualizarHeladas);
+document.getElementById("umbral-custom").addEventListener("input", actualizarHeladas);
+document.getElementById("margen-canopia").addEventListener("change", actualizarHeladas);
+function umbralActual() {
+  const c = CULTIVOS[Number(selCultivo.value)];
+  let u = c.u;
+  document.getElementById("fila-umbral").style.display = u === null ? "block" : "none";
+  if (u === null) u = Number(document.getElementById("umbral-custom").value) || 0;
+  if (document.getElementById("margen-canopia").checked) u += 2;
+  return u;
+}
+function construirHeladas() {
+  const h = tilesConfig.heladas;
+  if (!h) {
+    document.getElementById("badge-heladas").innerHTML = '<span class="badge">Sin datos de heladas todavia: corre el pipeline</span>';
+    return;
+  }
+  document.getElementById("nota-heladas").textContent =
+    "Madrugada del " + h.fecha + " (" + h.ventana_utc + "). Fuente: ERA5-Land, temperatura del aire a 2 m; llega con unos 5 dias de retraso.";
+  actualizarHeladas();
+}
+function actualizarHeladas() {
+  const h = tilesConfig && tilesConfig.heladas;
+  if (!h) return;
+  const u = umbralActual();
+  const alerta = h.departamentos.filter(d => d.tmin_c <= u);
+  const badge = document.getElementById("badge-heladas");
+  badge.innerHTML = alerta.length
+    ? '<span class="badge frio">' + alerta.length + " departamentos bajo el umbral de " + u.toFixed(1) + " C (madrugada del " + h.fecha + ")</span>"
+    : '<span class="badge">Sin riesgo bajo el umbral de ' + u.toFixed(1) + " C en la madrugada del " + h.fecha + "</span>";
+  const cont = document.getElementById("lista-heladas");
+  cont.innerHTML = "";
+  alerta.slice(0, 80).forEach(function (d) {
+    const fila = document.createElement("div");
+    fila.className = "item-alerta";
+    const extra = [];
+    if (d.hr_pct !== null && d.hr_pct !== undefined) extra.push("HR " + d.hr_pct + "%");
+    if (d.despejado) extra.push("cielo despejado: helada radiativa probable");
+    fila.innerHTML = '<span class="lugar">' + d.departamento + "<small>" + d.provincia +
+      (extra.length ? " - " + extra.join(" - ") : "") + '</small></span><span class="dato frio">' +
+      d.tmin_c.toFixed(1) + " C</span>";
+    cont.appendChild(fila);
+  });
+  if (capaChoropleth && document.getElementById("pintar-heladas").checked) pintarHeladas(true);
+}
+function colorTmin(t) {
+  if (t <= -4) return "#7f00ff";
+  if (t <= -2) return "#3b3bff";
+  if (t <= 0)  return "#00bfff";
+  if (t <= 3)  return "#bfe9ff";
+  return "#2a313a";
+}
+document.getElementById("pintar-heladas").addEventListener("change", e => pintarHeladas(e.target.checked));
+async function pintarHeladas(activar) {
+  if (capaChoropleth) { mapa.removeLayer(capaChoropleth); capaChoropleth = null; }
+  if (!activar) return;
+  const h = tilesConfig && tilesConfig.heladas;
+  if (!h) { mostrarAviso("Sin datos de heladas todavia."); document.getElementById("pintar-heladas").checked = false; return; }
+  let gj;
+  try { gj = await traerDeptos(); } catch { mostrarAviso("No se pudo cargar departamentos.geojson."); return; }
+  const porDepto = {};
+  h.departamentos.forEach(d => { porDepto[d.departamento + "|" + d.provincia] = d; });
+  capaChoropleth = L.geoJSON(gj, {
+    filter: f => f.geometry && String(f.geometry.type).includes("Polygon"),
+    style: function (f) {
+      const d = porDepto[(f.properties.ADM2_NAME || "") + "|" + (f.properties.ADM1_NAME || "")];
+      return { color: "#161b22", weight: 0.4, fillColor: d ? colorTmin(d.tmin_c) : "#2a313a", fillOpacity: d && d.tmin_c <= 3 ? 0.55 : 0.08 };
+    },
+    onEachFeature: function (f, layer) {
+      const d = porDepto[(f.properties.ADM2_NAME || "") + "|" + (f.properties.ADM1_NAME || "")];
+      layer.on("mouseover", function () {
+        const info = document.getElementById("info-depto");
+        info.innerHTML = "<b>" + (f.properties.ADM2_NAME || "") + "</b><br>" + (f.properties.ADM1_NAME || "") +
+          (d ? "<br>Minima: " + d.tmin_c.toFixed(1) + " C" + (d.hr_pct != null ? " - HR " + d.hr_pct + "%" : "") + (d.despejado ? "<br>Cielo despejado esa noche" : "") : "");
+        info.style.display = "block";
+      });
+      layer.on("mouseout", function () { document.getElementById("info-depto").style.display = "none"; });
+    },
+  }).addTo(mapa);
+}
+
+// ---------- Granizo: reporte de ayer ----------
+function construirGranizo() {
+  const g = tilesConfig.granizo;
+  const badge = document.getElementById("badge-granizo");
+  if (!g) { badge.innerHTML = '<span class="badge">Sin reporte de granizo todavia</span>'; return; }
+  badge.innerHTML = g.departamentos.length
+    ? '<span class="badge alerta">' + g.departamentos.length + " departamentos con conveccion severa el " + g.fecha + "</span>"
+    : '<span class="badge">Sin conveccion severa detectada el ' + g.fecha + "</span>";
+  const cont = document.getElementById("lista-granizo");
+  cont.innerHTML = "";
+  g.departamentos.slice(0, 80).forEach(function (d) {
+    const fila = document.createElement("div");
+    fila.className = "item-alerta";
+    fila.innerHTML = '<span class="lugar">' + d.departamento + "<small>" + d.provincia +
+      '</small></span><span class="dato rojo">tope ' + d.tmin_c.toFixed(0) + " C</span>";
+    cont.appendChild(fila);
+  });
+}
+
+// ---------- Inundaciones ----------
+function construirInundacion() {
+  const inu = tilesConfig.inundacion;
+  const badge = document.getElementById("badge-inundacion");
+  if (!inu) { badge.innerHTML = '<span class="badge">Sin reporte de inundacion todavia</span>'; return; }
+  badge.innerHTML = inu.departamentos.length
+    ? '<span class="badge alerta">' + inu.departamentos.length + " departamentos con senal de agua o lluvia fuerte</span>"
+    : '<span class="badge">Sin senales de inundacion (' + inu.fecha + ")</span>";
+  const cont = document.getElementById("lista-inundacion");
+  cont.innerHTML = "";
+  inu.departamentos.forEach(function (d) {
+    const fila = document.createElement("div");
+    fila.className = "item-alerta";
+    fila.innerHTML = '<span class="lugar">' + d.departamento + "<small>" + d.provincia +
+      '</small></span><span class="dato">' + d.agua_nueva_ha.toLocaleString("es-AR") + " ha - " + d.lluvia_72h_mm + " mm</span>";
+    cont.appendChild(fila);
+  });
+}
+
+// ---------- Historiales ----------
+async function cargarHistorial(archivo, contId, tipo) {
+  const cont = document.getElementById(contId);
+  try {
+    const r = await fetch(archivo, { cache: "no-store" });
+    if (!r.ok) throw new Error();
+    const hist = await r.json();
+    cont.innerHTML = "";
+    hist.slice().reverse().slice(0, 30).forEach(function (dia) {
+      const n = (dia.departamentos || []).length;
+      const fila = document.createElement("div");
+      fila.className = "item-alerta";
+      const desc = tipo === "granizo"
+        ? (n ? n + " deptos con posible granizo" : "sin eventos")
+        : (n ? n + " deptos con minima <= 3 C" : "sin frio");
+      fila.innerHTML = '<span class="lugar">' + dia.fecha + '</span><span class="dato' +
+        (n ? (tipo === "granizo" ? " rojo" : " frio") : "") + '">' + desc + "</span>";
+      cont.appendChild(fila);
+    });
+  } catch { cont.innerHTML = ""; }
+}
+
 // ---------- Analisis de lote: dibujo + serie temporal ----------
 const hoyd = new Date();
 const hace6 = new Date(); hace6.setMonth(hace6.getMonth() - 6);

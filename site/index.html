@@ -94,6 +94,10 @@
     </div>
     <button id="btn-dibujar" class="boton-accion">Dibujar lote y graficar</button>
     <div id="estado-serie"></div>
+    <h2>Tiempo real GOES</h2>
+    <button id="btn-goes" class="boton-accion">Cargar ultima imagen GOES</button>
+    <div id="grupo-goes" style="margin-top:6px;"></div>
+    <div id="estado-goes" style="font-size:12px;color:#9aa4af;margin-top:6px;min-height:16px;"></div>
   </aside>
   <div style="flex:1; position:relative; min-height:0;">
     <div id="mapa"></div>
@@ -260,6 +264,45 @@ function dibujarGrafico(ind, puntos) {
 document.getElementById("cerrar-grafico").onclick = function () {
   document.getElementById("panel-grafico").style.display = "none";
 };
+// ---------- GOES tiempo real ----------
+let capasGoes = {};
+document.getElementById("btn-goes").addEventListener("click", cargarGoes);
+async function cargarGoes() {
+  document.getElementById("estado-goes").textContent = "Buscando la ultima imagen GOES-19...";
+  try {
+    const r = await fetch("/.netlify/functions/goes");
+    const d = await r.json();
+    if (!r.ok || d.error) throw new Error(d.error || ("error " + r.status));
+    document.getElementById("estado-goes").textContent = "Imagen del " + d.fecha_imagen + " - tocar de nuevo para refrescar";
+    const defs = [["nubes", "Nubes (tope frio)", "#e2e8f0", 0.7], ["severo", "Conveccion severa (granizo?)", "#f43f5e", 0.85]];
+    const cont = document.getElementById("grupo-goes");
+    cont.innerHTML = "";
+    defs.forEach(function (def) {
+      const clave = def[0];
+      const habia = capasGoes[clave];
+      if (habia && habia.capa) mapa.removeLayer(habia.capa);
+      const capa = L.tileLayer(d.tiles[clave], { opacity: def[3], maxZoom: 12 });
+      capasGoes[clave] = { capa: capa, visible: false };
+      const btn = document.createElement("button");
+      btn.className = "capa-btn";
+      const pt = document.createElement("span");
+      pt.className = "punto"; pt.style.background = def[2];
+      btn.appendChild(pt);
+      btn.appendChild(document.createTextNode(def[1]));
+      btn.onclick = function () {
+        const o = capasGoes[clave];
+        o.visible = !o.visible;
+        if (o.visible) { o.capa.addTo(mapa); } else { mapa.removeLayer(o.capa); }
+        btn.classList.toggle("activa", o.visible);
+      };
+      cont.appendChild(btn);
+      const auto = habia ? habia.visible : (clave === "nubes");
+      if (auto) btn.click();
+    });
+  } catch (err) {
+    document.getElementById("estado-goes").textContent = "Error: " + err.message;
+  }
+}
 cargarConfig();
 </script>
 </body>

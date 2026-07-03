@@ -2,13 +2,22 @@
   "fecha": "2026-07-03",
   "ventana_dias": 15,
   "tiles": {
-    "NDVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/0c5d6648e6ca7319c658cfeb4e87f8e7-75e32cdbde25f7ed0a07fd23967501b0/tiles/{z}/{x}/{y}",
-    "EVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/c7b1cdedb037dc93f3dfff36f9b7c9e8-ae57be54eafcd369e72d7e4804396fcb/tiles/{z}/{x}/{y}",
-    "NDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/257dc3b0d09638ebddabb16134eeb004-ca08cabcbecaddfa5861c4e1c0cd7ceb/tiles/{z}/{x}/{y}",
-    "MNDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/72d1a0b92812eaec2919b662450c780d-152963f1d1b31105b75d883afad49557/tiles/{z}/{x}/{y}",
-    "NDVI_modis": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/7bc26a373879120c811e5a94cd4f5905-1b5b174521efdb6ebe6d462d9a40168c/tiles/{z}/{x}/{y}",
-    "lluvia_chirps": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/bdc75ba4ad5da59300f7e1c45d33a386-45957c5a9ac62816384d493b9d3cc548/tiles/{z}/{x}/{y}",
-    "lluvia_era5": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/29a174b3b0162ad9f60b30647ee923e7-c31d6e1a82853f7752de2c40f4ae7814/tiles/{z}/{x}/{y}"
+    "NDVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/e1fbf7831738d6aeb1d9e980c2d25f87-f0211b6214250057fb7f965ecff83f83/tiles/{z}/{x}/{y}",
+    "EVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/fc1f16718d2dcca383bc3145b246e5dd-9455c4ab8ba017f74a8aa96f9db580aa/tiles/{z}/{x}/{y}",
+    "NDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/2c9b3b5177908393138b6d5c292ea74d-f5dc0eaf3c29d96e2342685d19f498dc/tiles/{z}/{x}/{y}",
+    "MNDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/71afa7a2918aa317d6a7e4b5325e3ffd-49c7eda477f2afcd61fd2a931ec93472/tiles/{z}/{x}/{y}",
+    "NDVI_modis": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/7bc26a373879120c811e5a94cd4f5905-cad7eb41662641db56b6d7d2f45eb2cc/tiles/{z}/{x}/{y}",
+    "lluvia_chirps": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/bdc75ba4ad5da59300f7e1c45d33a386-780d24908c51589fdfbcd1d5c40f4cd5/tiles/{z}/{x}/{y}",
+    "lluvia_era5": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/29a174b3b0162ad9f60b30647ee923e7-7b1b4ec7255dd7fd136f97e6e2acc855/tiles/{z}/{x}/{y}"
+  },
+  "rangos": {
+    "NDVI_s2": "2026-06-18 a 2026-07-03",
+    "EVI_s2": "2026-06-18 a 2026-07-03",
+    "NDWI_s2": "2026-06-18 a 2026-07-03",
+    "MNDWI_s2": "2026-06-18 a 2026-07-03",
+    "NDVI_modis": "2026-05-24 a 2026-07-03",
+    "lluvia_chirps": "2026-05-04 a 2026-07-03",
+    "lluvia_era5": "2026-05-04 a 2026-07-03"
   },
   "ndvi_medio_nacional": 0.372
 }

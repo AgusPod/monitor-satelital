@@ -138,6 +138,16 @@ def main():
             print("capa omitida:", nombre, "-", e)
 
     salida = {"fecha": FIN, "ventana_dias": VENTANA, "tiles": tiles}
+    optico = INICIO + " a " + FIN
+    salida["rangos"] = {
+        "NDVI_s2": optico,
+        "EVI_s2": optico,
+        "NDWI_s2": optico,
+        "MNDWI_s2": optico,
+        "NDVI_modis": (HOY - dt.timedelta(days=40)).isoformat() + " a " + FIN,
+        "lluvia_chirps": INICIO_LLUVIA + " a " + FIN,
+        "lluvia_era5": INICIO_LLUVIA + " a " + FIN,
+    }
 
     media = (
         mod.select("NDVI")

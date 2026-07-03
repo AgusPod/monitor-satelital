@@ -1,0 +1,7 @@
+{
+  "name": "monitor-satelital",
+  "private": true,
+  "dependencies": {
+    "@google/earthengine": "^1.4.0"
+  }
+}

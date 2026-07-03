@@ -157,6 +157,7 @@ document.getElementById("toggle-deptos").addEventListener("change", async e => {
         if (!r.ok) throw new Error();
         const gj = await r.json();
         capaDeptos = L.geoJSON(gj, {
+          filter: f => f.geometry && String(f.geometry.type).includes("Polygon"),
           style: { color: "#94a3b8", weight: 0.7, fillOpacity: 0, opacity: 0.6 },
           onEachFeature: (f, layer) => {
             layer.on("mouseover", () => {

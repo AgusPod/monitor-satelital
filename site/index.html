@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monitor Satelital Argentina</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; background: #0f1419; color: #e6e8ea; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
@@ -13,8 +14,8 @@
   header h1 span { color: #4ade80; }
   #fecha-info { font-size: 12.5px; color: #9aa4af; }
   #contenedor { flex: 1; display: flex; min-height: 0; }
-  #panel { width: 260px; background: #161b22; border-right: 1px solid #2a313a; padding: 16px; overflow-y: auto; flex-shrink: 0; }
-  #panel h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #9aa4af; margin: 14px 0 8px; }
+  #panel { width: 270px; background: #161b22; border-right: 1px solid #2a313a; padding: 16px; overflow-y: auto; flex-shrink: 0; }
+  #panel h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #9aa4af; margin: 16px 0 8px; }
   #panel h2:first-child { margin-top: 0; }
   .capa-btn { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: transparent; border: 1px solid transparent; color: #cfd6dd; padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 13.5px; margin-bottom: 3px; }
   .capa-btn:hover { background: #1e2630; }
@@ -22,21 +23,31 @@
   .capa-btn .punto { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   .control-fila { margin: 10px 0; }
   .control-fila label { font-size: 12.5px; color: #9aa4af; display: flex; justify-content: space-between; margin-bottom: 5px; }
+  .control-fila input[type="date"], .control-fila select { width: 100%; background: #0f1419; color: #e6e8ea; border: 1px solid #2a313a; border-radius: 8px; padding: 7px 9px; font-size: 13px; }
   input[type="range"] { width: 100%; accent-color: #4ade80; }
   .check-fila { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #cfd6dd; margin: 8px 0; cursor: pointer; }
   .check-fila input { accent-color: #4ade80; }
+  .boton-accion { width: 100%; background: #1a2f24; border: 1px solid #2f6b47; color: #7ee2a8; padding: 9px 10px; border-radius: 8px; cursor: pointer; font-size: 13.5px; margin-top: 4px; }
+  .boton-accion:hover { background: #22402f; }
+  #estado-serie { font-size: 12px; color: #9aa4af; margin-top: 8px; min-height: 16px; }
   #leyenda { margin-top: 14px; }
   #leyenda-barra { height: 12px; border-radius: 6px; margin: 6px 0 4px; }
   #leyenda-rangos { display: flex; justify-content: space-between; font-size: 11.5px; color: #9aa4af; }
   #leyenda-titulo { font-size: 12.5px; color: #cfd6dd; }
+  #leyenda-rango { font-size: 11.5px; color: #6b7480; margin-top: 4px; }
   #mapa { position: absolute; inset: 0; background: #0a0e12; }
   #aviso { position: absolute; top: 70px; left: 50%; transform: translateX(-50%); background: #2a1f0e; border: 1px solid #6b5320; color: #fbbf24; padding: 10px 18px; border-radius: 10px; font-size: 13px; z-index: 2000; max-width: 90%; text-align: center; display: none; }
   #info-depto { position: absolute; bottom: 16px; right: 16px; background: rgba(22,27,34,.94); border: 1px solid #2a313a; border-radius: 10px; padding: 10px 14px; font-size: 13px; z-index: 1000; display: none; max-width: 240px; }
   #info-depto b { color: #7ee2a8; }
+  #panel-grafico { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 18px; width: min(760px, 92%); background: rgba(22,27,34,.97); border: 1px solid #2a313a; border-radius: 12px; padding: 12px 14px 16px; z-index: 1500; }
+  #grafico-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  #grafico-titulo { font-size: 13px; color: #cfd6dd; }
+  #cerrar-grafico { background: transparent; border: none; color: #9aa4af; font-size: 18px; cursor: pointer; }
+  #grafico-wrap { position: relative; height: 220px; }
   footer { background: #161b22; border-top: 1px solid #2a313a; padding: 6px 20px; font-size: 11.5px; color: #6b7480; }
   @media (max-width: 720px) {
     #contenedor { flex-direction: column; }
-    #panel { width: 100%; max-height: 38vh; border-right: none; border-bottom: 1px solid #2a313a; }
+    #panel { width: 100%; max-height: 42vh; border-right: none; border-bottom: 1px solid #2a313a; }
   }
   .leaflet-container { background: #0a0e12; }
 </style>
@@ -66,16 +77,38 @@
       <div id="leyenda-titulo">-</div>
       <div id="leyenda-barra"></div>
       <div id="leyenda-rangos"><span id="ley-min"></span><span id="ley-max"></span></div>
+      <div id="leyenda-rango"></div>
     </div>
+    <h2>Analisis de lote</h2>
+    <div class="control-fila"><label>Desde</label><input type="date" id="fecha-inicio"></div>
+    <div class="control-fila"><label>Hasta</label><input type="date" id="fecha-fin"></div>
+    <div class="control-fila"><label>Variable</label>
+      <select id="indice-serie">
+        <option value="NDVI">NDVI (optico, sin nubes)</option>
+        <option value="EVI">EVI (optico, sin nubes)</option>
+        <option value="NDWI">NDWI (optico, sin nubes)</option>
+        <option value="NDMI">NDMI (optico, sin nubes)</option>
+        <option value="RVI">RVI (radar Sentinel-1)</option>
+        <option value="TEMP">Temperatura media (ERA5)</option>
+      </select>
+    </div>
+    <button id="btn-dibujar" class="boton-accion">Dibujar lote y graficar</button>
+    <div id="estado-serie"></div>
   </aside>
   <div style="flex:1; position:relative; min-height:0;">
     <div id="mapa"></div>
     <div id="aviso"></div>
     <div id="info-depto"></div>
+    <div id="panel-grafico">
+      <div id="grafico-header"><span id="grafico-titulo"></span><button id="cerrar-grafico">&times;</button></div>
+      <div id="grafico-wrap"><canvas id="grafico"></canvas></div>
+    </div>
   </div>
 </div>
-<footer>Datos: Sentinel-2, Landsat 8/9, MODIS, CHIRPS, ERA5-Land via Google Earth Engine - Compuesto de los ultimos 15 dias</footer>
+<footer>Datos: Sentinel-1, Sentinel-2, MODIS, CHIRPS, ERA5-Land via Google Earth Engine - Cada capa declara su rango de fechas</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 const CAPAS = {
   NDVI_s2:       { nombre: "NDVI (Sentinel-2)",  grupo: "grupo-indices", color: "#22c55e", min: -0.2, max: 0.9,  grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
@@ -83,43 +116,38 @@ const CAPAS = {
   NDVI_modis:    { nombre: "NDVI (MODIS)",       grupo: "grupo-indices", color: "#16a34a", min: -0.2, max: 0.9,  grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
   NDWI_s2:       { nombre: "NDWI (Sentinel-2)",  grupo: "grupo-agua",    color: "#38bdf8", min: -0.5, max: 0.5,  grad: "linear-gradient(90deg,#8c510a,#f5f5f5,#01665e)", unidad: "" },
   MNDWI_s2:      { nombre: "MNDWI (Sentinel-2)", grupo: "grupo-agua",    color: "#0ea5e9", min: -0.5, max: 0.5,  grad: "linear-gradient(90deg,#8c510a,#f5f5f5,#0571b0)", unidad: "" },
-  lluvia_chirps: { nombre: "Lluvia CHIRPS",      grupo: "grupo-lluvia",  color: "#3b82f6", min: 0,    max: 150,  grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
-  lluvia_era5:   { nombre: "Lluvia ERA5-Land",   grupo: "grupo-lluvia",  color: "#6366f1", min: 0,    max: 150,  grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
+  lluvia_chirps: { nombre: "Lluvia CHIRPS",      grupo: "grupo-lluvia",  color: "#3b82f6", min: 0,    max: 300,  grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
+  lluvia_era5:   { nombre: "Lluvia ERA5-Land",   grupo: "grupo-lluvia",  color: "#6366f1", min: 0,    max: 300,  grad: "linear-gradient(90deg,#ffffff,#4292c6,#08306b)", unidad: " mm" },
 };
 const mapa = L.map("mapa", { zoomControl: true }).setView([-38.5, -64.5], 4);
 L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-  attribution: "&copy; OpenStreetMap &copy; CARTO",
-  maxZoom: 18,
+  attribution: "&copy; OpenStreetMap &copy; CARTO", maxZoom: 18,
 }).addTo(mapa);
-let capaActiva = null;
-let claveActiva = null;
-let tilesConfig = null;
-let capaDeptos = null;
+let capaActiva = null, claveActiva = null, tilesConfig = null, capaDeptos = null;
+let capaLote = null, chartSerie = null;
 async function cargarConfig() {
   try {
     const r = await fetch("tiles.json", { cache: "no-store" });
     if (!r.ok) throw new Error("no encontrado");
     tilesConfig = await r.json();
     document.getElementById("fecha-info").textContent =
-      "Actualizado: " + tilesConfig.fecha + " - ventana " + tilesConfig.ventana_dias + " dias";
+      "Actualizado: " + tilesConfig.fecha + " - cada capa declara sus fechas";
   } catch (e) {
     tilesConfig = { tiles: {} };
     document.getElementById("fecha-info").textContent = "Sin datos cargados";
-    mostrarAviso("No se encontro tiles.json - el mapa base funciona, pero faltan las capas satelitales. Corre el pipeline y volve a cargar.");
+    mostrarAviso("No se encontro tiles.json - el mapa base funciona, pero faltan las capas satelitales.");
   }
   construirBotones();
 }
 function mostrarAviso(txt) {
   const a = document.getElementById("aviso");
-  a.textContent = txt;
-  a.style.display = "block";
+  a.textContent = txt; a.style.display = "block";
   setTimeout(() => (a.style.display = "none"), 9000);
 }
 function construirBotones() {
   for (const [clave, cfg] of Object.entries(CAPAS)) {
     const btn = document.createElement("button");
-    btn.className = "capa-btn";
-    btn.id = "btn-" + clave;
+    btn.className = "capa-btn"; btn.id = "btn-" + clave;
     btn.innerHTML = '<span class="punto" style="background:' + cfg.color + '"></span>' + cfg.nombre;
     btn.onclick = () => activarCapa(clave);
     document.getElementById(cfg.grupo).appendChild(btn);
@@ -130,10 +158,7 @@ function construirBotones() {
 function activarCapa(clave) {
   const cfg = CAPAS[clave];
   const url = tilesConfig.tiles[clave];
-  if (!url) {
-    mostrarAviso('La capa "' + cfg.nombre + '" no esta en tiles.json todavia.');
-    return;
-  }
+  if (!url) { mostrarAviso('La capa "' + cfg.nombre + '" no esta en tiles.json todavia.'); return; }
   if (capaActiva) mapa.removeLayer(capaActiva);
   document.querySelectorAll(".capa-btn").forEach(b => b.classList.remove("activa"));
   document.getElementById("btn-" + clave).classList.add("activa");
@@ -144,6 +169,8 @@ function activarCapa(clave) {
   document.getElementById("leyenda-barra").style.background = cfg.grad;
   document.getElementById("ley-min").textContent = cfg.min + cfg.unidad;
   document.getElementById("ley-max").textContent = cfg.max + cfg.unidad;
+  const rango = tilesConfig.rangos && tilesConfig.rangos[clave];
+  document.getElementById("leyenda-rango").textContent = rango ? ("Imagenes del " + rango) : "";
 }
 document.getElementById("opacidad").addEventListener("input", e => {
   document.getElementById("opacidad-valor").textContent = e.target.value + "%";
@@ -161,9 +188,10 @@ document.getElementById("toggle-deptos").addEventListener("change", async e => {
           style: { color: "#94a3b8", weight: 0.7, fillOpacity: 0, opacity: 0.6 },
           onEachFeature: (f, layer) => {
             layer.on("mouseover", () => {
-              const nombre = f.properties.nam || f.properties.NAME || f.properties.ADM2_NAME || "Departamento";
+              const nombre = f.properties.ADM2_NAME || f.properties.nam || "Departamento";
+              const prov = f.properties.ADM1_NAME || "";
               const info = document.getElementById("info-depto");
-              info.innerHTML = "<b>" + nombre + "</b>";
+              info.innerHTML = "<b>" + nombre + "</b>" + (prov ? "<br>" + prov : "");
               info.style.display = "block";
               layer.setStyle({ color: "#4ade80", weight: 1.5 });
             });
@@ -174,16 +202,64 @@ document.getElementById("toggle-deptos").addEventListener("change", async e => {
           },
         });
       } catch {
-        mostrarAviso("No se encontro departamentos.geojson. Descargalo del IGN y subilo junto al index.html.");
-        e.target.checked = false;
-        return;
+        mostrarAviso("No se pudo cargar departamentos.geojson.");
+        e.target.checked = false; return;
       }
     }
     capaDeptos.addTo(mapa);
-  } else if (capaDeptos) {
-    mapa.removeLayer(capaDeptos);
-  }
+  } else if (capaDeptos) { mapa.removeLayer(capaDeptos); }
 });
+// ---------- Analisis de lote: dibujo + serie temporal ----------
+const hoyd = new Date();
+const hace6 = new Date(); hace6.setMonth(hace6.getMonth() - 6);
+document.getElementById("fecha-fin").value = hoyd.toISOString().slice(0, 10);
+document.getElementById("fecha-inicio").value = hace6.toISOString().slice(0, 10);
+function estado(t) { document.getElementById("estado-serie").textContent = t; }
+document.getElementById("btn-dibujar").addEventListener("click", function () {
+  if (capaLote) { mapa.removeLayer(capaLote); capaLote = null; }
+  estado("Dibuja el lote: clic por vertice, clic en el primer punto para cerrar.");
+  new L.Draw.Polygon(mapa, { shapeOptions: { color: "#4ade80", weight: 2 } }).enable();
+});
+mapa.on(L.Draw.Event.CREATED, function (e) {
+  capaLote = e.layer.addTo(mapa);
+  pedirSerie(e.layer.toGeoJSON().geometry);
+});
+async function pedirSerie(geom) {
+  const ind = document.getElementById("indice-serie").value;
+  estado("Consultando Earth Engine... puede tardar 10-30 segundos.");
+  try {
+    const r = await fetch("/.netlify/functions/serie", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ geometry: geom, indice: ind,
+        inicio: document.getElementById("fecha-inicio").value,
+        fin: document.getElementById("fecha-fin").value }),
+    });
+    const d = await r.json();
+    if (!r.ok || d.error) throw new Error(d.error || ("error " + r.status));
+    if (!d.puntos || !d.puntos.length) { estado("Sin imagenes validas (sin nubes) en ese rango."); return; }
+    dibujarGrafico(ind, d.puntos);
+    estado("Listo: " + d.puntos.length + " fechas con datos.");
+  } catch (err) { estado("Error: " + err.message); }
+}
+function dibujarGrafico(ind, puntos) {
+  document.getElementById("panel-grafico").style.display = "block";
+  const nota = ind === "RVI" ? " (radar, sin problema de nubes)" : ind === "TEMP" ? " (grados C)" : " (solo imagenes sin nubes)";
+  document.getElementById("grafico-titulo").textContent = ind + " del lote" + nota;
+  if (chartSerie) chartSerie.destroy();
+  chartSerie = new Chart(document.getElementById("grafico"), {
+    type: "line",
+    data: { labels: puntos.map(p => p.fecha),
+      datasets: [{ label: ind, data: puntos.map(p => p.valor), borderColor: "#4ade80",
+        backgroundColor: "rgba(74,222,128,.15)", fill: true, tension: 0.25, pointRadius: 3 }] },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { labels: { color: "#cfd6dd" } } },
+      scales: { x: { ticks: { color: "#9aa4af", maxTicksLimit: 12 }, grid: { color: "#20262e" } },
+                y: { ticks: { color: "#9aa4af" }, grid: { color: "#20262e" } } } },
+  });
+}
+document.getElementById("cerrar-grafico").onclick = function () {
+  document.getElementById("panel-grafico").style.display = "none";
+};
 cargarConfig();
 </script>
 </body>

@@ -99,14 +99,25 @@ def url_tiles(imagen, banda, vis):
 def main():
     inicializar()
 
-    arg = (
+    departamentos = (
         ee.FeatureCollection("FAO/GAUL/2015/level2")
         .filter(ee.Filter.eq("ADM0_NAME", "Argentina"))
-        .geometry()
     )
+    arg = departamentos.geometry()
 
-    s2 = sentinel2(arg)
-    mod = modis(arg)
+    if not pathlib.Path("site/departamentos.geojson").exists():
+        deptos = departamentos.map(
+            lambda f: ee.Feature(f.simplify(1000)).select(["ADM1_NAME", "ADM2_NAME"])
+        )
+        url_geo = deptos.getDownloadURL(filetype="geojson")
+        gj = requests.get(url_geo, timeout=600)
+        gj.raise_for_status()
+        pathlib.Path("site").mkdir(exist_ok=True)
+        pathlib.Path("site/departamentos.geojson").write_bytes(gj.content)
+        print("departamentos.geojson generado:", len(gj.content) // 1024, "KB")
+
+    s2 = sentinel2(arg).clip(arg)
+    mod = modis(arg).clip(arg)
     chirps, era5 = lluvias(arg)
 
     tiles = {}

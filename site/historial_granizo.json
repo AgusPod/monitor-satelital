@@ -69,5 +69,10 @@
         "tmin_c": -62.1
       }
     ]
+  },
+  {
+    "fecha": "2026-07-03",
+    "umbral_c": -58,
+    "departamentos": []
   }
 ]

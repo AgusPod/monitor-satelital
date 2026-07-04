@@ -295,6 +295,44 @@ def reporte_inundaciones(region, departamentos):
     return reporte, tiles
 
 
+def capas_topografia(region):
+    """Topografia desde Copernicus DEM GLO-30 (30 m), la mejor base global.
+    'Lomas y bajos' es la elevacion relativa al promedio del entorno de 1.5 km:
+    resalta el microrelieve que define donde se junta el agua, aunque el
+    desnivel total sea de pocos metros. Son capas estaticas (no cambian por
+    dia), pero se regeneran porque las URLs de tiles de GEE caducan."""
+    dem = (
+        ee.ImageCollection("COPERNICUS/DEM/GLO30")
+        .select("DEM").mosaic()
+        .setDefaultProjection("EPSG:4326", None, 30)
+        .clip(region)
+    )
+    pendiente = ee.Terrain.slope(dem).rename("pend")
+    sombra = ee.Terrain.hillshade(dem).rename("sombra")
+    relativo = dem.subtract(dem.focalMean(1500, "circle", "meters")).rename("rel")
+
+    return {
+        "topo_elevacion": url_tiles(
+            dem.rename("elev"), "elev",
+            {"min": -50, "max": 3000,
+             "palette": ["0a7e2e", "7fbf4d", "f7e08b", "c9a15f", "8a6a42", "f2f2f2"]},
+        ),
+        "topo_pendiente": url_tiles(
+            pendiente, "pend",
+            {"min": 0, "max": 15,
+             "palette": ["ffffff", "fdd49e", "fc8d59", "d7301f", "7f0000"]},
+        ),
+        "topo_sombreado": url_tiles(
+            sombra, "sombra", {"min": 0, "max": 255, "palette": ["000000", "ffffff"]},
+        ),
+        "topo_relieve": url_tiles(
+            relativo, "rel",
+            {"min": -3, "max": 3,
+             "palette": ["313695", "74add1", "f7f7f7", "f46d43", "a50026"]},
+        ),
+    }
+
+
 def actualizar_historial(nombre, registro, clave_fecha="fecha", maximo=60):
     path = pathlib.Path("site/" + nombre)
     historial = json.loads(path.read_text()) if path.exists() else []
@@ -356,6 +394,14 @@ def main():
         "lluvia_chirps": INICIO_LLUVIA + " a " + FIN,
         "lluvia_era5": INICIO_LLUVIA + " a " + FIN,
     }
+
+    try:
+        tiles.update(capas_topografia(arg))
+        for k in ["topo_elevacion", "topo_pendiente", "topo_sombreado", "topo_relieve"]:
+            salida["rangos"][k] = "capa estatica (Copernicus DEM 30 m)"
+        print("topografia: 4 capas listas")
+    except Exception as e:
+        print("topografia omitida:", e)
 
     try:
         granizo, url_granizo = reporte_granizo(arg, departamentos)

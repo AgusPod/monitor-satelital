@@ -85,6 +85,7 @@
       <button class="pestana" data-tab="tab-lluvia">Lluvias</button>
       <button class="pestana" data-tab="tab-heladas">Heladas</button>
       <button class="pestana" data-tab="tab-granizo">Granizo</button>
+      <button class="pestana" data-tab="tab-topo">Topografia</button>
       <button class="pestana" data-tab="tab-lote">Mi lote</button>
     </nav>
     <div id="panel-scroll">
@@ -150,6 +151,12 @@
         <div class="estado" id="estado-goes"></div>
         <h2>Historial</h2>
         <div class="lista-alerta" id="historial-granizo"></div>
+      </div>
+
+      <div class="tab-content" id="tab-topo">
+        <h2>Relieve (Copernicus DEM 30 m)</h2>
+        <div id="grupo-topo"></div>
+        <div class="nota">"Lomas y bajos" muestra la elevacion relativa al entorno de 1,5 km: azul = bajos donde se junta el agua, rojo = lomas. Con 30 m se ve la estructura del relieve del lote; para desniveles de centimetros hace falta altimetria RTK o vuelo de drone. Capas estaticas: no cambian dia a dia.</div>
       </div>
 
       <div class="tab-content" id="tab-lote">
@@ -222,6 +229,10 @@ const CAPAS = {
   tmin_heladas:   { nombre: "Temperatura minima (2 m)", grupo: "grupo-heladas",    color: "#93c5fd", min: -8,   max: 10,  grad: "linear-gradient(90deg,#7f00ff,#0000ff,#00bfff,#ffffff,#ffff99,#ff8c00)", unidad: " C" },
   hr_madrugada:   { nombre: "Humedad relativa minima",  grupo: "grupo-heladas",    color: "#4575b4", min: 20,   max: 100, grad: "linear-gradient(90deg,#d73027,#fee090,#e0f3f8,#4575b4)", unidad: " %" },
   granizo_ayer:   { nombre: "Mancha de granizo (ayer)", grupo: "grupo-granizo",    color: "#f43f5e", min: -88,  max: -58, grad: "linear-gradient(90deg,#ff00ff,#ff0000,#ffa500,#ffff00)", unidad: " C" },
+  topo_elevacion: { nombre: "Elevacion",                 grupo: "grupo-topo",       color: "#8a6a42", min: -50,  max: 3000, grad: "linear-gradient(90deg,#0a7e2e,#7fbf4d,#f7e08b,#c9a15f,#8a6a42,#f2f2f2)", unidad: " m" },
+  topo_pendiente: { nombre: "Pendiente",                 grupo: "grupo-topo",       color: "#d7301f", min: 0,    max: 15,  grad: "linear-gradient(90deg,#ffffff,#fdd49e,#fc8d59,#d7301f,#7f0000)", unidad: " grados" },
+  topo_sombreado: { nombre: "Relieve sombreado",         grupo: "grupo-topo",       color: "#9aa4af", min: 0,    max: 255, grad: "linear-gradient(90deg,#000000,#ffffff)", unidad: "" },
+  topo_relieve:   { nombre: "Lomas y bajos (relativo)",  grupo: "grupo-topo",       color: "#74add1", min: -3,   max: 3,   grad: "linear-gradient(90deg,#313695,#74add1,#f7f7f7,#f46d43,#a50026)", unidad: " m" },
 };
 const CULTIVOS = [
   { n: "Helada meteorologica (aire a 0 C)", u: 0 },

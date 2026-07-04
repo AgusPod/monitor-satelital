@@ -204,6 +204,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
+// Datos siempre frescos desde GitHub (no depende de redeploys del hosting)
+const DATA_BASE = "https://raw.githubusercontent.com/AgusPod/monitor-satelital/main/site/";
+const FN_BASE = "https://monitor-satelital-argentina.netlify.app";
 const CAPAS = {
   NDVI_s2:        { nombre: "NDVI (Sentinel-2)",        grupo: "grupo-veg",        color: "#22c55e", min: -0.2, max: 0.9, grad: "linear-gradient(90deg,#a50026,#ffffbf,#006837)", unidad: "" },
   EVI_s2:         { nombre: "EVI (Sentinel-2)",         grupo: "grupo-veg",        color: "#84cc16", min: 0,    max: 0.8, grad: "linear-gradient(90deg,#ffffcc,#41ab5d,#005a32)", unidad: "" },
@@ -252,7 +255,7 @@ document.querySelectorAll(".pestana").forEach(function (p) {
 
 async function cargarConfig() {
   try {
-    const r = await fetch("tiles.json", { cache: "no-store" });
+    const r = await fetch(DATA_BASE + "tiles.json", { cache: "no-store" });
     if (!r.ok) throw new Error("no encontrado");
     tilesConfig = await r.json();
     document.getElementById("fecha-info").textContent =
@@ -313,7 +316,7 @@ document.getElementById("opacidad").addEventListener("input", e => {
 });
 async function traerDeptos() {
   if (geojsonDeptos) return geojsonDeptos;
-  const r = await fetch("departamentos.geojson");
+  const r = await fetch(DATA_BASE + "departamentos.geojson");
   if (!r.ok) throw new Error();
   geojsonDeptos = await r.json();
   return geojsonDeptos;
@@ -480,7 +483,7 @@ function construirInundacion() {
 async function cargarHistorial(archivo, contId, tipo) {
   const cont = document.getElementById(contId);
   try {
-    const r = await fetch(archivo, { cache: "no-store" });
+    const r = await fetch(DATA_BASE + archivo, { cache: "no-store" });
     if (!r.ok) throw new Error();
     const hist = await r.json();
     cont.innerHTML = "";
@@ -517,7 +520,7 @@ async function pedirSerie(geom) {
   const ind = document.getElementById("indice-serie").value;
   estado("Consultando Earth Engine... puede tardar 10-30 segundos.");
   try {
-    const r = await fetch("/.netlify/functions/serie", {
+    const r = await fetch(FN_BASE + "/.netlify/functions/serie", {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ geometry: geom, indice: ind,
         inicio: document.getElementById("fecha-inicio").value,
@@ -555,7 +558,7 @@ document.getElementById("btn-goes").addEventListener("click", cargarGoes);
 async function cargarGoes() {
   document.getElementById("estado-goes").textContent = "Buscando la ultima imagen GOES-19...";
   try {
-    const r = await fetch("/.netlify/functions/goes");
+    const r = await fetch(FN_BASE + "/.netlify/functions/goes");
     const d = await r.json();
     if (!r.ok || d.error) throw new Error(d.error || ("error " + r.status));
     document.getElementById("estado-goes").textContent = "Imagen del " + d.fecha_imagen + " - tocar de nuevo para refrescar";

@@ -32,7 +32,7 @@ jobs:
           git config user.name "monitor-bot"
           git config user.email "bot@users.noreply.github.com"
           git add site/
-          git commit -m "Actualizacion diaria" || echo "sin cambios"
+          git commit -m "Actualizacion diaria [skip netlify]" || echo "sin cambios"
           git push
 
       - name: Enviar por WhatsApp

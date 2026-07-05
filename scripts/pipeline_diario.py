@@ -87,7 +87,7 @@ def modis(region):
     col = (
         ee.ImageCollection("MODIS/061/MOD13Q1")
         .filterBounds(region)
-        .filterDate((HOY - dt.timedelta(days=40)).isoformat(), FIN)
+        .filterDate((HOY - dt.timedelta(days=80)).isoformat(), FIN)
     )
     return col.median().select(["NDVI", "EVI"]).multiply(0.0001)
 
@@ -401,7 +401,7 @@ def main():
         "EVI_s2": optico,
         "NDWI_s2": optico,
         "MNDWI_s2": optico,
-        "NDVI_modis": (HOY - dt.timedelta(days=40)).isoformat() + " a " + FIN,
+        "NDVI_modis": (HOY - dt.timedelta(days=80)).isoformat() + " a " + FIN,
         "lluvia_chirps": INICIO_LLUVIA + " a " + FIN,
         "lluvia_era5": INICIO_LLUVIA + " a " + FIN,
     }
@@ -453,12 +453,16 @@ def main():
     except Exception as e:
         print("reporte inundaciones omitido:", e)
 
-    media = (
-        mod.select("NDVI")
-        .reduceRegion(ee.Reducer.mean(), arg, scale=5000, maxPixels=1e13)
-        .get("NDVI").getInfo()
-    )
-    salida["ndvi_medio_nacional"] = round(media, 3) if media else None
+    try:
+        media = (
+            mod.select("NDVI")
+            .reduceRegion(ee.Reducer.mean(), arg, scale=5000, maxPixels=1e13)
+            .get("NDVI").getInfo()
+        )
+        salida["ndvi_medio_nacional"] = round(media, 3) if media else None
+    except Exception as e:
+        print("ndvi medio omitido:", e)
+        salida["ndvi_medio_nacional"] = None
 
     # Serie historica nacional (para graficos de tendencia)
     g_ = salida.get("granizo") or {}

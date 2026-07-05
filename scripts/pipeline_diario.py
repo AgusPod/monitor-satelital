@@ -133,8 +133,19 @@ def reporte_granizo(region, departamentos):
         tmin.updateMask(tmin.lt(215)), "T",
         {"min": 185, "max": 215, "palette": ["ff00ff", "ff0000", "ffa500", "ffff00"]},
     )
+    def severidad(t):
+        if t <= -70:
+            return "granizo grande probable"
+        if t <= -65:
+            return "granizo probable"
+        return "posible granizo"
+
     deps = [
-        {"departamento": x[0], "provincia": x[1], "tmin_c": round(x[2] - 273.15, 1)}
+        {
+            "departamento": x[0], "provincia": x[1],
+            "tmin_c": round(x[2] - 273.15, 1),
+            "severidad": severidad(x[2] - 273.15),
+        }
         for x in lista
     ]
     deps.sort(key=lambda d: d["tmin_c"])
@@ -448,6 +459,19 @@ def main():
         .get("NDVI").getInfo()
     )
     salida["ndvi_medio_nacional"] = round(media, 3) if media else None
+
+    # Serie historica nacional (para graficos de tendencia)
+    g_ = salida.get("granizo") or {}
+    h_ = salida.get("heladas") or {}
+    inu_ = salida.get("inundacion") or {}
+    registro_nacional = {
+        "fecha": FIN,
+        "ndvi_medio": salida["ndvi_medio_nacional"],
+        "deptos_granizo": len(g_.get("departamentos", [])),
+        "deptos_helada_bajo0": sum(1 for d in h_.get("departamentos", []) if d.get("tmin_c", 99) <= 0),
+        "deptos_inundacion": len(inu_.get("departamentos", [])),
+    }
+    actualizar_historial("serie_nacional.json", registro_nacional, maximo=120)
 
     pathlib.Path("site").mkdir(exist_ok=True)
     pathlib.Path("site/tiles.json").write_text(json.dumps(salida, indent=2))

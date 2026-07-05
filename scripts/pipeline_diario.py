@@ -353,6 +353,93 @@ def actualizar_historial(nombre, registro, clave_fecha="fecha", maximo=60):
     path.write_text(json.dumps(historial, indent=2))
 
 
+def ambientar_lotes():
+    """K-means de ambientacion por lote guardado (site/lotes.json).
+    Zonas de vigor desde una mediana estacional de NDVI (Sentinel-2, ~150 dias,
+    enmascarado de nubes). Escribe site/lotes_data.json con el tile de zonas,
+    hectareas y NDVI medio por zona, y una serie mensual de NDVI del lote."""
+    path_lotes = pathlib.Path("site/lotes.json")
+    if not path_lotes.exists():
+        return
+    lotes = json.loads(path_lotes.read_text()).get("lotes", [])
+    salida = {"fecha": FIN, "lotes": []}
+
+    ini_amb = (HOY - dt.timedelta(days=150)).isoformat()
+    n_zonas = 3
+    paleta = ["d73027", "fee08b", "1a9850"]
+
+    def _ndvi_s2(img):
+        scl = img.select("SCL")
+        mala = scl.eq(3).Or(scl.eq(8)).Or(scl.eq(9)).Or(scl.eq(10)).Or(scl.eq(11))
+        return img.normalizedDifference(["B8", "B4"]).rename("NDVI").updateMask(mala.Not())
+
+    for lote in lotes:
+        try:
+            geom = ee.Geometry(lote["geometry"])
+            col = (
+                ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+                .filterBounds(geom).filterDate(ini_amb, FIN)
+                .filter(ee.Filter.lt("CLOUDY_PIXEL_PERCENTAGE", 60))
+            )
+            ndvi_med = col.map(_ndvi_s2).median().rename("NDVI").clip(geom)
+
+            muestras = ndvi_med.sample(region=geom, scale=10, numPixels=1000)
+            clusterer = ee.Clusterer.wekaKMeans(n_zonas).train(muestras)
+            clasificado = ndvi_med.cluster(clusterer).rename("zona")
+
+            medios = ndvi_med.addBands(clasificado).reduceRegion(
+                reducer=ee.Reducer.mean().group(groupField=1, groupName="zona"),
+                geometry=geom, scale=10, maxPixels=1e9,
+            ).get("groups").getInfo()
+            orden = sorted(medios, key=lambda g: g["mean"])
+            remap_from = [int(g["zona"]) for g in orden]
+            remap_to = list(range(len(orden)))
+            zonas_img = clasificado.remap(remap_from, remap_to).rename("zona").clip(geom)
+
+            areas = ee.Image.pixelArea().divide(10000).addBands(zonas_img).reduceRegion(
+                reducer=ee.Reducer.sum().group(groupField=1, groupName="zona"),
+                geometry=geom, scale=10, maxPixels=1e9,
+            ).get("groups").getInfo()
+            area_por_zona = {int(a["zona"]): a["sum"] for a in areas}
+
+            zonas = []
+            for i, g in enumerate(orden):
+                zonas.append({
+                    "zona": i,
+                    "ndvi_medio": round(g["mean"], 3),
+                    "area_ha": round(area_por_zona.get(i, 0), 1),
+                })
+
+            tile = url_tiles(zonas_img, "zona", {"min": 0, "max": n_zonas - 1, "palette": paleta})
+
+            serie = []
+            for m in range(11, -1, -1):
+                fin_m = HOY - dt.timedelta(days=30 * m)
+                ini_m = fin_m - dt.timedelta(days=30)
+                col_m = (
+                    ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
+                    .filterBounds(geom).filterDate(ini_m.isoformat(), fin_m.isoformat())
+                    .filter(ee.Filter.lt("CLOUDY_PIXEL_PERCENTAGE", 70))
+                )
+                val = col_m.map(_ndvi_s2).median().reduceRegion(
+                    ee.Reducer.mean(), geom, scale=10, maxPixels=1e9,
+                ).get("NDVI").getInfo()
+                if val is not None:
+                    serie.append({"fecha": fin_m.isoformat(), "ndvi": round(val, 3)})
+
+            salida["lotes"].append({
+                "id": lote["id"], "nombre": lote.get("nombre", lote["id"]),
+                "tile": tile, "zonas": zonas, "serie": serie,
+                "centro": geom.centroid(1).coordinates().getInfo(),
+            })
+            print("lote ambientado:", lote["id"], "-", len(zonas), "zonas")
+        except Exception as e:
+            print("lote omitido:", lote.get("id"), "-", e)
+
+    pathlib.Path("site/lotes_data.json").write_text(json.dumps(salida, indent=2))
+    print("lotes_data.json escrito:", len(salida["lotes"]), "lotes")
+
+
 def main():
     inicializar()
 
@@ -480,6 +567,11 @@ def main():
     pathlib.Path("site").mkdir(exist_ok=True)
     pathlib.Path("site/tiles.json").write_text(json.dumps(salida, indent=2))
     print("tiles.json escrito. NDVI medio:", salida["ndvi_medio_nacional"])
+
+    try:
+        ambientar_lotes()
+    except Exception as e:
+        print("ambientar_lotes omitido:", e)
 
     thumb_url = mod.select("NDVI").visualize(**PALETAS["NDVI"]).getThumbURL(
         {"region": arg, "dimensions": 1024, "format": "png"}

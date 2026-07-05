@@ -86,6 +86,7 @@
       <button class="pestana" data-tab="tab-heladas">Heladas</button>
       <button class="pestana" data-tab="tab-granizo">Granizo</button>
       <button class="pestana" data-tab="tab-topo">Topografia</button>
+      <button class="pestana" data-tab="tab-series">Series</button>
       <button class="pestana" data-tab="tab-lote">Mi lote</button>
     </nav>
     <div id="panel-scroll">
@@ -157,6 +158,15 @@
         <h2>Relieve (Copernicus DEM 30 m)</h2>
         <div id="grupo-topo"></div>
         <div class="nota">"Lomas y bajos" muestra la elevacion relativa al entorno de 1,5 km: azul = bajos donde se junta el agua, rojo = lomas. Con 30 m se ve la estructura del relieve del lote; para desniveles de centimetros hace falta altimetria RTK o vuelo de drone. Capas estaticas: no cambian dia a dia.</div>
+      </div>
+
+      <div class="tab-content" id="tab-series">
+        <h2>Tendencia nacional</h2>
+        <div class="nota">Se arma dia a dia con cada corrida del pipeline; al principio hay pocos puntos y se va llenando.</div>
+        <div style="position:relative;height:170px;margin-top:8px;"><canvas id="chart-ndvi"></canvas></div>
+        <h2>Eventos por dia</h2>
+        <div style="position:relative;height:190px;margin-top:8px;"><canvas id="chart-eventos"></canvas></div>
+        <div class="estado" id="estado-series"></div>
       </div>
 
       <div class="tab-content" id="tab-lote">
@@ -282,6 +292,7 @@ async function cargarConfig() {
   construirInundacion();
   cargarHistorial("historial_granizo.json", "historial-granizo", "granizo");
   cargarHistorial("historial_heladas.json", "historial-heladas", "heladas");
+  cargarSeries();
 }
 function mostrarAviso(txt) {
   const a = document.getElementById("aviso");
@@ -466,7 +477,7 @@ function construirGranizo() {
     const fila = document.createElement("div");
     fila.className = "item-alerta";
     fila.innerHTML = '<span class="lugar">' + d.departamento + "<small>" + d.provincia +
-      '</small></span><span class="dato rojo">tope ' + d.tmin_c.toFixed(0) + " C</span>";
+      (d.severidad ? " - " + d.severidad : "") + '</small></span><span class="dato rojo">' + d.tmin_c.toFixed(0) + " C</span>";
     cont.appendChild(fila);
   });
 }
@@ -601,6 +612,38 @@ async function cargarGoes() {
   } catch (err) {
     document.getElementById("estado-goes").textContent = "Error: " + err.message;
   }
+}
+async function cargarSeries() {
+  let serie = [];
+  try {
+    const r = await fetch(DATA_BASE + "serie_nacional.json", { cache: "no-store" });
+    if (r.ok) serie = await r.json();
+  } catch (e) {}
+  if (!serie.length) {
+    document.getElementById("estado-series").textContent = "Todavia no hay serie: se genera con la proxima corrida del pipeline.";
+    return;
+  }
+  const labels = serie.map(d => d.fecha);
+  new Chart(document.getElementById("chart-ndvi"), {
+    type: "line",
+    data: { labels, datasets: [{ label: "NDVI medio nacional", data: serie.map(d => d.ndvi_medio),
+      borderColor: "#4ade80", backgroundColor: "rgba(74,222,128,.15)", fill: true, tension: 0.25, pointRadius: 3 }] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: "#cfd6dd" } } },
+      scales: { x: { ticks: { color: "#9aa4af", maxTicksLimit: 10 }, grid: { color: "#20262e" } },
+                y: { ticks: { color: "#9aa4af" }, grid: { color: "#20262e" } } } },
+  });
+  new Chart(document.getElementById("chart-eventos"), {
+    type: "bar",
+    data: { labels, datasets: [
+      { label: "Granizo", data: serie.map(d => d.deptos_granizo), backgroundColor: "#f43f5e" },
+      { label: "Heladas <0", data: serie.map(d => d.deptos_helada_bajo0), backgroundColor: "#93c5fd" },
+      { label: "Inundacion", data: serie.map(d => d.deptos_inundacion), backgroundColor: "#a78bfa" },
+    ] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: "#cfd6dd" } } },
+      scales: { x: { ticks: { color: "#9aa4af", maxTicksLimit: 10 }, grid: { color: "#20262e" } },
+                y: { ticks: { color: "#9aa4af" }, grid: { color: "#20262e" }, beginAtZero: true } } },
+  });
+  document.getElementById("estado-series").textContent = serie.length + " dias registrados.";
 }
 cargarConfig();
 </script>

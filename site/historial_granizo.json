@@ -79,5 +79,29 @@
     "fecha": "2026-07-04",
     "umbral_c": -58,
     "departamentos": []
+  },
+  {
+    "fecha": "2026-07-05",
+    "umbral_c": -58,
+    "departamentos": [
+      {
+        "departamento": "Guer Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -63.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Ushuaia",
+        "provincia": "Tierra Del Fuego",
+        "tmin_c": -63.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lago Argentino",
+        "provincia": "Santa Cruz",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      }
+    ]
   }
 ]

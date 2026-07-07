@@ -12,5 +12,12 @@
     "deptos_granizo": 3,
     "deptos_helada_bajo0": 156,
     "deptos_inundacion": 40
+  },
+  {
+    "fecha": "2026-07-07",
+    "ndvi_medio": 0.406,
+    "deptos_granizo": 66,
+    "deptos_helada_bajo0": 114,
+    "deptos_inundacion": 40
   }
 ]

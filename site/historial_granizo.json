@@ -505,5 +505,845 @@
         "severidad": "posible granizo"
       }
     ]
+  },
+  {
+    "fecha": "2026-07-07",
+    "umbral_c": -58,
+    "departamentos": [
+      {
+        "departamento": "Anelo",
+        "provincia": "Neuquen",
+        "tmin_c": -71.4,
+        "severidad": "granizo grande probable"
+      },
+      {
+        "departamento": "Malargue",
+        "provincia": "Mendoza",
+        "tmin_c": -69.7,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Pehuenches",
+        "provincia": "Neuquen",
+        "tmin_c": -69.6,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Loncopue",
+        "provincia": "Neuquen",
+        "tmin_c": -69.2,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "General Roca",
+        "provincia": "Rio Negro",
+        "tmin_c": -68.9,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Puelen",
+        "provincia": "La Pampa",
+        "tmin_c": -68.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Picun Leufu",
+        "provincia": "Neuquen",
+        "tmin_c": -68.3,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Norquin",
+        "provincia": "Neuquen",
+        "tmin_c": -68.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Picunches",
+        "provincia": "Neuquen",
+        "tmin_c": -68.0,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Chical Co",
+        "provincia": "La Pampa",
+        "tmin_c": -67.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Zapala",
+        "provincia": "Neuquen",
+        "tmin_c": -67.6,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "El Cuy",
+        "provincia": "Rio Negro",
+        "tmin_c": -67.6,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Chos  Malal",
+        "provincia": "Neuquen",
+        "tmin_c": -67.5,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Confluencia",
+        "provincia": "Neuquen",
+        "tmin_c": -67.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Chalileo",
+        "provincia": "La Pampa",
+        "tmin_c": -67.0,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Limay Mahuida",
+        "provincia": "La Pampa",
+        "tmin_c": -67.0,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Catan Lil",
+        "provincia": "Neuquen",
+        "tmin_c": -67.0,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "San Rafael",
+        "provincia": "Mendoza",
+        "tmin_c": -66.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "Rio Negro",
+        "tmin_c": -66.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Minas",
+        "provincia": "Neuquen",
+        "tmin_c": -66.0,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "General Alvear",
+        "provincia": "Mendoza",
+        "tmin_c": -65.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Collon Cura",
+        "provincia": "Neuquen",
+        "tmin_c": -65.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Pilcaniyeu",
+        "provincia": "Rio Negro",
+        "tmin_c": -65.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Loventue",
+        "provincia": "La Pampa",
+        "tmin_c": -65.5,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Curaco",
+        "provincia": "La Pampa",
+        "tmin_c": -65.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Gobernador Dupuy",
+        "provincia": "San Luis",
+        "tmin_c": -65.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "9 de julio",
+        "provincia": "Rio Negro",
+        "tmin_c": -65.2,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Santa Rosa",
+        "provincia": "Mendoza",
+        "tmin_c": -65.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Avellaneda",
+        "provincia": "Rio Negro",
+        "tmin_c": -65.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Telsen",
+        "provincia": "Chubut",
+        "tmin_c": -64.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Conhelo",
+        "provincia": "La Pampa",
+        "tmin_c": -64.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Carlos",
+        "provincia": "Mendoza",
+        "tmin_c": -64.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rivadavia",
+        "provincia": "Mendoza",
+        "tmin_c": -64.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Gastre",
+        "provincia": "Chubut",
+        "tmin_c": -64.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rancul",
+        "provincia": "La Pampa",
+        "tmin_c": -64.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "La Paz",
+        "provincia": "Mendoza",
+        "tmin_c": -64.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Realico",
+        "provincia": "La Pampa",
+        "tmin_c": -64.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lavalle",
+        "provincia": "Mendoza",
+        "tmin_c": -64.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Toay",
+        "provincia": "La Pampa",
+        "tmin_c": -63.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Utracan",
+        "provincia": "La Pampa",
+        "tmin_c": -63.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Valcheta",
+        "provincia": "Rio Negro",
+        "tmin_c": -63.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lihuel Calel",
+        "provincia": "La Pampa",
+        "tmin_c": -63.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Junin",
+        "provincia": "Mendoza",
+        "tmin_c": -63.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Martin",
+        "provincia": "Mendoza",
+        "tmin_c": -63.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Paso de Indios",
+        "provincia": "Chubut",
+        "tmin_c": -63.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lacar",
+        "provincia": "Neuquen",
+        "tmin_c": -63.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Cushamen",
+        "provincia": "Chubut",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Trenel",
+        "provincia": "La Pampa",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lujan de Cuyo",
+        "provincia": "Mendoza",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Norquinco",
+        "provincia": "Rio Negro",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Deseado",
+        "provincia": "Santa Cruz",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Futaleufu",
+        "provincia": "Chubut",
+        "tmin_c": -63.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Alumine",
+        "provincia": "Neuquen",
+        "tmin_c": -63.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Capital",
+        "provincia": "La Pampa",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Huiliches",
+        "provincia": "Neuquen",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Maipu",
+        "provincia": "Mendoza",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Adolfo Alsina",
+        "provincia": "Rio Negro",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pergamino",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Guaymallen",
+        "provincia": "Mendoza",
+        "tmin_c": -62.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tupungato",
+        "provincia": "Mendoza",
+        "tmin_c": -62.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tehuelches",
+        "provincia": "Chubut",
+        "tmin_c": -62.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Hucal",
+        "provincia": "La Pampa",
+        "tmin_c": -62.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Martires",
+        "provincia": "Chubut",
+        "tmin_c": -62.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Catrilo",
+        "provincia": "La Pampa",
+        "tmin_c": -62.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Atreuco",
+        "provincia": "La Pampa",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Las Heras",
+        "provincia": "Mendoza",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Bariloche",
+        "provincia": "Rio Negro",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rivadavia",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Languineo",
+        "provincia": "Chubut",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Quemu Quemu",
+        "provincia": "La Pampa",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Antonio",
+        "provincia": "Rio Negro",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rawson",
+        "provincia": "San Juan",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Zonda",
+        "provincia": "San Juan",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pellegrini",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Juan Martin de Pueyrredon",
+        "provincia": "San Luis",
+        "tmin_c": -61.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Patagones",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Maraco",
+        "provincia": "La Pampa",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "San Juan",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pocito",
+        "provincia": "San Juan",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Ullum",
+        "provincia": "San Juan",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Constitucion",
+        "provincia": "Santa Fe",
+        "tmin_c": -61.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "Chubut",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chapaleufu",
+        "provincia": "La Pampa",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pichi Mahuida",
+        "provincia": "Rio Negro",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Caucete",
+        "provincia": "San Juan",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Santa Lucia",
+        "provincia": "San Juan",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Escalante",
+        "provincia": "Chubut",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Roca",
+        "provincia": "Cordoba",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Los Lagos",
+        "provincia": "Neuquen",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General  Lopez",
+        "provincia": "Santa Fe",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Colon",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Ramallo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Nicolas",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Godoy Cruz",
+        "provincia": "Mendoza",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Florentino Ameghino",
+        "provincia": "Chubut",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "9 de Julio",
+        "provincia": "San Juan",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Pedernera",
+        "provincia": "San Luis",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Villegas",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Gualeguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Capital",
+        "provincia": "Mendoza",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Adolfo Alsina",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Carlos Tejedor",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Biedma",
+        "provincia": "Chubut",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Coronel Pringles",
+        "provincia": "San Luis",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Libertador General San Martin",
+        "provincia": "San Luis",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Belgrano",
+        "provincia": "San Luis",
+        "tmin_c": -60.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Trenque Lauquen",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Guatrache",
+        "provincia": "La Pampa",
+        "tmin_c": -60.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rio Cuarto",
+        "provincia": "Cordoba",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Martin",
+        "provincia": "San Juan",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chacabuco",
+        "provincia": "San Luis",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Florentino Ameghino",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "San Juan",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Caleu Caleu",
+        "provincia": "La Pampa",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tunuyan",
+        "provincia": "Mendoza",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Albardon",
+        "provincia": "San Juan",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chimbas",
+        "provincia": "San Juan",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Magallanes",
+        "provincia": "Santa Cruz",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Calamuchita",
+        "provincia": "Cordoba",
+        "tmin_c": -59.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Junin",
+        "provincia": "San Luis",
+        "tmin_c": -59.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Angaco",
+        "provincia": "San Juan",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Jachal",
+        "provincia": "San Juan",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tres Lomas",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lincoln",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Salliquelo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Junin",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Calingasta",
+        "provincia": "San Juan",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Pinto",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Leandro N. Alem",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pehuajo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Presidente Roque Saenz Pena",
+        "provincia": "Cordoba",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Punilla",
+        "provincia": "Cordoba",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Conesa",
+        "provincia": "Rio Negro",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Ayacucho",
+        "provincia": "San Luis",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Javier",
+        "provincia": "Cordoba",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Victoria",
+        "provincia": "Entre Rios",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rivadavia",
+        "provincia": "San Juan",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Gaiman",
+        "provincia": "Chubut",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Iglesia",
+        "provincia": "San Juan",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo"
+      }
+    ]
   }
 ]

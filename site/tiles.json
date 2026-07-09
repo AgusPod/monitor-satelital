@@ -1,256 +1,460 @@
 {
-  "fecha": "2026-07-08",
+  "fecha": "2026-07-09",
   "ventana_dias": 15,
   "tiles": {
-    "NDVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/6aa1e2d3eb48af9026cb644a5c6741fb-e4e5109cf8009ee81fb51d61f94939ff/tiles/{z}/{x}/{y}",
-    "EVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/f003f76b904a3418b38c7fb8077227a7-a68c1e591885f82b2d3d72cc114b91de/tiles/{z}/{x}/{y}",
-    "NDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/47c6b9c02ad629a2e82170f346774d75-990ec550ea2a8e62d98bc8d5850f347b/tiles/{z}/{x}/{y}",
-    "MNDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/6918aac8bf13cec9d1dac96ebd85478b-46e23c1399383846e61f1ffbd04b408d/tiles/{z}/{x}/{y}",
-    "NDVI_modis": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/847850fcf47fef428a7f6191cbdd9aae-961cadbbf32211144b588425c255bdf2/tiles/{z}/{x}/{y}",
-    "lluvia_chirps": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/6f36871fa50303be3e9d41f81af47927-73f34e973723627a80e3e302b99efc58/tiles/{z}/{x}/{y}",
-    "lluvia_era5": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/326183ed2c99c272cf0f46bb351c945f-a80ec16d24b72177fe7244b7e5080efd/tiles/{z}/{x}/{y}",
-    "topo_elevacion": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/314302b2aa7e0e20ce776b5be0b7ae95-00282040583a86bb26f5c6c1cee1e517/tiles/{z}/{x}/{y}",
-    "topo_pendiente": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/9928522cf0f2e6b60d8ffcfd97a3c060-d574093da6602a4f890c1b66c99cfa09/tiles/{z}/{x}/{y}",
-    "topo_sombreado": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/4cc7879c6bfc7a0f990f556b44b4ee6e-32547c2a5a6d48d34eb7ee90e3b2c7ac/tiles/{z}/{x}/{y}",
-    "topo_relieve": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/ed1884497a350ef4e55d89b81bf11241-21ad7bf22f57e0687f86d4c3d95266c9/tiles/{z}/{x}/{y}",
-    "granizo_ayer": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/8d4ed441ee79f256a3a0a6d3f4804db8-7f042af8c0f885006341e1fd01869700/tiles/{z}/{x}/{y}",
-    "tmin_heladas": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/b8682c432358691cc7d8f8975672f10b-9370663694512198e7302c18b054b809/tiles/{z}/{x}/{y}",
-    "hr_madrugada": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/13c0b04a2176f645e5fa1235c02eeebf-bb5e6abfc65a2a5a7b2d52ce776698a2/tiles/{z}/{x}/{y}",
-    "lluvia_imerg72": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/761ea6167a52a7b806914dd4f820ef7e-f07482e07c20aedeffebddf4f0a27bc3/tiles/{z}/{x}/{y}",
-    "agua_s1": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/be8b448f245432b33e535b7dcd10cd15-167b097bd9888a56b4495672a838486c/tiles/{z}/{x}/{y}",
-    "agua_nueva": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/cc075f1cecbd19e3d17f91101c7c500c-8a3982f3b006ef6df671b355a66e47f0/tiles/{z}/{x}/{y}",
-    "zonas_bajas": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/763316ad6de46fb96114c4c526e1b8cc-2d8b13865860336724f8d3414d6e96e9/tiles/{z}/{x}/{y}"
+    "NDVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/1a7fdaad628e541d421548fd9e643857-24cca89f7cae0df70b003ce312dc5ee0/tiles/{z}/{x}/{y}",
+    "EVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/00638d007efe44770cd6e8550295cd40-ef6bb77570407cedbce0a2aae9561f5a/tiles/{z}/{x}/{y}",
+    "NDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/468d293e84593f8818d9fac2c61dccf6-22b085586ec4ff317ab13e9eb574fa86/tiles/{z}/{x}/{y}",
+    "MNDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/317ed90e9a40543bda33721fde56041d-a6a63585ee15b3460e95b5f6c90472ed/tiles/{z}/{x}/{y}",
+    "NDVI_modis": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/31c72fd07f3a692096ce746c7b782e32-6735da15c7c166b3028ac8df70bf1596/tiles/{z}/{x}/{y}",
+    "lluvia_chirps": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/49e7fec826a2555aff30a618a4d678c7-ac3941cb536a6f4d825f010835e3bcba/tiles/{z}/{x}/{y}",
+    "lluvia_era5": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/cb8cfaff7b10b98f7fc8f7c1ac3f4d38-b80879f4bccdafd9ea586c85190af9fc/tiles/{z}/{x}/{y}",
+    "topo_elevacion": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/314302b2aa7e0e20ce776b5be0b7ae95-ab978385169a09813fcbdc8221edb231/tiles/{z}/{x}/{y}",
+    "topo_pendiente": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/9928522cf0f2e6b60d8ffcfd97a3c060-6de40b0583be96e25910f7d3cb04e303/tiles/{z}/{x}/{y}",
+    "topo_sombreado": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/4cc7879c6bfc7a0f990f556b44b4ee6e-3330599f8e91ebe4221e3470351c50ca/tiles/{z}/{x}/{y}",
+    "topo_relieve": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/ed1884497a350ef4e55d89b81bf11241-789e3a8e59c1a6c08ba452a4d902b88b/tiles/{z}/{x}/{y}",
+    "granizo_ayer": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/66ff1ea34fe88c7c8bf948efe2ac3a1f-597a770c0b3d0a9dbb0511512fe93422/tiles/{z}/{x}/{y}",
+    "tmin_heladas": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/3e7203432b368bcc3c7795686e4f8c11-2da93968fa7d8e6c9696420effc1bbb8/tiles/{z}/{x}/{y}",
+    "hr_madrugada": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/853d364bd8e8c67d96cf7569c5cc7f10-cc15e1d5e11b55aa37e728c503488f5a/tiles/{z}/{x}/{y}",
+    "lluvia_imerg72": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/b76bf7f990d458a2b15ccced0e4690d0-e52ad67a7fea70b873e7bb023a5ce016/tiles/{z}/{x}/{y}",
+    "agua_s1": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/7536a4c56096dba1d1c62a5912e9a7e7-11f71b55dbc03b738233db9c3f2676f3/tiles/{z}/{x}/{y}",
+    "agua_nueva": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/75db1f236e2300428f3de6430752588b-18987633a2d5b87376f3c92d30dfdde7/tiles/{z}/{x}/{y}",
+    "zonas_bajas": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/763316ad6de46fb96114c4c526e1b8cc-9029260cf857a50e6ab64c344f4b6705/tiles/{z}/{x}/{y}"
   },
   "rangos": {
-    "NDVI_s2": "2026-06-23 a 2026-07-08",
-    "EVI_s2": "2026-06-23 a 2026-07-08",
-    "NDWI_s2": "2026-06-23 a 2026-07-08",
-    "MNDWI_s2": "2026-06-23 a 2026-07-08",
-    "NDVI_modis": "2026-04-19 a 2026-07-08",
-    "lluvia_chirps": "2026-05-09 a 2026-07-08",
-    "lluvia_era5": "2026-05-09 a 2026-07-08",
+    "NDVI_s2": "2026-06-24 a 2026-07-09",
+    "EVI_s2": "2026-06-24 a 2026-07-09",
+    "NDWI_s2": "2026-06-24 a 2026-07-09",
+    "MNDWI_s2": "2026-06-24 a 2026-07-09",
+    "NDVI_modis": "2026-04-20 a 2026-07-09",
+    "lluvia_chirps": "2026-05-10 a 2026-07-09",
+    "lluvia_era5": "2026-05-10 a 2026-07-09",
     "topo_elevacion": "capa estatica (Copernicus DEM 30 m)",
     "topo_pendiente": "capa estatica (Copernicus DEM 30 m)",
     "topo_sombreado": "capa estatica (Copernicus DEM 30 m)",
     "topo_relieve": "capa estatica (Copernicus DEM 30 m)",
-    "granizo_ayer": "2026-07-07",
+    "granizo_ayer": "2026-07-08",
     "tmin_heladas": "madrugada del 2026-07-02",
     "hr_madrugada": "madrugada del 2026-07-02",
-    "lluvia_imerg72": "2026-07-05 a 2026-07-08",
-    "agua_s1": "2026-06-26 a 2026-07-08",
-    "agua_nueva": "2026-06-26 a 2026-07-08",
+    "lluvia_imerg72": "2026-07-06 a 2026-07-09",
+    "agua_s1": "2026-06-27 a 2026-07-09",
+    "agua_nueva": "2026-06-27 a 2026-07-09",
     "zonas_bajas": "capa estatica (HAND, MERIT Hydro)"
   },
   "granizo": {
-    "fecha": "2026-07-07",
+    "fecha": "2026-07-08",
     "umbral_c": -58,
     "departamentos": [
       {
-        "departamento": "Anelo",
-        "provincia": "Neuquen",
-        "tmin_c": -71.4,
+        "departamento": "Tunuyan",
+        "provincia": "Mendoza",
+        "tmin_c": -70.8,
         "severidad": "granizo grande probable"
+      },
+      {
+        "departamento": "San Carlos",
+        "provincia": "Mendoza",
+        "tmin_c": -69.3,
+        "severidad": "granizo probable"
       },
       {
         "departamento": "Malargue",
         "provincia": "Mendoza",
-        "tmin_c": -69.7,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Pehuenches",
-        "provincia": "Neuquen",
-        "tmin_c": -69.6,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Loncopue",
-        "provincia": "Neuquen",
-        "tmin_c": -69.2,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "General Roca",
-        "provincia": "Rio Negro",
-        "tmin_c": -68.9,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Puelen",
-        "provincia": "La Pampa",
-        "tmin_c": -68.4,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Picun Leufu",
-        "provincia": "Neuquen",
-        "tmin_c": -68.3,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Norquin",
-        "provincia": "Neuquen",
-        "tmin_c": -68.1,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Picunches",
-        "provincia": "Neuquen",
-        "tmin_c": -68.0,
+        "tmin_c": -68.8,
         "severidad": "granizo probable"
       },
       {
         "departamento": "Chical Co",
         "provincia": "La Pampa",
-        "tmin_c": -67.8,
+        "tmin_c": -68.7,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "Zapala",
-        "provincia": "Neuquen",
-        "tmin_c": -67.6,
+        "departamento": "Guaymallen",
+        "provincia": "Mendoza",
+        "tmin_c": -68.6,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "El Cuy",
-        "provincia": "Rio Negro",
-        "tmin_c": -67.6,
+        "departamento": "Las Heras",
+        "provincia": "Mendoza",
+        "tmin_c": -68.6,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "Chos  Malal",
-        "provincia": "Neuquen",
-        "tmin_c": -67.5,
+        "departamento": "Lujan de Cuyo",
+        "provincia": "Mendoza",
+        "tmin_c": -68.4,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "Confluencia",
-        "provincia": "Neuquen",
-        "tmin_c": -67.1,
+        "departamento": "Capital",
+        "provincia": "Mendoza",
+        "tmin_c": -68.3,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "Chalileo",
-        "provincia": "La Pampa",
-        "tmin_c": -67.0,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Limay Mahuida",
-        "provincia": "La Pampa",
-        "tmin_c": -67.0,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Catan Lil",
-        "provincia": "Neuquen",
-        "tmin_c": -67.0,
+        "departamento": "Godoy Cruz",
+        "provincia": "Mendoza",
+        "tmin_c": -68.3,
         "severidad": "granizo probable"
       },
       {
         "departamento": "San Rafael",
         "provincia": "Mendoza",
-        "tmin_c": -66.8,
+        "tmin_c": -68.1,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "25 de Mayo",
-        "provincia": "Rio Negro",
-        "tmin_c": -66.4,
+        "departamento": "Maipu",
+        "provincia": "Mendoza",
+        "tmin_c": -68.0,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "Minas",
+        "departamento": "Chalileo",
+        "provincia": "La Pampa",
+        "tmin_c": -67.9,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Lavalle",
+        "provincia": "Mendoza",
+        "tmin_c": -67.9,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Anelo",
         "provincia": "Neuquen",
-        "tmin_c": -66.0,
+        "tmin_c": -67.9,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Loncopue",
+        "provincia": "Neuquen",
+        "tmin_c": -67.9,
         "severidad": "granizo probable"
       },
       {
         "departamento": "General Alvear",
         "provincia": "Mendoza",
-        "tmin_c": -65.8,
+        "tmin_c": -67.6,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "Collon Cura",
+        "departamento": "Confluencia",
         "provincia": "Neuquen",
-        "tmin_c": -65.8,
+        "tmin_c": -67.6,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "Pilcaniyeu",
-        "provincia": "Rio Negro",
-        "tmin_c": -65.8,
+        "departamento": "Vinchina",
+        "provincia": "La Rioja",
+        "tmin_c": -67.3,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "Loventue",
+        "departamento": "Tupungato",
+        "provincia": "Mendoza",
+        "tmin_c": -67.3,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "San Juan",
+        "tmin_c": -67.3,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Puelen",
         "provincia": "La Pampa",
-        "tmin_c": -65.5,
-        "severidad": "granizo probable"
-      },
-      {
-        "departamento": "Curaco",
-        "provincia": "La Pampa",
-        "tmin_c": -65.4,
+        "tmin_c": -67.2,
         "severidad": "granizo probable"
       },
       {
         "departamento": "Gobernador Dupuy",
         "provincia": "San Luis",
-        "tmin_c": -65.4,
+        "tmin_c": -67.2,
         "severidad": "granizo probable"
       },
       {
-        "departamento": "9 de julio",
+        "departamento": "Collon Cura",
+        "provincia": "Neuquen",
+        "tmin_c": -67.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Calingasta",
+        "provincia": "San Juan",
+        "tmin_c": -67.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Zonda",
+        "provincia": "San Juan",
+        "tmin_c": -67.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "General Lamadrid",
+        "provincia": "La Rioja",
+        "tmin_c": -66.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Norquin",
+        "provincia": "Neuquen",
+        "tmin_c": -66.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Pehuenches",
+        "provincia": "Neuquen",
+        "tmin_c": -66.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Famatina",
+        "provincia": "La Rioja",
+        "tmin_c": -66.6,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Coronel Felipe Varela",
+        "provincia": "La Rioja",
+        "tmin_c": -66.6,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Junin",
+        "provincia": "Mendoza",
+        "tmin_c": -66.5,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Picunches",
+        "provincia": "Neuquen",
+        "tmin_c": -66.5,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Chilecito",
+        "provincia": "La Rioja",
+        "tmin_c": -66.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "San Martin",
+        "provincia": "Mendoza",
+        "tmin_c": -66.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "General Roca",
         "provincia": "Rio Negro",
-        "tmin_c": -65.2,
+        "tmin_c": -66.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Albardon",
+        "provincia": "San Juan",
+        "tmin_c": -66.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Rivadavia",
+        "provincia": "Mendoza",
+        "tmin_c": -66.3,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Zapala",
+        "provincia": "Neuquen",
+        "tmin_c": -66.3,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Tinogasta",
+        "provincia": "Catamarca",
+        "tmin_c": -66.2,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Curaco",
+        "provincia": "La Pampa",
+        "tmin_c": -66.2,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Limay Mahuida",
+        "provincia": "La Pampa",
+        "tmin_c": -66.2,
         "severidad": "granizo probable"
       },
       {
         "departamento": "Santa Rosa",
         "provincia": "Mendoza",
-        "tmin_c": -65.1,
+        "tmin_c": -66.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Catan Lil",
+        "provincia": "Neuquen",
+        "tmin_c": -66.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Utracan",
+        "provincia": "La Pampa",
+        "tmin_c": -66.0,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Belgrano",
+        "provincia": "San Luis",
+        "tmin_c": -65.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Iglesia",
+        "provincia": "San Juan",
+        "tmin_c": -65.7,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "San Juan",
+        "tmin_c": -65.5,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Pocito",
+        "provincia": "San Juan",
+        "tmin_c": -65.5,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Ayacucho",
+        "provincia": "San Luis",
+        "tmin_c": -65.5,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Lihuel Calel",
+        "provincia": "La Pampa",
+        "tmin_c": -65.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Chos  Malal",
+        "provincia": "Neuquen",
+        "tmin_c": -65.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Ullum",
+        "provincia": "San Juan",
+        "tmin_c": -65.4,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Loventue",
+        "provincia": "La Pampa",
+        "tmin_c": -65.2,
         "severidad": "granizo probable"
       },
       {
         "departamento": "Avellaneda",
         "provincia": "Rio Negro",
+        "tmin_c": -65.1,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Huiliches",
+        "provincia": "Neuquen",
         "tmin_c": -65.0,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Telsen",
-        "provincia": "Chubut",
+        "departamento": "Picun Leufu",
+        "provincia": "Neuquen",
+        "tmin_c": -65.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pilcaniyeu",
+        "provincia": "Rio Negro",
+        "tmin_c": -65.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chimbas",
+        "provincia": "San Juan",
+        "tmin_c": -65.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Juan Martin de Pueyrredon",
+        "provincia": "San Luis",
+        "tmin_c": -65.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Blas de los Sauces",
+        "provincia": "La Rioja",
         "tmin_c": -64.9,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Conhelo",
+        "departamento": "Sanagasta",
+        "provincia": "La Rioja",
+        "tmin_c": -64.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Caleu Caleu",
         "provincia": "La Pampa",
         "tmin_c": -64.8,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "San Carlos",
-        "provincia": "Mendoza",
-        "tmin_c": -64.6,
+        "departamento": "Rawson",
+        "provincia": "San Juan",
+        "tmin_c": -64.8,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Rivadavia",
-        "provincia": "Mendoza",
+        "departamento": "Angaco",
+        "provincia": "San Juan",
+        "tmin_c": -64.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "Rio Negro",
         "tmin_c": -64.5,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Gastre",
-        "provincia": "Chubut",
+        "departamento": "Caucete",
+        "provincia": "San Juan",
+        "tmin_c": -64.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Jachal",
+        "provincia": "San Juan",
+        "tmin_c": -64.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Puan",
+        "provincia": "Buenos Aires",
         "tmin_c": -64.2,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Rancul",
+        "departamento": "Toay",
         "provincia": "La Pampa",
         "tmin_c": -64.2,
         "severidad": "posible granizo"
@@ -258,241 +462,277 @@
       {
         "departamento": "La Paz",
         "provincia": "Mendoza",
-        "tmin_c": -64.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Realico",
-        "provincia": "La Pampa",
         "tmin_c": -64.1,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Lavalle",
-        "provincia": "Mendoza",
+        "departamento": "Santa Lucia",
+        "provincia": "San Juan",
         "tmin_c": -64.1,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Toay",
+        "departamento": "Conhelo",
         "provincia": "La Pampa",
         "tmin_c": -63.9,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Utracan",
-        "provincia": "La Pampa",
-        "tmin_c": -63.9,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Valcheta",
+        "departamento": "El Cuy",
         "provincia": "Rio Negro",
         "tmin_c": -63.9,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Lihuel Calel",
-        "provincia": "La Pampa",
-        "tmin_c": -63.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Junin",
-        "provincia": "Mendoza",
-        "tmin_c": -63.8,
         "severidad": "posible granizo"
       },
       {
         "departamento": "San Martin",
-        "provincia": "Mendoza",
-        "tmin_c": -63.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Paso de Indios",
-        "provincia": "Chubut",
-        "tmin_c": -63.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Lacar",
-        "provincia": "Neuquen",
-        "tmin_c": -63.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Cushamen",
-        "provincia": "Chubut",
-        "tmin_c": -63.5,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Trenel",
-        "provincia": "La Pampa",
-        "tmin_c": -63.5,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Lujan de Cuyo",
-        "provincia": "Mendoza",
-        "tmin_c": -63.5,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Norquinco",
-        "provincia": "Rio Negro",
-        "tmin_c": -63.5,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Deseado",
-        "provincia": "Santa Cruz",
-        "tmin_c": -63.5,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Futaleufu",
-        "provincia": "Chubut",
-        "tmin_c": -63.3,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Alumine",
-        "provincia": "Neuquen",
-        "tmin_c": -63.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Capital",
-        "provincia": "La Pampa",
-        "tmin_c": -63.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Huiliches",
-        "provincia": "Neuquen",
-        "tmin_c": -63.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Maipu",
-        "provincia": "Mendoza",
-        "tmin_c": -63.0,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Adolfo Alsina",
-        "provincia": "Rio Negro",
-        "tmin_c": -63.0,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Pergamino",
-        "provincia": "Buenos Aires",
-        "tmin_c": -62.5,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Guaymallen",
-        "provincia": "Mendoza",
-        "tmin_c": -62.5,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Tupungato",
-        "provincia": "Mendoza",
-        "tmin_c": -62.5,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Tehuelches",
-        "provincia": "Chubut",
-        "tmin_c": -62.4,
+        "provincia": "San Juan",
+        "tmin_c": -63.9,
         "severidad": "posible granizo"
       },
       {
         "departamento": "Hucal",
         "provincia": "La Pampa",
-        "tmin_c": -62.3,
+        "tmin_c": -63.8,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Martires",
-        "provincia": "Chubut",
-        "tmin_c": -62.1,
+        "departamento": "Castro Barros",
+        "provincia": "La Rioja",
+        "tmin_c": -63.8,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Catrilo",
+        "departamento": "9 de Julio",
+        "provincia": "San Juan",
+        "tmin_c": -63.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Alumine",
+        "provincia": "Neuquen",
+        "tmin_c": -63.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Adolfo Alsina",
+        "provincia": "Buenos Aires",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Guatrache",
         "provincia": "La Pampa",
-        "tmin_c": -62.1,
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "9 de julio",
+        "provincia": "Rio Negro",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pichi Mahuida",
+        "provincia": "Rio Negro",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Valle Fertil",
+        "provincia": "San Juan",
+        "tmin_c": -63.5,
         "severidad": "posible granizo"
       },
       {
         "departamento": "Atreuco",
         "provincia": "La Pampa",
-        "tmin_c": -62.0,
+        "tmin_c": -63.3,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Las Heras",
-        "provincia": "Mendoza",
-        "tmin_c": -62.0,
+        "departamento": "Capital",
+        "provincia": "La Pampa",
+        "tmin_c": -63.3,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Bariloche",
+        "departamento": "Capital",
+        "provincia": "San Juan",
+        "tmin_c": -63.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rancul",
+        "provincia": "La Pampa",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Angel V. Penaloza",
+        "provincia": "La Rioja",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Juan F. Quiroga",
+        "provincia": "La Rioja",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rosario  Vera Penaloza",
+        "provincia": "La Rioja",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Coronel Pringles",
+        "provincia": "Buenos Aires",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lacar",
+        "provincia": "Neuquen",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Valcheta",
         "provincia": "Rio Negro",
-        "tmin_c": -62.0,
+        "tmin_c": -63.0,
         "severidad": "posible granizo"
       },
       {
         "departamento": "Rivadavia",
+        "provincia": "San Juan",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Pedernera",
+        "provincia": "San Luis",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Villarino",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Coronel Dorrego",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General La Madrid",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Independencia",
+        "provincia": "La Rioja",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Coronel Pringles",
+        "provincia": "San Luis",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Coronel Suarez",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Saavedra",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tornquist",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Bahia Blanca",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Trenel",
+        "provincia": "La Pampa",
+        "tmin_c": -62.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General San Martin",
+        "provincia": "La Rioja",
+        "tmin_c": -62.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Coronel de Marina L Rosales",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Arauco",
+        "provincia": "La Rioja",
+        "tmin_c": -62.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chamical",
+        "provincia": "La Rioja",
+        "tmin_c": -62.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Salliquelo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Laprida",
         "provincia": "Buenos Aires",
         "tmin_c": -61.9,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Languineo",
+        "departamento": "Biedma",
         "provincia": "Chubut",
         "tmin_c": -61.9,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Quemu Quemu",
+        "departamento": "Catrilo",
         "provincia": "La Pampa",
         "tmin_c": -61.9,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "San Antonio",
-        "provincia": "Rio Negro",
+        "departamento": "Realico",
+        "provincia": "La Pampa",
         "tmin_c": -61.9,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Rawson",
-        "provincia": "San Juan",
-        "tmin_c": -61.9,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Zonda",
-        "provincia": "San Juan",
-        "tmin_c": -61.9,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Pellegrini",
+        "departamento": "Benito Juarez",
         "provincia": "Buenos Aires",
-        "tmin_c": -61.7,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Juan Martin de Pueyrredon",
-        "provincia": "San Luis",
-        "tmin_c": -61.7,
+        "tmin_c": -61.6,
         "severidad": "posible granizo"
       },
       {
@@ -502,381 +742,315 @@
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Maraco",
-        "provincia": "La Pampa",
+        "departamento": "San Antonio",
+        "provincia": "Rio Negro",
         "tmin_c": -61.6,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "25 de Mayo",
-        "provincia": "San Juan",
-        "tmin_c": -61.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Pocito",
-        "provincia": "San Juan",
-        "tmin_c": -61.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Ullum",
-        "provincia": "San Juan",
-        "tmin_c": -61.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Constitucion",
-        "provincia": "Santa Fe",
+        "departamento": "Adolfo Gonzales Chaves",
+        "provincia": "Buenos Aires",
         "tmin_c": -61.5,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Sarmiento",
-        "provincia": "Chubut",
-        "tmin_c": -61.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Chapaleufu",
-        "provincia": "La Pampa",
-        "tmin_c": -61.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Pichi Mahuida",
-        "provincia": "Rio Negro",
-        "tmin_c": -61.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Caucete",
-        "provincia": "San Juan",
-        "tmin_c": -61.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Santa Lucia",
-        "provincia": "San Juan",
-        "tmin_c": -61.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Escalante",
-        "provincia": "Chubut",
-        "tmin_c": -61.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "General Roca",
-        "provincia": "Cordoba",
-        "tmin_c": -61.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Los Lagos",
-        "provincia": "Neuquen",
-        "tmin_c": -61.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "General  Lopez",
-        "provincia": "Santa Fe",
-        "tmin_c": -61.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Colon",
+        "departamento": "Tres Arroyos",
         "provincia": "Buenos Aires",
-        "tmin_c": -61.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Ramallo",
-        "provincia": "Buenos Aires",
-        "tmin_c": -61.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "San Nicolas",
-        "provincia": "Buenos Aires",
-        "tmin_c": -61.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Godoy Cruz",
-        "provincia": "Mendoza",
-        "tmin_c": -61.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Florentino Ameghino",
-        "provincia": "Chubut",
-        "tmin_c": -60.9,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "9 de Julio",
-        "provincia": "San Juan",
-        "tmin_c": -60.9,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "General Pedernera",
-        "provincia": "San Luis",
-        "tmin_c": -60.9,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "General Villegas",
-        "provincia": "Buenos Aires",
-        "tmin_c": -60.7,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Gualeguay",
-        "provincia": "Entre Rios",
-        "tmin_c": -60.7,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Capital",
-        "provincia": "Mendoza",
-        "tmin_c": -60.7,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Adolfo Alsina",
-        "provincia": "Buenos Aires",
-        "tmin_c": -60.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Carlos Tejedor",
-        "provincia": "Buenos Aires",
-        "tmin_c": -60.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Biedma",
-        "provincia": "Chubut",
-        "tmin_c": -60.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Coronel Pringles",
-        "provincia": "San Luis",
-        "tmin_c": -60.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Libertador General San Martin",
-        "provincia": "San Luis",
-        "tmin_c": -60.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Belgrano",
-        "provincia": "San Luis",
-        "tmin_c": -60.3,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Trenque Lauquen",
-        "provincia": "Buenos Aires",
-        "tmin_c": -60.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Guatrache",
-        "provincia": "La Pampa",
-        "tmin_c": -60.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Rio Cuarto",
-        "provincia": "Cordoba",
-        "tmin_c": -60.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "San Martin",
-        "provincia": "San Juan",
-        "tmin_c": -60.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Chacabuco",
-        "provincia": "San Luis",
-        "tmin_c": -60.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Florentino Ameghino",
-        "provincia": "Buenos Aires",
-        "tmin_c": -60.0,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Sarmiento",
-        "provincia": "San Juan",
-        "tmin_c": -59.9,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Caleu Caleu",
-        "provincia": "La Pampa",
-        "tmin_c": -59.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Tunuyan",
-        "provincia": "Mendoza",
-        "tmin_c": -59.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Albardon",
-        "provincia": "San Juan",
-        "tmin_c": -59.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Chimbas",
-        "provincia": "San Juan",
-        "tmin_c": -59.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Magallanes",
-        "provincia": "Santa Cruz",
-        "tmin_c": -59.6,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Calamuchita",
-        "provincia": "Cordoba",
-        "tmin_c": -59.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Junin",
-        "provincia": "San Luis",
-        "tmin_c": -59.4,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Angaco",
-        "provincia": "San Juan",
-        "tmin_c": -59.3,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Jachal",
-        "provincia": "San Juan",
-        "tmin_c": -59.3,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Tres Lomas",
-        "provincia": "Buenos Aires",
-        "tmin_c": -59.2,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Lincoln",
-        "provincia": "Buenos Aires",
-        "tmin_c": -59.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Salliquelo",
-        "provincia": "Buenos Aires",
-        "tmin_c": -59.1,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Junin",
-        "provincia": "Buenos Aires",
-        "tmin_c": -59.0,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Calingasta",
-        "provincia": "San Juan",
-        "tmin_c": -59.0,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "General Pinto",
-        "provincia": "Buenos Aires",
-        "tmin_c": -58.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Leandro N. Alem",
-        "provincia": "Buenos Aires",
-        "tmin_c": -58.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Pehuajo",
-        "provincia": "Buenos Aires",
-        "tmin_c": -58.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Presidente Roque Saenz Pena",
-        "provincia": "Cordoba",
-        "tmin_c": -58.8,
-        "severidad": "posible granizo"
-      },
-      {
-        "departamento": "Punilla",
-        "provincia": "Cordoba",
-        "tmin_c": -58.7,
+        "tmin_c": -61.5,
         "severidad": "posible granizo"
       },
       {
         "departamento": "Conesa",
         "provincia": "Rio Negro",
-        "tmin_c": -58.6,
+        "tmin_c": -61.5,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Ayacucho",
+        "departamento": "Guamini",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Necochea",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Olavarria",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tres Lomas",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Libertador General San Martin",
         "provincia": "San Luis",
-        "tmin_c": -58.5,
+        "tmin_c": -61.2,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "San Javier",
-        "provincia": "Cordoba",
-        "tmin_c": -58.3,
+        "departamento": "Daireaux",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Victoria",
-        "provincia": "Entre Rios",
-        "tmin_c": -58.3,
+        "departamento": "General Alvarado",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Cayetano",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Trenque Lauquen",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Belgrano",
+        "provincia": "La Rioja",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Ocampo",
+        "provincia": "La Rioja",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Carlos Casares",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Loberia",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pellegrini",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Antofagasta de la Sierra",
+        "provincia": "Catamarca",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Poman",
+        "provincia": "Catamarca",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Azul",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Maraco",
+        "provincia": "La Pampa",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Los Lagos",
+        "provincia": "Neuquen",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Bolivar",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.4,
         "severidad": "posible granizo"
       },
       {
         "departamento": "Rivadavia",
-        "provincia": "San Juan",
-        "tmin_c": -58.3,
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.4,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Gaiman",
+        "departamento": "General Roca",
+        "provincia": "Cordoba",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rio Cuarto",
+        "provincia": "Cordoba",
+        "tmin_c": -60.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pehuajo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tandil",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Capital",
+        "provincia": "La Rioja",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chapaleufu",
+        "provincia": "La Pampa",
+        "tmin_c": -60.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rauch",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Carlos Tejedor",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Adolfo Alsina",
+        "provincia": "Rio Negro",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Balcarce",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Capayan",
+        "provincia": "Catamarca",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Quemu Quemu",
+        "provincia": "La Pampa",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Ayacucho",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chacabuco",
+        "provincia": "San Luis",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Minas",
+        "provincia": "Neuquen",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Pueyrredon",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Norquinco",
+        "provincia": "Rio Negro",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Monte Hermoso",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Telsen",
         "provincia": "Chubut",
-        "tmin_c": -58.2,
+        "tmin_c": -58.8,
         "severidad": "posible granizo"
       },
       {
-        "departamento": "Iglesia",
-        "provincia": "San Juan",
-        "tmin_c": -58.2,
+        "departamento": "Gastre",
+        "provincia": "Chubut",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tapalque",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pocho",
+        "provincia": "Cordoba",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Lavalle",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Villegas",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Capital",
+        "provincia": "Catamarca",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Bariloche",
+        "provincia": "Rio Negro",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Alberto",
+        "provincia": "Cordoba",
+        "tmin_c": -58.3,
         "severidad": "posible granizo"
       }
     ]
@@ -889,64 +1063,64 @@
       {
         "departamento": "Tunuyan",
         "provincia": "Mendoza",
-        "tmin_c": -25.6,
-        "hr_pct": 53,
+        "tmin_c": -26.2,
+        "hr_pct": 45,
         "despejado": false
       },
       {
         "departamento": "Lujan de Cuyo",
         "provincia": "Mendoza",
-        "tmin_c": -24.9,
-        "hr_pct": 53,
+        "tmin_c": -25.6,
+        "hr_pct": 45,
         "despejado": false
       },
       {
         "departamento": "Tupungato",
         "provincia": "Mendoza",
-        "tmin_c": -24.9,
-        "hr_pct": 59,
+        "tmin_c": -25.6,
+        "hr_pct": 51,
         "despejado": false
       },
       {
         "departamento": "Calingasta",
         "provincia": "San Juan",
-        "tmin_c": -22.1,
-        "hr_pct": 19,
+        "tmin_c": -22.3,
+        "hr_pct": 18,
         "despejado": false
       },
       {
         "departamento": "Iglesia",
         "provincia": "San Juan",
-        "tmin_c": -22.1,
-        "hr_pct": 25,
+        "tmin_c": -22.3,
+        "hr_pct": 23,
         "despejado": false
       },
       {
         "departamento": "Las Heras",
         "provincia": "Mendoza",
         "tmin_c": -21.8,
-        "hr_pct": 58,
+        "hr_pct": 57,
         "despejado": false
       },
       {
         "departamento": "San Carlos",
         "provincia": "Mendoza",
-        "tmin_c": -19.7,
-        "hr_pct": 47,
+        "tmin_c": -19.9,
+        "hr_pct": 45,
         "despejado": false
       },
       {
         "departamento": "San Rafael",
         "provincia": "Mendoza",
         "tmin_c": -18.7,
-        "hr_pct": 46,
+        "hr_pct": 45,
         "despejado": false
       },
       {
         "departamento": "Vinchina",
         "provincia": "La Rioja",
         "tmin_c": -18.4,
-        "hr_pct": 23,
+        "hr_pct": 21,
         "despejado": false
       },
       {
@@ -959,36 +1133,43 @@
       {
         "departamento": "Malargue",
         "provincia": "Mendoza",
-        "tmin_c": -17.4,
-        "hr_pct": 42,
+        "tmin_c": -17.5,
+        "hr_pct": 41,
         "despejado": false
       },
       {
         "departamento": "Minas",
         "provincia": "Neuquen",
-        "tmin_c": -16.9,
+        "tmin_c": -17.1,
         "hr_pct": 74,
         "despejado": false
       },
       {
         "departamento": "Chos  Malal",
         "provincia": "Neuquen",
-        "tmin_c": -16.5,
+        "tmin_c": -16.7,
         "hr_pct": 73,
         "despejado": false
       },
       {
         "departamento": "Alumine",
         "provincia": "Neuquen",
-        "tmin_c": -16.0,
-        "hr_pct": 67,
+        "tmin_c": -16.1,
+        "hr_pct": 66,
         "despejado": false
       },
       {
         "departamento": "Gastre",
         "provincia": "Chubut",
         "tmin_c": -15.8,
-        "hr_pct": 49,
+        "hr_pct": 48,
+        "despejado": false
+      },
+      {
+        "departamento": "Picunches",
+        "provincia": "Neuquen",
+        "tmin_c": -15.7,
+        "hr_pct": 70,
         "despejado": false
       },
       {
@@ -999,17 +1180,24 @@
         "despejado": false
       },
       {
-        "departamento": "Picunches",
+        "departamento": "Loncopue",
         "provincia": "Neuquen",
         "tmin_c": -15.3,
-        "hr_pct": 70,
+        "hr_pct": 69,
         "despejado": false
       },
       {
         "departamento": "Norquin",
         "provincia": "Neuquen",
-        "tmin_c": -14.9,
+        "tmin_c": -15.3,
         "hr_pct": 68,
+        "despejado": false
+      },
+      {
+        "departamento": "General Lamadrid",
+        "provincia": "La Rioja",
+        "tmin_c": -14.8,
+        "hr_pct": 31,
         "despejado": false
       },
       {
@@ -1020,31 +1208,17 @@
         "despejado": false
       },
       {
-        "departamento": "General Lamadrid",
-        "provincia": "La Rioja",
-        "tmin_c": -14.6,
-        "hr_pct": 34,
-        "despejado": false
-      },
-      {
         "departamento": "Bariloche",
         "provincia": "Rio Negro",
-        "tmin_c": -14.6,
+        "tmin_c": -14.7,
         "hr_pct": 60,
         "despejado": false
       },
       {
         "departamento": "Norquinco",
         "provincia": "Rio Negro",
-        "tmin_c": -14.6,
+        "tmin_c": -14.7,
         "hr_pct": 51,
-        "despejado": false
-      },
-      {
-        "departamento": "Loncopue",
-        "provincia": "Neuquen",
-        "tmin_c": -14.5,
-        "hr_pct": 69,
         "despejado": false
       },
       {
@@ -1065,7 +1239,7 @@
         "departamento": "25 de Mayo",
         "provincia": "Rio Negro",
         "tmin_c": -14.0,
-        "hr_pct": 50,
+        "hr_pct": 49,
         "despejado": false
       },
       {
@@ -1078,15 +1252,22 @@
       {
         "departamento": "Zapala",
         "provincia": "Neuquen",
-        "tmin_c": -13.3,
+        "tmin_c": -13.5,
         "hr_pct": 68,
         "despejado": false
       },
       {
         "departamento": "Telsen",
         "provincia": "Chubut",
+        "tmin_c": -13.2,
+        "hr_pct": 46,
+        "despejado": false
+      },
+      {
+        "departamento": "Lacar",
+        "provincia": "Neuquen",
         "tmin_c": -12.9,
-        "hr_pct": 47,
+        "hr_pct": 62,
         "despejado": false
       },
       {
@@ -1094,13 +1275,6 @@
         "provincia": "Rio Negro",
         "tmin_c": -12.8,
         "hr_pct": 51,
-        "despejado": false
-      },
-      {
-        "departamento": "Lacar",
-        "provincia": "Neuquen",
-        "tmin_c": -12.7,
-        "hr_pct": 62,
         "despejado": false
       },
       {
@@ -1127,14 +1301,21 @@
       {
         "departamento": "9 de julio",
         "provincia": "Rio Negro",
-        "tmin_c": -11.4,
+        "tmin_c": -11.6,
         "hr_pct": 49,
         "despejado": false
       },
       {
         "departamento": "Lago Buenos Aires",
         "provincia": "Santa Cruz",
-        "tmin_c": -10.7,
+        "tmin_c": -11.2,
+        "hr_pct": 29,
+        "despejado": false
+      },
+      {
+        "departamento": "Rio Chico",
+        "provincia": "Santa Cruz",
+        "tmin_c": -10.2,
         "hr_pct": 31,
         "despejado": false
       },
@@ -1156,14 +1337,14 @@
         "departamento": "Zonda",
         "provincia": "San Juan",
         "tmin_c": -9.9,
-        "hr_pct": 74,
+        "hr_pct": 73,
         "despejado": false
       },
       {
-        "departamento": "Rio Chico",
-        "provincia": "Santa Cruz",
-        "tmin_c": -9.7,
-        "hr_pct": 33,
+        "departamento": "Tehuelches",
+        "provincia": "Chubut",
+        "tmin_c": -9.5,
+        "hr_pct": 40,
         "despejado": false
       },
       {
@@ -1174,31 +1355,31 @@
         "despejado": false
       },
       {
-        "departamento": "Tehuelches",
-        "provincia": "Chubut",
-        "tmin_c": -8.8,
-        "hr_pct": 41,
-        "despejado": false
-      },
-      {
         "departamento": "Coronel Felipe Varela",
         "provincia": "La Rioja",
         "tmin_c": -8.8,
-        "hr_pct": 57,
-        "despejado": false
-      },
-      {
-        "departamento": "Jachal",
-        "provincia": "San Juan",
-        "tmin_c": -8.6,
-        "hr_pct": 69,
+        "hr_pct": 56,
         "despejado": false
       },
       {
         "departamento": "Anelo",
         "provincia": "Neuquen",
-        "tmin_c": -8.5,
+        "tmin_c": -8.8,
         "hr_pct": 66,
+        "despejado": false
+      },
+      {
+        "departamento": "Jachal",
+        "provincia": "San Juan",
+        "tmin_c": -8.7,
+        "hr_pct": 65,
+        "despejado": false
+      },
+      {
+        "departamento": "Paso de Indios",
+        "provincia": "Chubut",
+        "tmin_c": -8.6,
+        "hr_pct": 39,
         "despejado": false
       },
       {
@@ -1209,6 +1390,13 @@
         "despejado": false
       },
       {
+        "departamento": "Ullum",
+        "provincia": "San Juan",
+        "tmin_c": -8.5,
+        "hr_pct": 74,
+        "despejado": false
+      },
+      {
         "departamento": "El Cuy",
         "provincia": "Rio Negro",
         "tmin_c": -8.4,
@@ -1216,24 +1404,10 @@
         "despejado": false
       },
       {
-        "departamento": "Ullum",
-        "provincia": "San Juan",
-        "tmin_c": -8.3,
-        "hr_pct": 75,
-        "despejado": false
-      },
-      {
         "departamento": "Rio Senguer",
         "provincia": "Chubut",
         "tmin_c": -8.2,
-        "hr_pct": 35,
-        "despejado": false
-      },
-      {
-        "departamento": "Paso de Indios",
-        "provincia": "Chubut",
-        "tmin_c": -8.1,
-        "hr_pct": 39,
+        "hr_pct": 33,
         "despejado": false
       },
       {
@@ -1254,7 +1428,7 @@
         "departamento": "Famatina",
         "provincia": "La Rioja",
         "tmin_c": -7.4,
-        "hr_pct": 64,
+        "hr_pct": 63,
         "despejado": false
       },
       {
@@ -1275,7 +1449,7 @@
         "departamento": "Lago Argentino",
         "provincia": "Santa Cruz",
         "tmin_c": -7.2,
-        "hr_pct": 40,
+        "hr_pct": 39,
         "despejado": false
       },
       {
@@ -1296,7 +1470,7 @@
         "departamento": "Valcheta",
         "provincia": "Rio Negro",
         "tmin_c": -7.1,
-        "hr_pct": 44,
+        "hr_pct": 43,
         "despejado": false
       },
       {
@@ -1314,9 +1488,16 @@
         "despejado": false
       },
       {
+        "departamento": "Confluencia",
+        "provincia": "Neuquen",
+        "tmin_c": -6.9,
+        "hr_pct": 64,
+        "despejado": false
+      },
+      {
         "departamento": "Picun Leufu",
         "provincia": "Neuquen",
-        "tmin_c": -6.7,
+        "tmin_c": -6.8,
         "hr_pct": 64,
         "despejado": false
       },
@@ -1328,17 +1509,10 @@
         "despejado": false
       },
       {
-        "departamento": "Confluencia",
-        "provincia": "Neuquen",
-        "tmin_c": -6.6,
-        "hr_pct": 64,
-        "despejado": false
-      },
-      {
         "departamento": "Sarmiento",
         "provincia": "Chubut",
         "tmin_c": -6.3,
-        "hr_pct": 38,
+        "hr_pct": 37,
         "despejado": false
       },
       {
@@ -1349,6 +1523,13 @@
         "despejado": false
       },
       {
+        "departamento": "San Antonio",
+        "provincia": "Rio Negro",
+        "tmin_c": -5.8,
+        "hr_pct": 52,
+        "despejado": false
+      },
+      {
         "departamento": "Santa Maria",
         "provincia": "Catamarca",
         "tmin_c": -5.6,
@@ -1356,16 +1537,9 @@
         "despejado": false
       },
       {
-        "departamento": "San Antonio",
-        "provincia": "Rio Negro",
-        "tmin_c": -5.5,
-        "hr_pct": 53,
-        "despejado": false
-      },
-      {
         "departamento": "Avellaneda",
         "provincia": "Rio Negro",
-        "tmin_c": -5.4,
+        "tmin_c": -5.6,
         "hr_pct": 51,
         "despejado": false
       },
@@ -1393,22 +1567,36 @@
       {
         "departamento": "Biedma",
         "provincia": "Chubut",
-        "tmin_c": -5.1,
-        "hr_pct": 60,
+        "tmin_c": -5.2,
+        "hr_pct": 59,
         "despejado": false
       },
       {
         "departamento": "Gaiman",
         "provincia": "Chubut",
         "tmin_c": -5.0,
-        "hr_pct": 57,
+        "hr_pct": 56,
+        "despejado": false
+      },
+      {
+        "departamento": "Utracan",
+        "provincia": "La Pampa",
+        "tmin_c": -5.0,
+        "hr_pct": 65,
         "despejado": false
       },
       {
         "departamento": "Pichi Mahuida",
         "provincia": "Rio Negro",
-        "tmin_c": -4.9,
+        "tmin_c": -5.0,
         "hr_pct": 63,
+        "despejado": false
+      },
+      {
+        "departamento": "Limay Mahuida",
+        "provincia": "La Pampa",
+        "tmin_c": -4.9,
+        "hr_pct": 64,
         "despejado": false
       },
       {
@@ -1416,20 +1604,6 @@
         "provincia": "La Pampa",
         "tmin_c": -4.8,
         "hr_pct": 68,
-        "despejado": false
-      },
-      {
-        "departamento": "Limay Mahuida",
-        "provincia": "La Pampa",
-        "tmin_c": -4.8,
-        "hr_pct": 64,
-        "despejado": false
-      },
-      {
-        "departamento": "Utracan",
-        "provincia": "La Pampa",
-        "tmin_c": -4.8,
-        "hr_pct": 65,
         "despejado": false
       },
       {
@@ -1454,6 +1628,13 @@
         "despejado": false
       },
       {
+        "departamento": "Angaco",
+        "provincia": "San Juan",
+        "tmin_c": -4.7,
+        "hr_pct": 76,
+        "despejado": false
+      },
+      {
         "departamento": "Chical Co",
         "provincia": "La Pampa",
         "tmin_c": -4.6,
@@ -1468,24 +1649,24 @@
         "despejado": false
       },
       {
-        "departamento": "Angaco",
-        "provincia": "San Juan",
+        "departamento": "Conesa",
+        "provincia": "Rio Negro",
         "tmin_c": -4.6,
-        "hr_pct": 76,
+        "hr_pct": 57,
         "despejado": false
       },
       {
         "departamento": "Capital",
         "provincia": "Mendoza",
         "tmin_c": -4.5,
-        "hr_pct": 78,
+        "hr_pct": 77,
         "despejado": false
       },
       {
         "departamento": "Godoy Cruz",
         "provincia": "Mendoza",
         "tmin_c": -4.5,
-        "hr_pct": 74,
+        "hr_pct": 72,
         "despejado": false
       },
       {
@@ -1496,24 +1677,17 @@
         "despejado": false
       },
       {
-        "departamento": "Conesa",
-        "provincia": "Rio Negro",
-        "tmin_c": -4.4,
-        "hr_pct": 57,
-        "despejado": false
-      },
-      {
         "departamento": "Valle Fertil",
         "provincia": "San Juan",
-        "tmin_c": -4.4,
-        "hr_pct": 75,
+        "tmin_c": -4.5,
+        "hr_pct": 74,
         "despejado": false
       },
       {
         "departamento": "Chicligasta",
         "provincia": "Tucuman",
         "tmin_c": -4.4,
-        "hr_pct": 81,
+        "hr_pct": 80,
         "despejado": false
       },
       {
@@ -1524,10 +1698,24 @@
         "despejado": false
       },
       {
+        "departamento": "Loventue",
+        "provincia": "La Pampa",
+        "tmin_c": -4.3,
+        "hr_pct": 63,
+        "despejado": false
+      },
+      {
         "departamento": "Monteros",
         "provincia": "Tucuman",
         "tmin_c": -4.3,
-        "hr_pct": 74,
+        "hr_pct": 73,
+        "despejado": false
+      },
+      {
+        "departamento": "Florentino Ameghino",
+        "provincia": "Chubut",
+        "tmin_c": -4.2,
+        "hr_pct": 47,
         "despejado": false
       },
       {
@@ -1538,13 +1726,6 @@
         "despejado": false
       },
       {
-        "departamento": "Loventue",
-        "provincia": "La Pampa",
-        "tmin_c": -4.2,
-        "hr_pct": 63,
-        "despejado": false
-      },
-      {
         "departamento": "Gobernador Dupuy",
         "provincia": "San Luis",
         "tmin_c": -4.2,
@@ -1552,17 +1733,17 @@
         "despejado": false
       },
       {
+        "departamento": "Tornquist",
+        "provincia": "Buenos Aires",
+        "tmin_c": -4.1,
+        "hr_pct": 81,
+        "despejado": false
+      },
+      {
         "departamento": "Escalante",
         "provincia": "Chubut",
         "tmin_c": -4.1,
         "hr_pct": 37,
-        "despejado": false
-      },
-      {
-        "departamento": "Florentino Ameghino",
-        "provincia": "Chubut",
-        "tmin_c": -4.1,
-        "hr_pct": 47,
         "despejado": false
       },
       {
@@ -1576,7 +1757,14 @@
         "departamento": "San Antonio",
         "provincia": "Jujuy",
         "tmin_c": -4.1,
-        "hr_pct": 55,
+        "hr_pct": 53,
+        "despejado": false
+      },
+      {
+        "departamento": "Hucal",
+        "provincia": "La Pampa",
+        "tmin_c": -4.1,
+        "hr_pct": 73,
         "despejado": false
       },
       {
@@ -1587,17 +1775,24 @@
         "despejado": false
       },
       {
-        "departamento": "Hucal",
-        "provincia": "La Pampa",
+        "departamento": "Coronel Suarez",
+        "provincia": "Buenos Aires",
         "tmin_c": -4.0,
-        "hr_pct": 73,
+        "hr_pct": 80,
+        "despejado": false
+      },
+      {
+        "departamento": "Rawson",
+        "provincia": "Chubut",
+        "tmin_c": -4.0,
+        "hr_pct": 62,
         "despejado": false
       },
       {
         "departamento": "Cafayate",
         "provincia": "Salta",
         "tmin_c": -4.0,
-        "hr_pct": 75,
+        "hr_pct": 72,
         "despejado": false
       },
       {
@@ -1611,35 +1806,35 @@
         "departamento": "Tafi del Valle",
         "provincia": "Tucuman",
         "tmin_c": -4.0,
-        "hr_pct": 57,
+        "hr_pct": 55,
         "despejado": false
       },
       {
-        "departamento": "Tornquist",
+        "departamento": "Saavedra",
         "provincia": "Buenos Aires",
         "tmin_c": -3.9,
-        "hr_pct": 81,
+        "hr_pct": 80,
         "despejado": false
       },
       {
-        "departamento": "Coronel Suarez",
-        "provincia": "Buenos Aires",
-        "tmin_c": -3.8,
-        "hr_pct": 80,
+        "departamento": "Coronel Pringles",
+        "provincia": "San Luis",
+        "tmin_c": -3.9,
+        "hr_pct": 77,
+        "despejado": false
+      },
+      {
+        "departamento": "Deseado",
+        "provincia": "Santa Cruz",
+        "tmin_c": -3.9,
+        "hr_pct": 34,
         "despejado": false
       },
       {
         "departamento": "Andalgala",
         "provincia": "Catamarca",
         "tmin_c": -3.8,
-        "hr_pct": 68,
-        "despejado": false
-      },
-      {
-        "departamento": "Rawson",
-        "provincia": "Chubut",
-        "tmin_c": -3.8,
-        "hr_pct": 63,
+        "hr_pct": 67,
         "despejado": false
       },
       {
@@ -1657,24 +1852,17 @@
         "despejado": false
       },
       {
-        "departamento": "Saavedra",
-        "provincia": "Buenos Aires",
+        "departamento": "Caleu Caleu",
+        "provincia": "La Pampa",
         "tmin_c": -3.7,
-        "hr_pct": 80,
+        "hr_pct": 79,
         "despejado": false
       },
       {
-        "departamento": "Coronel Pringles",
-        "provincia": "San Luis",
+        "departamento": "Adolfo Alsina",
+        "provincia": "Rio Negro",
         "tmin_c": -3.7,
-        "hr_pct": 77,
-        "despejado": false
-      },
-      {
-        "departamento": "Deseado",
-        "provincia": "Santa Cruz",
-        "tmin_c": -3.7,
-        "hr_pct": 34,
+        "hr_pct": 68,
         "despejado": false
       },
       {
@@ -1685,10 +1873,10 @@
         "despejado": false
       },
       {
-        "departamento": "Caleu Caleu",
-        "provincia": "La Pampa",
+        "departamento": "General Pedernera",
+        "provincia": "San Luis",
         "tmin_c": -3.5,
-        "hr_pct": 79,
+        "hr_pct": 64,
         "despejado": false
       },
       {
@@ -1706,10 +1894,10 @@
         "despejado": false
       },
       {
-        "departamento": "General Pedernera",
+        "departamento": "Libertador General San Martin",
         "provincia": "San Luis",
         "tmin_c": -3.4,
-        "hr_pct": 64,
+        "hr_pct": 72,
         "despejado": false
       },
       {
@@ -1720,13 +1908,6 @@
         "despejado": false
       },
       {
-        "departamento": "Adolfo Alsina",
-        "provincia": "Rio Negro",
-        "tmin_c": -3.3,
-        "hr_pct": 68,
-        "despejado": false
-      },
-      {
         "departamento": "Catrilo",
         "provincia": "La Pampa",
         "tmin_c": -3.2,
@@ -1734,17 +1915,17 @@
         "despejado": false
       },
       {
-        "departamento": "La Caldera",
-        "provincia": "Salta",
+        "departamento": "Guatrache",
+        "provincia": "La Pampa",
         "tmin_c": -3.2,
-        "hr_pct": 66,
+        "hr_pct": 67,
         "despejado": false
       },
       {
-        "departamento": "Libertador General San Martin",
-        "provincia": "San Luis",
+        "departamento": "La Caldera",
+        "provincia": "Salta",
         "tmin_c": -3.2,
-        "hr_pct": 72,
+        "hr_pct": 60,
         "despejado": false
       },
       {
@@ -1769,13 +1950,6 @@
         "despejado": false
       },
       {
-        "departamento": "Guatrache",
-        "provincia": "La Pampa",
-        "tmin_c": -3.1,
-        "hr_pct": 67,
-        "despejado": false
-      },
-      {
         "departamento": "Quemu Quemu",
         "provincia": "La Pampa",
         "tmin_c": -3.1,
@@ -1790,38 +1964,38 @@
         "despejado": false
       },
       {
-        "departamento": "Maraco",
-        "provincia": "La Pampa",
-        "tmin_c": -3.0,
-        "hr_pct": 66,
-        "despejado": false
-      },
-      {
-        "departamento": "Tumbaya",
-        "provincia": "Jujuy",
-        "tmin_c": -2.9,
-        "hr_pct": 30,
-        "despejado": false
-      },
-      {
         "departamento": "Santa Rosa",
         "provincia": "Mendoza",
-        "tmin_c": -2.9,
+        "tmin_c": -3.1,
         "hr_pct": 56,
         "despejado": false
       },
       {
         "departamento": "Albardon",
         "provincia": "San Juan",
-        "tmin_c": -2.9,
+        "tmin_c": -3.1,
         "hr_pct": 80,
         "despejado": false
       },
       {
         "departamento": "Rivadavia",
         "provincia": "San Juan",
-        "tmin_c": -2.9,
+        "tmin_c": -3.1,
         "hr_pct": 83,
+        "despejado": false
+      },
+      {
+        "departamento": "Tumbaya",
+        "provincia": "Jujuy",
+        "tmin_c": -3.0,
+        "hr_pct": 30,
+        "despejado": false
+      },
+      {
+        "departamento": "Maraco",
+        "provincia": "La Pampa",
+        "tmin_c": -3.0,
+        "hr_pct": 66,
         "despejado": false
       },
       {
@@ -1863,7 +2037,7 @@
         "departamento": "Guaymallen",
         "provincia": "Mendoza",
         "tmin_c": -2.8,
-        "hr_pct": 71,
+        "hr_pct": 70,
         "despejado": false
       },
       {
@@ -1871,6 +2045,13 @@
         "provincia": "Buenos Aires",
         "tmin_c": -2.7,
         "hr_pct": 83,
+        "despejado": false
+      },
+      {
+        "departamento": "Coronel Pringles",
+        "provincia": "Buenos Aires",
+        "tmin_c": -2.7,
+        "hr_pct": 84,
         "despejado": false
       },
       {
@@ -1898,7 +2079,7 @@
         "departamento": "Ambato",
         "provincia": "Catamarca",
         "tmin_c": -2.7,
-        "hr_pct": 78,
+        "hr_pct": 77,
         "despejado": false
       },
       {
@@ -1912,7 +2093,7 @@
         "departamento": "Capital",
         "provincia": "Catamarca",
         "tmin_c": -2.7,
-        "hr_pct": 82,
+        "hr_pct": 80,
         "despejado": false
       },
       {
@@ -1933,35 +2114,35 @@
         "departamento": "Lavalle",
         "provincia": "Mendoza",
         "tmin_c": -2.7,
-        "hr_pct": 57,
+        "hr_pct": 56,
         "despejado": false
       },
       {
         "departamento": "Famailla",
         "provincia": "Tucuman",
         "tmin_c": -2.7,
-        "hr_pct": 68,
+        "hr_pct": 67,
         "despejado": false
       },
       {
         "departamento": "Lules",
         "provincia": "Tucuman",
         "tmin_c": -2.7,
-        "hr_pct": 68,
+        "hr_pct": 67,
         "despejado": false
       },
       {
         "departamento": "Tafi  Viejo",
         "provincia": "Tucuman",
         "tmin_c": -2.7,
-        "hr_pct": 72,
+        "hr_pct": 69,
         "despejado": false
       },
       {
         "departamento": "Trancas",
         "provincia": "Tucuman",
         "tmin_c": -2.7,
-        "hr_pct": 81,
+        "hr_pct": 78,
         "despejado": false
       },
       {
@@ -1989,7 +2170,21 @@
         "departamento": "Poman",
         "provincia": "Catamarca",
         "tmin_c": -2.6,
-        "hr_pct": 66,
+        "hr_pct": 64,
+        "despejado": false
+      },
+      {
+        "departamento": "Juan Martin de Pueyrredon",
+        "provincia": "San Luis",
+        "tmin_c": -2.6,
+        "hr_pct": 56,
+        "despejado": false
+      },
+      {
+        "departamento": "Ushuaia",
+        "provincia": "Tierra Del Fuego",
+        "tmin_c": -2.6,
+        "hr_pct": 75,
         "despejado": false
       },
       {
@@ -2000,10 +2195,10 @@
         "despejado": false
       },
       {
-        "departamento": "Coronel Pringles",
+        "departamento": "Bahia Blanca",
         "provincia": "Buenos Aires",
         "tmin_c": -2.5,
-        "hr_pct": 84,
+        "hr_pct": 79,
         "despejado": false
       },
       {
@@ -2018,6 +2213,13 @@
         "provincia": "Buenos Aires",
         "tmin_c": -2.5,
         "hr_pct": 86,
+        "despejado": false
+      },
+      {
+        "departamento": "Chapaleufu",
+        "provincia": "La Pampa",
+        "tmin_c": -2.5,
+        "hr_pct": 64,
         "despejado": false
       },
       {
@@ -2042,24 +2244,10 @@
         "despejado": false
       },
       {
-        "departamento": "Juan Martin de Pueyrredon",
-        "provincia": "San Luis",
-        "tmin_c": -2.4,
-        "hr_pct": 56,
-        "despejado": false
-      },
-      {
         "departamento": "General Roca",
         "provincia": "Cordoba",
         "tmin_c": -2.3,
         "hr_pct": 63,
-        "despejado": false
-      },
-      {
-        "departamento": "Chapaleufu",
-        "provincia": "La Pampa",
-        "tmin_c": -2.3,
-        "hr_pct": 64,
         "despejado": false
       },
       {
@@ -2070,10 +2258,10 @@
         "despejado": false
       },
       {
-        "departamento": "Bahia Blanca",
-        "provincia": "Buenos Aires",
-        "tmin_c": -2.2,
-        "hr_pct": 79,
+        "departamento": "25 de Mayo",
+        "provincia": "San Juan",
+        "tmin_c": -2.3,
+        "hr_pct": 59,
         "despejado": false
       },
       {
@@ -2115,14 +2303,14 @@
         "departamento": "Chacabuco",
         "provincia": "San Luis",
         "tmin_c": -2.1,
-        "hr_pct": 80,
+        "hr_pct": 79,
         "despejado": false
       },
       {
-        "departamento": "Ushuaia",
-        "provincia": "Tierra Del Fuego",
-        "tmin_c": -2.1,
-        "hr_pct": 75,
+        "departamento": "Adolfo Gonzales Chaves",
+        "provincia": "Buenos Aires",
+        "tmin_c": -2.0,
+        "hr_pct": 82,
         "despejado": false
       },
       {
@@ -2154,13 +2342,6 @@
         "despejado": false
       },
       {
-        "departamento": "Adolfo Gonzales Chaves",
-        "provincia": "Buenos Aires",
-        "tmin_c": -1.9,
-        "hr_pct": 82,
-        "despejado": false
-      },
-      {
         "departamento": "Ayacucho",
         "provincia": "Buenos Aires",
         "tmin_c": -1.9,
@@ -2182,10 +2363,24 @@
         "despejado": false
       },
       {
-        "departamento": "25 de Mayo",
+        "departamento": "Capital",
         "provincia": "San Juan",
         "tmin_c": -1.9,
-        "hr_pct": 59,
+        "hr_pct": 83,
+        "despejado": false
+      },
+      {
+        "departamento": "Chimbas",
+        "provincia": "San Juan",
+        "tmin_c": -1.9,
+        "hr_pct": 83,
+        "despejado": false
+      },
+      {
+        "departamento": "Santa Lucia",
+        "provincia": "San Juan",
+        "tmin_c": -1.9,
+        "hr_pct": 82,
         "despejado": false
       },
       {
@@ -2203,10 +2398,38 @@
         "despejado": false
       },
       {
-        "departamento": "Chimbas",
+        "departamento": "Castro Barros",
+        "provincia": "La Rioja",
+        "tmin_c": -1.8,
+        "hr_pct": 66,
+        "despejado": false
+      },
+      {
+        "departamento": "General Juan F. Quiroga",
+        "provincia": "La Rioja",
+        "tmin_c": -1.8,
+        "hr_pct": 78,
+        "despejado": false
+      },
+      {
+        "departamento": "San Blas de los Sauces",
+        "provincia": "La Rioja",
+        "tmin_c": -1.8,
+        "hr_pct": 63,
+        "despejado": false
+      },
+      {
+        "departamento": "Sanagasta",
+        "provincia": "La Rioja",
+        "tmin_c": -1.8,
+        "hr_pct": 66,
+        "despejado": false
+      },
+      {
+        "departamento": "9 de Julio",
         "provincia": "San Juan",
         "tmin_c": -1.8,
-        "hr_pct": 83,
+        "hr_pct": 77,
         "despejado": false
       },
       {
@@ -2217,31 +2440,10 @@
         "despejado": false
       },
       {
-        "departamento": "Castro Barros",
+        "departamento": "Rosario  Vera Penaloza",
         "provincia": "La Rioja",
         "tmin_c": -1.7,
-        "hr_pct": 67,
-        "despejado": false
-      },
-      {
-        "departamento": "General Juan F. Quiroga",
-        "provincia": "La Rioja",
-        "tmin_c": -1.7,
-        "hr_pct": 79,
-        "despejado": false
-      },
-      {
-        "departamento": "San Blas de los Sauces",
-        "provincia": "La Rioja",
-        "tmin_c": -1.7,
-        "hr_pct": 64,
-        "despejado": false
-      },
-      {
-        "departamento": "Sanagasta",
-        "provincia": "La Rioja",
-        "tmin_c": -1.7,
-        "hr_pct": 67,
+        "hr_pct": 70,
         "despejado": false
       },
       {
@@ -2266,38 +2468,31 @@
         "despejado": false
       },
       {
+        "departamento": "Villarino",
+        "provincia": "Buenos Aires",
+        "tmin_c": -1.6,
+        "hr_pct": 73,
+        "despejado": false
+      },
+      {
         "departamento": "Calamuchita",
         "provincia": "Cordoba",
         "tmin_c": -1.6,
-        "hr_pct": 81,
+        "hr_pct": 80,
         "despejado": false
       },
       {
-        "departamento": "Rosario  Vera Penaloza",
-        "provincia": "La Rioja",
+        "departamento": "Punilla",
+        "provincia": "Cordoba",
         "tmin_c": -1.6,
-        "hr_pct": 72,
+        "hr_pct": 75,
         "despejado": false
       },
       {
-        "departamento": "9 de Julio",
-        "provincia": "San Juan",
+        "departamento": "San Alberto",
+        "provincia": "Cordoba",
         "tmin_c": -1.6,
-        "hr_pct": 77,
-        "despejado": false
-      },
-      {
-        "departamento": "Capital",
-        "provincia": "San Juan",
-        "tmin_c": -1.6,
-        "hr_pct": 83,
-        "despejado": false
-      },
-      {
-        "departamento": "Santa Lucia",
-        "provincia": "San Juan",
-        "tmin_c": -1.6,
-        "hr_pct": 82,
+        "hr_pct": 67,
         "despejado": false
       },
       {
@@ -2329,17 +2524,10 @@
         "despejado": false
       },
       {
-        "departamento": "Punilla",
-        "provincia": "Cordoba",
+        "departamento": "General Ocampo",
+        "provincia": "La Rioja",
         "tmin_c": -1.5,
-        "hr_pct": 75,
-        "despejado": false
-      },
-      {
-        "departamento": "San Alberto",
-        "provincia": "Cordoba",
-        "tmin_c": -1.5,
-        "hr_pct": 67,
+        "hr_pct": 74,
         "despejado": false
       },
       {
@@ -2371,17 +2559,10 @@
         "despejado": false
       },
       {
-        "departamento": "Villarino",
-        "provincia": "Buenos Aires",
+        "departamento": "Santa Maria",
+        "provincia": "Cordoba",
         "tmin_c": -1.4,
-        "hr_pct": 73,
-        "despejado": false
-      },
-      {
-        "departamento": "General Ocampo",
-        "provincia": "La Rioja",
-        "tmin_c": -1.4,
-        "hr_pct": 75,
+        "hr_pct": 76,
         "despejado": false
       },
       {
@@ -2392,10 +2573,17 @@
         "despejado": false
       },
       {
+        "departamento": "Junin",
+        "provincia": "San Luis",
+        "tmin_c": -1.4,
+        "hr_pct": 67,
+        "despejado": false
+      },
+      {
         "departamento": "Rio Grande",
         "provincia": "Tierra Del Fuego",
         "tmin_c": -1.4,
-        "hr_pct": 78,
+        "hr_pct": 77,
         "despejado": false
       },
       {
@@ -2403,6 +2591,13 @@
         "provincia": "Buenos Aires",
         "tmin_c": -1.3,
         "hr_pct": 64,
+        "despejado": false
+      },
+      {
+        "departamento": "Coronel Dorrego",
+        "provincia": "Buenos Aires",
+        "tmin_c": -1.3,
+        "hr_pct": 79,
         "despejado": false
       },
       {
@@ -2427,17 +2622,10 @@
         "despejado": false
       },
       {
-        "departamento": "Santa Maria",
-        "provincia": "Cordoba",
+        "departamento": "Tres Arroyos",
+        "provincia": "Buenos Aires",
         "tmin_c": -1.3,
-        "hr_pct": 77,
-        "despejado": false
-      },
-      {
-        "departamento": "Junin",
-        "provincia": "San Luis",
-        "tmin_c": -1.3,
-        "hr_pct": 67,
+        "hr_pct": 74,
         "despejado": false
       },
       {
@@ -2476,10 +2664,17 @@
         "despejado": false
       },
       {
-        "departamento": "Tres Arroyos",
-        "provincia": "Buenos Aires",
+        "departamento": "Cruz del Eje",
+        "provincia": "Cordoba",
         "tmin_c": -1.2,
-        "hr_pct": 74,
+        "hr_pct": 67,
+        "despejado": false
+      },
+      {
+        "departamento": "Presidente Roque Saenz Pena",
+        "provincia": "Cordoba",
+        "tmin_c": -1.2,
+        "hr_pct": 63,
         "despejado": false
       },
       {
@@ -2497,13 +2692,6 @@
         "despejado": false
       },
       {
-        "departamento": "Coronel Dorrego",
-        "provincia": "Buenos Aires",
-        "tmin_c": -1.1,
-        "hr_pct": 79,
-        "despejado": false
-      },
-      {
         "departamento": "General Lavalle",
         "provincia": "Buenos Aires",
         "tmin_c": -1.1,
@@ -2515,20 +2703,6 @@
         "provincia": "Buenos Aires",
         "tmin_c": -1.1,
         "hr_pct": 70,
-        "despejado": false
-      },
-      {
-        "departamento": "Cruz del Eje",
-        "provincia": "Cordoba",
-        "tmin_c": -1.1,
-        "hr_pct": 67,
-        "despejado": false
-      },
-      {
-        "departamento": "Presidente Roque Saenz Pena",
-        "provincia": "Cordoba",
-        "tmin_c": -1.1,
-        "hr_pct": 63,
         "despejado": false
       },
       {
@@ -2574,6 +2748,13 @@
         "despejado": false
       },
       {
+        "departamento": "Pocho",
+        "provincia": "Cordoba",
+        "tmin_c": -1.0,
+        "hr_pct": 68,
+        "despejado": false
+      },
+      {
         "departamento": "San Javier",
         "provincia": "Cordoba",
         "tmin_c": -1.0,
@@ -2599,13 +2780,6 @@
         "provincia": "Buenos Aires",
         "tmin_c": -0.9,
         "hr_pct": 70,
-        "despejado": false
-      },
-      {
-        "departamento": "Pocho",
-        "provincia": "Cordoba",
-        "tmin_c": -0.9,
-        "hr_pct": 68,
         "despejado": false
       },
       {
@@ -2637,6 +2811,13 @@
         "despejado": false
       },
       {
+        "departamento": "Coronel de Marina L Rosales",
+        "provincia": "Buenos Aires",
+        "tmin_c": -0.7,
+        "hr_pct": 77,
+        "despejado": false
+      },
+      {
         "departamento": "General Pinto",
         "provincia": "Buenos Aires",
         "tmin_c": -0.7,
@@ -2648,6 +2829,13 @@
         "provincia": "Buenos Aires",
         "tmin_c": -0.7,
         "hr_pct": 63,
+        "despejado": false
+      },
+      {
+        "departamento": "Minas",
+        "provincia": "Cordoba",
+        "tmin_c": -0.7,
+        "hr_pct": 75,
         "despejado": false
       },
       {
@@ -2686,20 +2874,6 @@
         "despejado": false
       },
       {
-        "departamento": "Minas",
-        "provincia": "Cordoba",
-        "tmin_c": -0.6,
-        "hr_pct": 75,
-        "despejado": false
-      },
-      {
-        "departamento": "Coronel de Marina L Rosales",
-        "provincia": "Buenos Aires",
-        "tmin_c": -0.5,
-        "hr_pct": 77,
-        "despejado": false
-      },
-      {
         "departamento": "La Plata",
         "provincia": "Buenos Aires",
         "tmin_c": -0.5,
@@ -2717,7 +2891,14 @@
         "departamento": "Fray Mamerto Esquiu",
         "provincia": "Catamarca",
         "tmin_c": -0.5,
-        "hr_pct": 81,
+        "hr_pct": 80,
+        "despejado": false
+      },
+      {
+        "departamento": "Juarez Celman",
+        "provincia": "Cordoba",
+        "tmin_c": -0.5,
+        "hr_pct": 64,
         "despejado": false
       },
       {
@@ -2756,13 +2937,6 @@
         "despejado": false
       },
       {
-        "departamento": "Juarez Celman",
-        "provincia": "Cordoba",
-        "tmin_c": -0.3,
-        "hr_pct": 65,
-        "despejado": false
-      },
-      {
         "departamento": "Capital",
         "provincia": "La Rioja",
         "tmin_c": -0.3,
@@ -2773,7 +2947,7 @@
         "departamento": "Guachipas",
         "provincia": "Salta",
         "tmin_c": -0.3,
-        "hr_pct": 84,
+        "hr_pct": 83,
         "despejado": false
       },
       {
@@ -2801,14 +2975,14 @@
         "departamento": "Rojas",
         "provincia": "Buenos Aires",
         "tmin_c": -0.2,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
         "departamento": "Salto",
         "provincia": "Buenos Aires",
         "tmin_c": -0.2,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
@@ -2822,7 +2996,7 @@
         "departamento": "Chicoana",
         "provincia": "Salta",
         "tmin_c": -0.2,
-        "hr_pct": 91,
+        "hr_pct": 90,
         "despejado": false
       },
       {
@@ -2830,6 +3004,13 @@
         "provincia": "Buenos Aires",
         "tmin_c": -0.1,
         "hr_pct": 61,
+        "despejado": false
+      },
+      {
+        "departamento": "General San Martin",
+        "provincia": "La Rioja",
+        "tmin_c": -0.1,
+        "hr_pct": 71,
         "despejado": false
       },
       {
@@ -2847,17 +3028,10 @@
         "despejado": false
       },
       {
-        "departamento": "General San Martin",
-        "provincia": "La Rioja",
-        "tmin_c": 0.0,
-        "hr_pct": 72,
-        "despejado": false
-      },
-      {
         "departamento": "General  Lopez",
         "provincia": "Santa Fe",
         "tmin_c": -0.0,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
@@ -2878,21 +3052,21 @@
         "departamento": "San Andres de Giles",
         "provincia": "Buenos Aires",
         "tmin_c": 0.1,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
         "departamento": "Colon",
         "provincia": "Cordoba",
-        "tmin_c": 0.2,
-        "hr_pct": 78,
+        "tmin_c": 0.1,
+        "hr_pct": 77,
         "despejado": false
       },
       {
         "departamento": "Totoral",
         "provincia": "Cordoba",
-        "tmin_c": 0.2,
-        "hr_pct": 74,
+        "tmin_c": 0.1,
+        "hr_pct": 72,
         "despejado": false
       },
       {
@@ -2913,21 +3087,28 @@
         "departamento": "La Vina",
         "provincia": "Salta",
         "tmin_c": 0.3,
-        "hr_pct": 84,
+        "hr_pct": 83,
         "despejado": false
       },
       {
         "departamento": "Arauco",
         "provincia": "La Rioja",
         "tmin_c": 0.4,
-        "hr_pct": 67,
+        "hr_pct": 66,
         "despejado": false
       },
       {
         "departamento": "Colon",
         "provincia": "Buenos Aires",
         "tmin_c": 0.5,
-        "hr_pct": 62,
+        "hr_pct": 61,
+        "despejado": false
+      },
+      {
+        "departamento": "Ischilin",
+        "provincia": "Cordoba",
+        "tmin_c": 0.5,
+        "hr_pct": 65,
         "despejado": false
       },
       {
@@ -2952,13 +3133,6 @@
         "despejado": false
       },
       {
-        "departamento": "Ischilin",
-        "provincia": "Cordoba",
-        "tmin_c": 0.6,
-        "hr_pct": 66,
-        "despejado": false
-      },
-      {
         "departamento": "Moron",
         "provincia": "Buenos Aires",
         "tmin_c": 0.7,
@@ -2969,19 +3143,26 @@
         "departamento": "Arrecifes",
         "provincia": "Buenos Aires",
         "tmin_c": 0.7,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
         "departamento": "Pergamino",
         "provincia": "Buenos Aires",
         "tmin_c": 0.7,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
         "departamento": "San Antonio de Areco",
         "provincia": "Buenos Aires",
+        "tmin_c": 0.7,
+        "hr_pct": 61,
+        "despejado": false
+      },
+      {
+        "departamento": "Marcos Juarez",
+        "provincia": "Cordoba",
         "tmin_c": 0.7,
         "hr_pct": 62,
         "despejado": false
@@ -2990,7 +3171,14 @@
         "departamento": "Valle Grande",
         "provincia": "Jujuy",
         "tmin_c": 0.7,
-        "hr_pct": 86,
+        "hr_pct": 83,
+        "despejado": false
+      },
+      {
+        "departamento": "La Candelaria",
+        "provincia": "Salta",
+        "tmin_c": 0.7,
+        "hr_pct": 82,
         "despejado": false
       },
       {
@@ -3025,14 +3213,7 @@
         "departamento": "Paclin",
         "provincia": "Catamarca",
         "tmin_c": 0.8,
-        "hr_pct": 74,
-        "despejado": false
-      },
-      {
-        "departamento": "Marcos Juarez",
-        "provincia": "Cordoba",
-        "tmin_c": 0.8,
-        "hr_pct": 62,
+        "hr_pct": 73,
         "despejado": false
       },
       {
@@ -3040,13 +3221,6 @@
         "provincia": "La Rioja",
         "tmin_c": 0.8,
         "hr_pct": 64,
-        "despejado": false
-      },
-      {
-        "departamento": "La Candelaria",
-        "provincia": "Salta",
-        "tmin_c": 0.8,
-        "hr_pct": 83,
         "despejado": false
       },
       {
@@ -3060,7 +3234,7 @@
         "departamento": "Valle Viejo",
         "provincia": "Catamarca",
         "tmin_c": 0.9,
-        "hr_pct": 78,
+        "hr_pct": 76,
         "despejado": false
       },
       {
@@ -3074,7 +3248,7 @@
         "departamento": "Capitan Sarmiento",
         "provincia": "Buenos Aires",
         "tmin_c": 1.0,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
@@ -3082,6 +3256,20 @@
         "provincia": "Buenos Aires",
         "tmin_c": 1.0,
         "hr_pct": 61,
+        "despejado": false
+      },
+      {
+        "departamento": "Union",
+        "provincia": "Cordoba",
+        "tmin_c": 1.0,
+        "hr_pct": 64,
+        "despejado": false
+      },
+      {
+        "departamento": "La Paz",
+        "provincia": "Mendoza",
+        "tmin_c": 1.0,
+        "hr_pct": 56,
         "despejado": false
       },
       {
@@ -3096,13 +3284,6 @@
         "provincia": "Buenos Aires",
         "tmin_c": 1.1,
         "hr_pct": 66,
-        "despejado": false
-      },
-      {
-        "departamento": "Union",
-        "provincia": "Cordoba",
-        "tmin_c": 1.1,
-        "hr_pct": 64,
         "despejado": false
       },
       {
@@ -3127,13 +3308,6 @@
         "despejado": false
       },
       {
-        "departamento": "La Paz",
-        "provincia": "Mendoza",
-        "tmin_c": 1.2,
-        "hr_pct": 56,
-        "despejado": false
-      },
-      {
         "departamento": "Ancasti",
         "provincia": "Catamarca",
         "tmin_c": 1.3,
@@ -3144,7 +3318,7 @@
         "departamento": "El Alto",
         "provincia": "Catamarca",
         "tmin_c": 1.3,
-        "hr_pct": 74,
+        "hr_pct": 73,
         "despejado": false
       },
       {
@@ -3165,7 +3339,7 @@
         "departamento": "Campana",
         "provincia": "Buenos Aires",
         "tmin_c": 1.4,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
@@ -3190,6 +3364,13 @@
         "despejado": false
       },
       {
+        "departamento": "Tercero Arriba",
+        "provincia": "Cordoba",
+        "tmin_c": 1.4,
+        "hr_pct": 70,
+        "despejado": false
+      },
+      {
         "departamento": "Capital",
         "provincia": "Salta",
         "tmin_c": 1.4,
@@ -3197,31 +3378,24 @@
         "despejado": false
       },
       {
+        "departamento": "Metan",
+        "provincia": "Salta",
+        "tmin_c": 1.4,
+        "hr_pct": 66,
+        "despejado": false
+      },
+      {
         "departamento": "Constitucion",
         "provincia": "Santa Fe",
         "tmin_c": 1.4,
-        "hr_pct": 62,
-        "despejado": false
-      },
-      {
-        "departamento": "Tercero Arriba",
-        "provincia": "Cordoba",
-        "tmin_c": 1.5,
-        "hr_pct": 70,
-        "despejado": false
-      },
-      {
-        "departamento": "Metan",
-        "provincia": "Salta",
-        "tmin_c": 1.5,
-        "hr_pct": 66,
+        "hr_pct": 61,
         "despejado": false
       },
       {
         "departamento": "Baradero",
         "provincia": "Buenos Aires",
-        "tmin_c": 1.6,
-        "hr_pct": 62,
+        "tmin_c": 1.5,
+        "hr_pct": 61,
         "despejado": false
       },
       {
@@ -3229,6 +3403,13 @@
         "provincia": "Buenos Aires",
         "tmin_c": 1.6,
         "hr_pct": 68,
+        "despejado": false
+      },
+      {
+        "departamento": "Caseros",
+        "provincia": "Santa Fe",
+        "tmin_c": 1.6,
+        "hr_pct": 62,
         "despejado": false
       },
       {
@@ -3277,14 +3458,21 @@
         "departamento": "Zarate",
         "provincia": "Buenos Aires",
         "tmin_c": 1.7,
-        "hr_pct": 62,
+        "hr_pct": 61,
         "despejado": false
       },
       {
-        "departamento": "Caseros",
-        "provincia": "Santa Fe",
-        "tmin_c": 1.7,
-        "hr_pct": 62,
+        "departamento": "General San Martin",
+        "provincia": "Cordoba",
+        "tmin_c": 1.8,
+        "hr_pct": 66,
+        "despejado": false
+      },
+      {
+        "departamento": "San Pedro",
+        "provincia": "Buenos Aires",
+        "tmin_c": 1.9,
+        "hr_pct": 61,
         "despejado": false
       },
       {
@@ -3292,6 +3480,13 @@
         "provincia": "Jujuy",
         "tmin_c": 1.9,
         "hr_pct": 80,
+        "despejado": false
+      },
+      {
+        "departamento": "Rosario de la Frontera",
+        "provincia": "Salta",
+        "tmin_c": 1.9,
+        "hr_pct": 72,
         "despejado": false
       },
       {
@@ -3358,24 +3553,10 @@
         "despejado": false
       },
       {
-        "departamento": "San Pedro",
-        "provincia": "Buenos Aires",
-        "tmin_c": 2.0,
-        "hr_pct": 62,
-        "despejado": false
-      },
-      {
-        "departamento": "General San Martin",
+        "departamento": "Capital",
         "provincia": "Cordoba",
         "tmin_c": 2.0,
-        "hr_pct": 66,
-        "despejado": false
-      },
-      {
-        "departamento": "Rosario de la Frontera",
-        "provincia": "Salta",
-        "tmin_c": 2.0,
-        "hr_pct": 72,
+        "hr_pct": 81,
         "despejado": false
       },
       {
@@ -3386,10 +3567,10 @@
         "despejado": false
       },
       {
-        "departamento": "Capital",
-        "provincia": "Cordoba",
-        "tmin_c": 2.1,
-        "hr_pct": 82,
+        "departamento": "Ramallo",
+        "provincia": "Buenos Aires",
+        "tmin_c": 2.2,
+        "hr_pct": 62,
         "despejado": false
       },
       {
@@ -3400,30 +3581,44 @@
         "despejado": false
       },
       {
-        "departamento": "Ramallo",
+        "departamento": "Monte Hermoso",
         "provincia": "Buenos Aires",
-        "tmin_c": 2.4,
-        "hr_pct": 62,
+        "tmin_c": 2.3,
+        "hr_pct": 80,
         "despejado": false
       },
       {
         "departamento": "Tulumba",
         "provincia": "Cordoba",
-        "tmin_c": 2.5,
+        "tmin_c": 2.4,
         "hr_pct": 64,
         "despejado": false
       },
       {
         "departamento": "Burruyacu",
         "provincia": "Tucuman",
-        "tmin_c": 2.5,
-        "hr_pct": 73,
+        "tmin_c": 2.4,
+        "hr_pct": 72,
         "despejado": false
       },
       {
         "departamento": "San Isidro",
         "provincia": "Buenos Aires",
-        "tmin_c": 2.6,
+        "tmin_c": 2.5,
+        "hr_pct": 62,
+        "despejado": false
+      },
+      {
+        "departamento": "Cerrillos",
+        "provincia": "Salta",
+        "tmin_c": 2.5,
+        "hr_pct": 92,
+        "despejado": false
+      },
+      {
+        "departamento": "San Lorenzo",
+        "provincia": "Santa Fe",
+        "tmin_c": 2.5,
         "hr_pct": 62,
         "despejado": false
       },
@@ -3431,54 +3626,47 @@
         "departamento": "El Carmen",
         "provincia": "Jujuy",
         "tmin_c": 2.6,
-        "hr_pct": 80,
-        "despejado": false
-      },
-      {
-        "departamento": "Cerrillos",
-        "provincia": "Salta",
-        "tmin_c": 2.6,
-        "hr_pct": 93,
-        "despejado": false
-      },
-      {
-        "departamento": "Monte Hermoso",
-        "provincia": "Buenos Aires",
-        "tmin_c": 2.7,
-        "hr_pct": 80,
-        "despejado": false
-      },
-      {
-        "departamento": "San Lorenzo",
-        "provincia": "Santa Fe",
-        "tmin_c": 2.8,
-        "hr_pct": 62,
+        "hr_pct": 79,
         "despejado": false
       },
       {
         "departamento": "La Cocha",
         "provincia": "Tucuman",
-        "tmin_c": 2.8,
+        "tmin_c": 2.6,
         "hr_pct": 91,
-        "despejado": false
-      },
-      {
-        "departamento": "Sobremonte",
-        "provincia": "Cordoba",
-        "tmin_c": 3.0,
-        "hr_pct": 63,
         "despejado": false
       },
       {
         "departamento": "San Nicolas",
         "provincia": "Buenos Aires",
-        "tmin_c": 3.1,
+        "tmin_c": 2.8,
         "hr_pct": 62,
+        "despejado": false
+      },
+      {
+        "departamento": "Sobremonte",
+        "provincia": "Cordoba",
+        "tmin_c": 2.9,
+        "hr_pct": 63,
         "despejado": false
       },
       {
         "departamento": "Belgrano",
         "provincia": "Santa Fe",
+        "tmin_c": 2.9,
+        "hr_pct": 62,
+        "despejado": false
+      },
+      {
+        "departamento": "Rosario",
+        "provincia": "Santa Fe",
+        "tmin_c": 3.0,
+        "hr_pct": 62,
+        "despejado": false
+      },
+      {
+        "departamento": "Gualeguay",
+        "provincia": "Entre Rios",
         "tmin_c": 3.1,
         "hr_pct": 62,
         "despejado": false
@@ -3486,50 +3674,36 @@
       {
         "departamento": "Islas del Ibicuy",
         "provincia": "Entre Rios",
-        "tmin_c": 3.2,
+        "tmin_c": 3.1,
         "hr_pct": 62,
         "despejado": false
       },
       {
         "departamento": "Iriondo",
         "provincia": "Santa Fe",
-        "tmin_c": 3.3,
+        "tmin_c": 3.1,
         "hr_pct": 62,
-        "despejado": false
-      },
-      {
-        "departamento": "Rosario",
-        "provincia": "Santa Fe",
-        "tmin_c": 3.3,
-        "hr_pct": 62,
-        "despejado": false
-      },
-      {
-        "departamento": "Santa Rosa",
-        "provincia": "Catamarca",
-        "tmin_c": 3.4,
-        "hr_pct": 68,
         "despejado": false
       },
       {
         "departamento": "Rio Segundo",
         "provincia": "Cordoba",
-        "tmin_c": 3.4,
+        "tmin_c": 3.2,
         "hr_pct": 67,
+        "despejado": false
+      },
+      {
+        "departamento": "Santa Rosa",
+        "provincia": "Catamarca",
+        "tmin_c": 3.3,
+        "hr_pct": 68,
         "despejado": false
       },
       {
         "departamento": "Rio Seco",
         "provincia": "Cordoba",
-        "tmin_c": 3.5,
-        "hr_pct": 68,
-        "despejado": false
-      },
-      {
-        "departamento": "Gualeguay",
-        "provincia": "Entre Rios",
-        "tmin_c": 3.5,
-        "hr_pct": 62,
+        "tmin_c": 3.3,
+        "hr_pct": 67,
         "despejado": false
       },
       {
@@ -3542,15 +3716,15 @@
       {
         "departamento": "Rio Primero",
         "provincia": "Cordoba",
-        "tmin_c": 3.8,
-        "hr_pct": 64,
+        "tmin_c": 3.7,
+        "hr_pct": 63,
         "despejado": false
       },
       {
         "departamento": "General Guemes",
         "provincia": "Salta",
         "tmin_c": 3.8,
-        "hr_pct": 79,
+        "hr_pct": 77,
         "despejado": false
       },
       {
@@ -3570,7 +3744,7 @@
       {
         "departamento": "Ojo de Agua",
         "provincia": "Santiago Del Estero",
-        "tmin_c": 4.1,
+        "tmin_c": 4.0,
         "hr_pct": 63,
         "despejado": false
       },
@@ -3578,13 +3752,34 @@
         "departamento": "San Pedro",
         "provincia": "Jujuy",
         "tmin_c": 4.2,
-        "hr_pct": 79,
+        "hr_pct": 77,
         "despejado": false
       },
       {
         "departamento": "Santa Barbara",
         "provincia": "Jujuy",
         "tmin_c": 4.2,
+        "hr_pct": 63,
+        "despejado": false
+      },
+      {
+        "departamento": "Gualeguaychu",
+        "provincia": "Entre Rios",
+        "tmin_c": 4.3,
+        "hr_pct": 65,
+        "despejado": false
+      },
+      {
+        "departamento": "Victoria",
+        "provincia": "Entre Rios",
+        "tmin_c": 4.3,
+        "hr_pct": 63,
+        "despejado": false
+      },
+      {
+        "departamento": "San Justo",
+        "provincia": "Cordoba",
+        "tmin_c": 4.4,
         "hr_pct": 63,
         "despejado": false
       },
@@ -3599,35 +3794,21 @@
         "departamento": "Cruz Alta",
         "provincia": "Tucuman",
         "tmin_c": 4.4,
-        "hr_pct": 79,
+        "hr_pct": 78,
         "despejado": false
       },
       {
-        "departamento": "Gualeguaychu",
-        "provincia": "Entre Rios",
+        "departamento": "San Martin",
+        "provincia": "Santa Fe",
         "tmin_c": 4.5,
-        "hr_pct": 65,
+        "hr_pct": 63,
         "despejado": false
       },
       {
         "departamento": "Uruguay",
         "provincia": "Entre Rios",
         "tmin_c": 4.7,
-        "hr_pct": 76,
-        "despejado": false
-      },
-      {
-        "departamento": "Victoria",
-        "provincia": "Entre Rios",
-        "tmin_c": 4.7,
-        "hr_pct": 63,
-        "despejado": false
-      },
-      {
-        "departamento": "San Justo",
-        "provincia": "Cordoba",
-        "tmin_c": 4.8,
-        "hr_pct": 63,
+        "hr_pct": 74,
         "despejado": false
       },
       {
@@ -3638,17 +3819,24 @@
         "despejado": false
       },
       {
-        "departamento": "San Martin",
-        "provincia": "Santa Fe",
-        "tmin_c": 4.8,
-        "hr_pct": 64,
-        "despejado": false
-      },
-      {
         "departamento": "Nogoya",
         "provincia": "Entre Rios",
         "tmin_c": 5.0,
         "hr_pct": 69,
+        "despejado": false
+      },
+      {
+        "departamento": "San Jeronimo",
+        "provincia": "Santa Fe",
+        "tmin_c": 5.0,
+        "hr_pct": 62,
+        "despejado": false
+      },
+      {
+        "departamento": "Leales",
+        "provincia": "Tucuman",
+        "tmin_c": 5.0,
+        "hr_pct": 73,
         "despejado": false
       },
       {
@@ -3666,38 +3854,31 @@
         "despejado": false
       },
       {
-        "departamento": "Leales",
-        "provincia": "Tucuman",
-        "tmin_c": 5.1,
-        "hr_pct": 73,
-        "despejado": false
-      },
-      {
         "departamento": "Villaguay",
         "provincia": "Entre Rios",
         "tmin_c": 5.2,
-        "hr_pct": 77,
+        "hr_pct": 74,
         "despejado": false
       },
       {
         "departamento": "Colon",
         "provincia": "Entre Rios",
         "tmin_c": 5.3,
-        "hr_pct": 84,
-        "despejado": false
-      },
-      {
-        "departamento": "San Jeronimo",
-        "provincia": "Santa Fe",
-        "tmin_c": 5.3,
-        "hr_pct": 63,
+        "hr_pct": 80,
         "despejado": false
       },
       {
         "departamento": "San Salvador",
         "provincia": "Entre Rios",
         "tmin_c": 5.5,
-        "hr_pct": 85,
+        "hr_pct": 82,
+        "despejado": false
+      },
+      {
+        "departamento": "Diamante",
+        "provincia": "Entre Rios",
+        "tmin_c": 5.6,
+        "hr_pct": 64,
         "despejado": false
       },
       {
@@ -3715,10 +3896,10 @@
         "despejado": false
       },
       {
-        "departamento": "Diamante",
-        "provincia": "Entre Rios",
-        "tmin_c": 5.9,
-        "hr_pct": 65,
+        "departamento": "Graneros",
+        "provincia": "Tucuman",
+        "tmin_c": 5.8,
+        "hr_pct": 67,
         "despejado": false
       },
       {
@@ -3732,7 +3913,7 @@
         "departamento": "La Paz",
         "provincia": "Entre Rios",
         "tmin_c": 5.9,
-        "hr_pct": 79,
+        "hr_pct": 77,
         "despejado": false
       },
       {
@@ -3743,16 +3924,16 @@
         "despejado": false
       },
       {
-        "departamento": "Graneros",
-        "provincia": "Tucuman",
+        "departamento": "Castellanos",
+        "provincia": "Santa Fe",
         "tmin_c": 5.9,
-        "hr_pct": 67,
+        "hr_pct": 63,
         "despejado": false
       },
       {
         "departamento": "Concordia",
         "provincia": "Entre Rios",
-        "tmin_c": 6.1,
+        "tmin_c": 6.0,
         "hr_pct": 82,
         "despejado": false
       },
@@ -3785,17 +3966,17 @@
         "despejado": false
       },
       {
-        "departamento": "Federacion",
-        "provincia": "Entre Rios",
-        "tmin_c": 6.3,
-        "hr_pct": 82,
+        "departamento": "Las Colonias",
+        "provincia": "Santa Fe",
+        "tmin_c": 6.2,
+        "hr_pct": 63,
         "despejado": false
       },
       {
-        "departamento": "Castellanos",
-        "provincia": "Santa Fe",
+        "departamento": "Federacion",
+        "provincia": "Entre Rios",
         "tmin_c": 6.3,
-        "hr_pct": 64,
+        "hr_pct": 81,
         "despejado": false
       },
       {
@@ -3816,14 +3997,7 @@
         "departamento": "Garay",
         "provincia": "Santa Fe",
         "tmin_c": 6.6,
-        "hr_pct": 76,
-        "despejado": false
-      },
-      {
-        "departamento": "Las Colonias",
-        "provincia": "Santa Fe",
-        "tmin_c": 6.6,
-        "hr_pct": 64,
+        "hr_pct": 73,
         "despejado": false
       },
       {
@@ -3848,17 +4022,17 @@
         "despejado": false
       },
       {
+        "departamento": "San Justo",
+        "provincia": "Santa Fe",
+        "tmin_c": 6.7,
+        "hr_pct": 76,
+        "despejado": false
+      },
+      {
         "departamento": "Vera",
         "provincia": "Santa Fe",
         "tmin_c": 6.7,
         "hr_pct": 73,
-        "despejado": false
-      },
-      {
-        "departamento": "San Justo",
-        "provincia": "Santa Fe",
-        "tmin_c": 6.8,
-        "hr_pct": 76,
         "despejado": false
       },
       {
@@ -3900,14 +4074,21 @@
         "departamento": "Mercedes",
         "provincia": "Corrientes",
         "tmin_c": 7.1,
-        "hr_pct": 81,
+        "hr_pct": 80,
+        "despejado": false
+      },
+      {
+        "departamento": "La Capital",
+        "provincia": "Santa Fe",
+        "tmin_c": 7.1,
+        "hr_pct": 67,
         "despejado": false
       },
       {
         "departamento": "San Cristobal",
         "provincia": "Santa Fe",
         "tmin_c": 7.1,
-        "hr_pct": 67,
+        "hr_pct": 66,
         "despejado": false
       },
       {
@@ -3964,13 +4145,6 @@
         "provincia": "Corrientes",
         "tmin_c": 7.4,
         "hr_pct": 82,
-        "despejado": false
-      },
-      {
-        "departamento": "La Capital",
-        "provincia": "Santa Fe",
-        "tmin_c": 7.4,
-        "hr_pct": 67,
         "despejado": false
       },
       {
@@ -4093,6 +4267,13 @@
         "despejado": false
       },
       {
+        "departamento": "Paso de los Libres",
+        "provincia": "Corrientes",
+        "tmin_c": 7.8,
+        "hr_pct": 78,
+        "despejado": false
+      },
+      {
         "departamento": "Salavina",
         "provincia": "Santiago Del Estero",
         "tmin_c": 7.8,
@@ -4131,13 +4312,6 @@
         "departamento": "Empedrado",
         "provincia": "Corrientes",
         "tmin_c": 7.9,
-        "hr_pct": 81,
-        "despejado": false
-      },
-      {
-        "departamento": "Paso de los Libres",
-        "provincia": "Corrientes",
-        "tmin_c": 7.9,
         "hr_pct": 80,
         "despejado": false
       },
@@ -4152,7 +4326,7 @@
         "departamento": "Rivadavia",
         "provincia": "Santiago Del Estero",
         "tmin_c": 7.9,
-        "hr_pct": 70,
+        "hr_pct": 69,
         "despejado": false
       },
       {
@@ -4180,7 +4354,7 @@
         "departamento": "Mitre",
         "provincia": "Santiago Del Estero",
         "tmin_c": 8.0,
-        "hr_pct": 70,
+        "hr_pct": 69,
         "despejado": false
       },
       {
@@ -4205,17 +4379,17 @@
         "despejado": false
       },
       {
+        "departamento": "General Jose de San Martin",
+        "provincia": "Salta",
+        "tmin_c": 8.1,
+        "hr_pct": 50,
+        "despejado": false
+      },
+      {
         "departamento": "San Martin",
         "provincia": "Santiago Del Estero",
         "tmin_c": 8.1,
         "hr_pct": 63,
-        "despejado": false
-      },
-      {
-        "departamento": "General Jose de San Martin",
-        "provincia": "Salta",
-        "tmin_c": 8.2,
-        "hr_pct": 51,
         "despejado": false
       },
       {
@@ -4250,7 +4424,7 @@
         "departamento": "San Luis del Palmar",
         "provincia": "Corrientes",
         "tmin_c": 8.5,
-        "hr_pct": 81,
+        "hr_pct": 80,
         "despejado": false
       },
       {
@@ -4285,7 +4459,14 @@
         "departamento": "Capital",
         "provincia": "Corrientes",
         "tmin_c": 8.9,
-        "hr_pct": 81,
+        "hr_pct": 80,
+        "despejado": false
+      },
+      {
+        "departamento": "San Martin",
+        "provincia": "Corrientes",
+        "tmin_c": 8.9,
+        "hr_pct": 78,
         "despejado": false
       },
       {
@@ -4300,13 +4481,6 @@
         "provincia": "Corrientes",
         "tmin_c": 9.1,
         "hr_pct": 82,
-        "despejado": false
-      },
-      {
-        "departamento": "San Martin",
-        "provincia": "Corrientes",
-        "tmin_c": 9.1,
-        "hr_pct": 81,
         "despejado": false
       },
       {
@@ -4327,7 +4501,7 @@
         "departamento": "San Miguel",
         "provincia": "Corrientes",
         "tmin_c": 9.3,
-        "hr_pct": 83,
+        "hr_pct": 82,
         "despejado": false
       },
       {
@@ -4362,14 +4536,14 @@
         "departamento": "Patino",
         "provincia": "Formosa",
         "tmin_c": 10.0,
-        "hr_pct": 69,
+        "hr_pct": 68,
         "despejado": false
       },
       {
         "departamento": "Laishi",
         "provincia": "Formosa",
         "tmin_c": 10.1,
-        "hr_pct": 84,
+        "hr_pct": 83,
         "despejado": false
       },
       {
@@ -4383,48 +4557,48 @@
         "departamento": "Formosa",
         "provincia": "Formosa",
         "tmin_c": 10.5,
-        "hr_pct": 84,
+        "hr_pct": 83,
         "despejado": false
       },
       {
         "departamento": "Matacos",
         "provincia": "Formosa",
         "tmin_c": 10.6,
-        "hr_pct": 57,
+        "hr_pct": 55,
         "despejado": false
       },
       {
         "departamento": "Santo Tome",
         "provincia": "Corrientes",
         "tmin_c": 10.7,
-        "hr_pct": 85,
+        "hr_pct": 84,
         "despejado": false
       },
       {
         "departamento": "General Alvear",
         "provincia": "Corrientes",
         "tmin_c": 11.0,
-        "hr_pct": 82,
+        "hr_pct": 80,
+        "despejado": false
+      },
+      {
+        "departamento": "Pilagas",
+        "provincia": "Formosa",
+        "tmin_c": 11.3,
+        "hr_pct": 85,
         "despejado": false
       },
       {
         "departamento": "Pilcomayo",
         "provincia": "Formosa",
         "tmin_c": 11.3,
-        "hr_pct": 89,
-        "despejado": false
-      },
-      {
-        "departamento": "Pilagas",
-        "provincia": "Formosa",
-        "tmin_c": 11.5,
-        "hr_pct": 86,
+        "hr_pct": 88,
         "despejado": false
       },
       {
         "departamento": "Ramon Lista",
         "provincia": "Formosa",
-        "tmin_c": 11.8,
+        "tmin_c": 11.7,
         "hr_pct": 54,
         "despejado": false
       },
@@ -4438,35 +4612,42 @@
       {
         "departamento": "Capital",
         "provincia": "Misiones",
-        "tmin_c": 12.8,
+        "tmin_c": 12.6,
         "hr_pct": 92,
         "despejado": false
       },
       {
         "departamento": "Concepcion",
         "provincia": "Misiones",
-        "tmin_c": 12.9,
-        "hr_pct": 94,
+        "tmin_c": 12.8,
+        "hr_pct": 93,
         "despejado": false
       },
       {
         "departamento": "Leandro N. Alem",
         "provincia": "Misiones",
-        "tmin_c": 13.0,
+        "tmin_c": 12.8,
         "hr_pct": 96,
         "despejado": false
       },
       {
         "departamento": "Candelaria",
         "provincia": "Misiones",
-        "tmin_c": 13.1,
+        "tmin_c": 12.9,
         "hr_pct": 95,
         "despejado": false
       },
       {
         "departamento": "San Javier",
         "provincia": "Misiones",
-        "tmin_c": 13.2,
+        "tmin_c": 13.0,
+        "hr_pct": 96,
+        "despejado": false
+      },
+      {
+        "departamento": "Obera",
+        "provincia": "Misiones",
+        "tmin_c": 13.1,
         "hr_pct": 97,
         "despejado": false
       },
@@ -4474,18 +4655,18 @@
         "departamento": "25 de Mayo",
         "provincia": "Misiones",
         "tmin_c": 13.3,
-        "hr_pct": 98,
+        "hr_pct": 97,
         "despejado": false
       },
       {
         "departamento": "Cainguas",
         "provincia": "Misiones",
         "tmin_c": 13.3,
-        "hr_pct": 99,
+        "hr_pct": 98,
         "despejado": false
       },
       {
-        "departamento": "Obera",
+        "departamento": "San Ignacio",
         "provincia": "Misiones",
         "tmin_c": 13.3,
         "hr_pct": 97,
@@ -4493,13 +4674,6 @@
       },
       {
         "departamento": "Guarani",
-        "provincia": "Misiones",
-        "tmin_c": 13.4,
-        "hr_pct": 98,
-        "despejado": false
-      },
-      {
-        "departamento": "San Ignacio",
         "provincia": "Misiones",
         "tmin_c": 13.4,
         "hr_pct": 98,
@@ -4516,138 +4690,180 @@
         "departamento": "Montecarlo",
         "provincia": "Misiones",
         "tmin_c": 14.0,
-        "hr_pct": 99,
+        "hr_pct": 96,
         "despejado": false
       },
       {
         "departamento": "San Pedro",
         "provincia": "Misiones",
-        "tmin_c": 14.9,
-        "hr_pct": 99,
+        "tmin_c": 14.7,
+        "hr_pct": 96,
         "despejado": false
       },
       {
         "departamento": "General Manuel Belgrano",
         "provincia": "Misiones",
-        "tmin_c": 15.4,
+        "tmin_c": 15.2,
         "hr_pct": 95,
         "despejado": false
       },
       {
         "departamento": "Eldorado",
         "provincia": "Misiones",
-        "tmin_c": 15.6,
-        "hr_pct": 100,
+        "tmin_c": 15.3,
+        "hr_pct": 96,
         "despejado": false
       },
       {
         "departamento": "Iguazu",
         "provincia": "Misiones",
-        "tmin_c": 16.6,
-        "hr_pct": 98,
+        "tmin_c": 16.0,
+        "hr_pct": 97,
         "despejado": false
       }
     ]
   },
   "inundacion": {
-    "fecha": "2026-07-08",
+    "fecha": "2026-07-09",
     "criterio": "agua nueva >= 200 ha (Sentinel-1, ultimos 12 dias) o lluvia 72 h >= 80 mm (IMERG)",
     "departamentos": [
       {
-        "departamento": "Gobernador Dupuy",
-        "provincia": "San Luis",
-        "agua_nueva_ha": 551575,
+        "departamento": "Deseado",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 714055,
         "lluvia_72h_mm": 4
       },
       {
-        "departamento": "Deseado",
-        "provincia": "Santa Cruz",
-        "agua_nueva_ha": 522042,
-        "lluvia_72h_mm": 1
+        "departamento": "Gobernador Dupuy",
+        "provincia": "San Luis",
+        "agua_nueva_ha": 491384,
+        "lluvia_72h_mm": 11
+      },
+      {
+        "departamento": "Villarino",
+        "provincia": "Buenos Aires",
+        "agua_nueva_ha": 442392,
+        "lluvia_72h_mm": 2
       },
       {
         "departamento": "Rio Senguer",
         "provincia": "Chubut",
-        "agua_nueva_ha": 407400,
-        "lluvia_72h_mm": 10
+        "agua_nueva_ha": 419391,
+        "lluvia_72h_mm": 13
+      },
+      {
+        "departamento": "Lago Buenos Aires",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 407461,
+        "lluvia_72h_mm": 1
       },
       {
         "departamento": "Malargue",
         "provincia": "Mendoza",
         "agua_nueva_ha": 389010,
-        "lluvia_72h_mm": 3
-      },
-      {
-        "departamento": "San Rafael",
-        "provincia": "Mendoza",
-        "agua_nueva_ha": 366199,
-        "lluvia_72h_mm": 3
-      },
-      {
-        "departamento": "Villarino",
-        "provincia": "Buenos Aires",
-        "agua_nueva_ha": 359738,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Lago Buenos Aires",
-        "provincia": "Santa Cruz",
-        "agua_nueva_ha": 353637,
-        "lluvia_72h_mm": 1
+        "lluvia_72h_mm": 23
       },
       {
         "departamento": "Magallanes",
         "provincia": "Santa Cruz",
-        "agua_nueva_ha": 336174,
+        "agua_nueva_ha": 375431,
+        "lluvia_72h_mm": 2
+      },
+      {
+        "departamento": "Lago Argentino",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 369981,
+        "lluvia_72h_mm": 5
+      },
+      {
+        "departamento": "San Rafael",
+        "provincia": "Mendoza",
+        "agua_nueva_ha": 364537,
+        "lluvia_72h_mm": 7
+      },
+      {
+        "departamento": "General Roca",
+        "provincia": "Cordoba",
+        "agua_nueva_ha": 343255,
+        "lluvia_72h_mm": 8
+      },
+      {
+        "departamento": "General Pedernera",
+        "provincia": "San Luis",
+        "agua_nueva_ha": 327340,
+        "lluvia_72h_mm": 6
+      },
+      {
+        "departamento": "Guer Aike",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 318331,
+        "lluvia_72h_mm": 12
+      },
+      {
+        "departamento": "Corpen Aike",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 303399,
+        "lluvia_72h_mm": 3
+      },
+      {
+        "departamento": "Puan",
+        "provincia": "Buenos Aires",
+        "agua_nueva_ha": 268642,
+        "lluvia_72h_mm": 1
+      },
+      {
+        "departamento": "Juarez Celman",
+        "provincia": "Cordoba",
+        "agua_nueva_ha": 257498,
         "lluvia_72h_mm": 2
       },
       {
         "departamento": "25 de Mayo",
         "provincia": "Rio Negro",
-        "agua_nueva_ha": 259263,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Avellaneda",
-        "provincia": "Rio Negro",
-        "agua_nueva_ha": 246218,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "General Pedernera",
-        "provincia": "San Luis",
-        "agua_nueva_ha": 242493,
-        "lluvia_72h_mm": 3
-      },
-      {
-        "departamento": "General Roca",
-        "provincia": "Cordoba",
-        "agua_nueva_ha": 228875,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Lago Argentino",
-        "provincia": "Santa Cruz",
-        "agua_nueva_ha": 221916,
-        "lluvia_72h_mm": 3
-      },
-      {
-        "departamento": "Corpen Aike",
-        "provincia": "Santa Cruz",
-        "agua_nueva_ha": 217797,
-        "lluvia_72h_mm": 3
+        "agua_nueva_ha": 255848,
+        "lluvia_72h_mm": 26
       },
       {
         "departamento": "Chalileo",
         "provincia": "La Pampa",
-        "agua_nueva_ha": 212684,
+        "agua_nueva_ha": 255216,
+        "lluvia_72h_mm": 10
+      },
+      {
+        "departamento": "Patagones",
+        "provincia": "Buenos Aires",
+        "agua_nueva_ha": 240405,
+        "lluvia_72h_mm": 3
+      },
+      {
+        "departamento": "Utracan",
+        "provincia": "La Pampa",
+        "agua_nueva_ha": 225588,
         "lluvia_72h_mm": 2
       },
       {
-        "departamento": "Marcos Juarez",
+        "departamento": "Adolfo Alsina",
+        "provincia": "Buenos Aires",
+        "agua_nueva_ha": 220121,
+        "lluvia_72h_mm": 1
+      },
+      {
+        "departamento": "Rio Cuarto",
         "provincia": "Cordoba",
-        "agua_nueva_ha": 209674,
-        "lluvia_72h_mm": 0
+        "agua_nueva_ha": 216784,
+        "lluvia_72h_mm": 5
+      },
+      {
+        "departamento": "Rio Chico",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 212406,
+        "lluvia_72h_mm": 1
+      },
+      {
+        "departamento": "General  Lopez",
+        "provincia": "Santa Fe",
+        "agua_nueva_ha": 204707,
+        "lluvia_72h_mm": 3
       },
       {
         "departamento": "Moreno",
@@ -4656,16 +4872,10 @@
         "lluvia_72h_mm": 1
       },
       {
-        "departamento": "Puan",
-        "provincia": "Buenos Aires",
-        "agua_nueva_ha": 198591,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Utracan",
+        "departamento": "Hucal",
         "provincia": "La Pampa",
-        "agua_nueva_ha": 185603,
-        "lluvia_72h_mm": 1
+        "agua_nueva_ha": 181973,
+        "lluvia_72h_mm": 0
       },
       {
         "departamento": "Cochinoca",
@@ -4674,124 +4884,88 @@
         "lluvia_72h_mm": 0
       },
       {
-        "departamento": "Hucal",
+        "departamento": "Marcos Juarez",
+        "provincia": "Cordoba",
+        "agua_nueva_ha": 177090,
+        "lluvia_72h_mm": 1
+      },
+      {
+        "departamento": "Atreuco",
         "provincia": "La Pampa",
-        "agua_nueva_ha": 178300,
-        "lluvia_72h_mm": 0
+        "agua_nueva_ha": 167012,
+        "lluvia_72h_mm": 1
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "Chubut",
+        "agua_nueva_ha": 159533,
+        "lluvia_72h_mm": 4
+      },
+      {
+        "departamento": "Trenque Lauquen",
+        "provincia": "Buenos Aires",
+        "agua_nueva_ha": 152524,
+        "lluvia_72h_mm": 1
+      },
+      {
+        "departamento": "Catrilo",
+        "provincia": "La Pampa",
+        "agua_nueva_ha": 148197,
+        "lluvia_72h_mm": 1
       },
       {
         "departamento": "Jachal",
         "provincia": "San Juan",
-        "agua_nueva_ha": 147338,
+        "agua_nueva_ha": 145251,
         "lluvia_72h_mm": 2
-      },
-      {
-        "departamento": "General  Lopez",
-        "provincia": "Santa Fe",
-        "agua_nueva_ha": 147243,
-        "lluvia_72h_mm": 3
-      },
-      {
-        "departamento": "Juarez Celman",
-        "provincia": "Cordoba",
-        "agua_nueva_ha": 146750,
-        "lluvia_72h_mm": 0
-      },
-      {
-        "departamento": "Juan Martin de Pueyrredon",
-        "provincia": "San Luis",
-        "agua_nueva_ha": 143674,
-        "lluvia_72h_mm": 2
-      },
-      {
-        "departamento": "Patagones",
-        "provincia": "Buenos Aires",
-        "agua_nueva_ha": 139381,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Guer Aike",
-        "provincia": "Santa Cruz",
-        "agua_nueva_ha": 139375,
-        "lluvia_72h_mm": 9
       },
       {
         "departamento": "Cushamen",
         "provincia": "Chubut",
         "agua_nueva_ha": 139227,
-        "lluvia_72h_mm": 9
+        "lluvia_72h_mm": 66
       },
       {
-        "departamento": "Guatrache",
-        "provincia": "La Pampa",
-        "agua_nueva_ha": 132749,
+        "departamento": "Rio Grande",
+        "provincia": "Tierra Del Fuego",
+        "agua_nueva_ha": 137312,
+        "lluvia_72h_mm": 10
+      },
+      {
+        "departamento": "Juan Martin de Pueyrredon",
+        "provincia": "San Luis",
+        "agua_nueva_ha": 134899,
+        "lluvia_72h_mm": 3
+      },
+      {
+        "departamento": "General Alvear",
+        "provincia": "Mendoza",
+        "agua_nueva_ha": 132682,
+        "lluvia_72h_mm": 6
+      },
+      {
+        "departamento": "Poman",
+        "provincia": "Catamarca",
+        "agua_nueva_ha": 132309,
         "lluvia_72h_mm": 0
       },
       {
         "departamento": "Languineo",
         "provincia": "Chubut",
         "agua_nueva_ha": 130343,
-        "lluvia_72h_mm": 7
-      },
-      {
-        "departamento": "Poman",
-        "provincia": "Catamarca",
-        "agua_nueva_ha": 128968,
-        "lluvia_72h_mm": 0
-      },
-      {
-        "departamento": "General Alvear",
-        "provincia": "Mendoza",
-        "agua_nueva_ha": 127843,
-        "lluvia_72h_mm": 3
-      },
-      {
-        "departamento": "Adolfo Alsina",
-        "provincia": "Buenos Aires",
-        "agua_nueva_ha": 126261,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Rio Cuarto",
-        "provincia": "Cordoba",
-        "agua_nueva_ha": 124503,
-        "lluvia_72h_mm": 2
+        "lluvia_72h_mm": 16
       },
       {
         "departamento": "El Cuy",
         "provincia": "Rio Negro",
-        "agua_nueva_ha": 124477,
-        "lluvia_72h_mm": 1
+        "agua_nueva_ha": 125682,
+        "lluvia_72h_mm": 17
       },
       {
-        "departamento": "Norquinco",
-        "provincia": "Rio Negro",
-        "agua_nueva_ha": 122490,
-        "lluvia_72h_mm": 2
-      },
-      {
-        "departamento": "Tehuelches",
-        "provincia": "Chubut",
-        "agua_nueva_ha": 120474,
-        "lluvia_72h_mm": 7
-      },
-      {
-        "departamento": "Atreuco",
-        "provincia": "La Pampa",
-        "agua_nueva_ha": 114056,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Limay Mahuida",
-        "provincia": "La Pampa",
-        "agua_nueva_ha": 113176,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Lavalle",
-        "provincia": "Mendoza",
-        "agua_nueva_ha": 111750,
-        "lluvia_72h_mm": 1
+        "departamento": "Caseros",
+        "provincia": "Santa Fe",
+        "agua_nueva_ha": 123779,
+        "lluvia_72h_mm": 0
       }
     ]
   },

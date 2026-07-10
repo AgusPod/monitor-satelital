@@ -2359,5 +2359,401 @@
         "severidad": "posible granizo"
       }
     ]
+  },
+  {
+    "fecha": "2026-07-09",
+    "umbral_c": -58,
+    "departamentos": [
+      {
+        "departamento": "General Lamadrid",
+        "provincia": "La Rioja",
+        "tmin_c": -63.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Ullum",
+        "provincia": "San Juan",
+        "tmin_c": -63.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Castro Barros",
+        "provincia": "La Rioja",
+        "tmin_c": -63.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chilecito",
+        "provincia": "La Rioja",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Famatina",
+        "provincia": "La Rioja",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Jachal",
+        "provincia": "San Juan",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Coronel Felipe Varela",
+        "provincia": "La Rioja",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Vinchina",
+        "provincia": "La Rioja",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Sanagasta",
+        "provincia": "La Rioja",
+        "tmin_c": -63.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Capital",
+        "provincia": "La Rioja",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Blas de los Sauces",
+        "provincia": "La Rioja",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Carlos",
+        "provincia": "Mendoza",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Iglesia",
+        "provincia": "San Juan",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Arauco",
+        "provincia": "La Rioja",
+        "tmin_c": -62.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Malargue",
+        "provincia": "Mendoza",
+        "tmin_c": -62.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Rafael",
+        "provincia": "Mendoza",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Punta Indio",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tunuyan",
+        "provincia": "Mendoza",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Calingasta",
+        "provincia": "San Juan",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Caucete",
+        "provincia": "San Juan",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Zonda",
+        "provincia": "San Juan",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Brandsen",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Las Heras",
+        "provincia": "Mendoza",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Magdalena",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Canuelas",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Paz",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rosario  Vera Penaloza",
+        "provincia": "La Rioja",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chimbas",
+        "provincia": "San Juan",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rivadavia",
+        "provincia": "San Juan",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Valle Fertil",
+        "provincia": "San Juan",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tinogasta",
+        "provincia": "Catamarca",
+        "tmin_c": -60.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Angel V. Penaloza",
+        "provincia": "La Rioja",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Albardon",
+        "provincia": "San Juan",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Angaco",
+        "provincia": "San Juan",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pocito",
+        "provincia": "San Juan",
+        "tmin_c": -60.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Monte",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rawson",
+        "provincia": "San Juan",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tupungato",
+        "provincia": "Mendoza",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "San Juan",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "San Vicente",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lobos",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chascomus",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Mar Chiquita",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Chamical",
+        "provincia": "La Rioja",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Ayacucho",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "La Plata",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Belgrano",
+        "provincia": "San Luis",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Juan Martin de Pueyrredon",
+        "provincia": "San Luis",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Juan Madariaga",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Balcarce",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Coronel Pringles",
+        "provincia": "San Luis",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Pedernera",
+        "provincia": "San Luis",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Tandil",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Poman",
+        "provincia": "Catamarca",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rivadavia",
+        "provincia": "Mendoza",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Villa Gesell",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Conhelo",
+        "provincia": "La Pampa",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pehuenches",
+        "provincia": "Neuquen",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Gobernador Dupuy",
+        "provincia": "San Luis",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Pinamar",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Maraco",
+        "provincia": "La Pampa",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Belgrano",
+        "provincia": "La Rioja",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "General Juan F. Quiroga",
+        "provincia": "La Rioja",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Capital",
+        "provincia": "San Juan",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Punilla",
+        "provincia": "Cordoba",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo"
+      }
+    ]
   }
 ]

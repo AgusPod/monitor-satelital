@@ -1,4 +1,81 @@
 {
-  "fecha": "2026-07-09",
-  "lotes": []
+  "fecha": "2026-07-10",
+  "lotes": [
+    {
+      "id": "demo",
+      "nombre": "Lote demo (Pampa)",
+      "tile": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/13ea00f96c4693ac193d608f94f30e2c-ec8fce95280caa43046b41f632e3f883/tiles/{z}/{x}/{y}",
+      "zonas": [
+        {
+          "zona": 0,
+          "ndvi_medio": 0.168,
+          "area_ha": 31.6
+        },
+        {
+          "zona": 1,
+          "ndvi_medio": 0.415,
+          "area_ha": 29.4
+        },
+        {
+          "zona": 2,
+          "ndvi_medio": 0.667,
+          "area_ha": 40.6
+        }
+      ],
+      "serie": [
+        {
+          "fecha": "2025-08-14",
+          "ndvi": 0.334
+        },
+        {
+          "fecha": "2025-09-13",
+          "ndvi": 0.371
+        },
+        {
+          "fecha": "2025-10-13",
+          "ndvi": 0.446
+        },
+        {
+          "fecha": "2025-11-12",
+          "ndvi": 0.355
+        },
+        {
+          "fecha": "2025-12-12",
+          "ndvi": 0.447
+        },
+        {
+          "fecha": "2026-01-11",
+          "ndvi": 0.435
+        },
+        {
+          "fecha": "2026-02-10",
+          "ndvi": 0.379
+        },
+        {
+          "fecha": "2026-03-12",
+          "ndvi": 0.447
+        },
+        {
+          "fecha": "2026-04-11",
+          "ndvi": 0.471
+        },
+        {
+          "fecha": "2026-05-11",
+          "ndvi": 0.463
+        },
+        {
+          "fecha": "2026-06-10",
+          "ndvi": 0.401
+        },
+        {
+          "fecha": "2026-07-10",
+          "ndvi": 0.387
+        }
+      ],
+      "centro": [
+        -60.594499999998405,
+        -33.9045000430395
+      ]
+    }
+  ]
 }

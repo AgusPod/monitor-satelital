@@ -2977,5 +2977,59 @@
         "severidad": "posible granizo"
       }
     ]
+  },
+  {
+    "fecha": "2026-07-12",
+    "umbral_c": -58,
+    "departamentos": [
+      {
+        "departamento": "Lago Argentino",
+        "provincia": "Santa Cruz",
+        "tmin_c": -65.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Rio Chico",
+        "provincia": "Santa Cruz",
+        "tmin_c": -65.8,
+        "severidad": "granizo probable"
+      },
+      {
+        "departamento": "Corpen Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -62.8,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Deseado",
+        "provincia": "Santa Cruz",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Magallanes",
+        "provincia": "Santa Cruz",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Lago Buenos Aires",
+        "provincia": "Santa Cruz",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Guer Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo"
+      },
+      {
+        "departamento": "Rio Senguer",
+        "provincia": "Chubut",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo"
+      }
+    ]
   }
 ]

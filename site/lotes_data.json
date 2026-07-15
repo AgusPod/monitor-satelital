@@ -1,75 +1,75 @@
 {
-  "fecha": "2026-07-14",
+  "fecha": "2026-07-15",
   "lotes": [
     {
       "id": "demo",
       "nombre": "Lote demo (Pampa)",
-      "tile": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/038ee2b0edfbdcba54866ee4c903b675-15cab36cdfa10d0392fda58686873c54/tiles/{z}/{x}/{y}",
+      "tile": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/7c7fe325912aad9b2c63ce00c58bea87-c0073e34f8a3ee63ab3d2b70a338d4b9/tiles/{z}/{x}/{y}",
       "zonas": [
         {
           "zona": 0,
-          "ndvi_medio": 0.168,
-          "area_ha": 31.6
+          "ndvi_medio": 0.169,
+          "area_ha": 32.0
         },
         {
           "zona": 1,
-          "ndvi_medio": 0.415,
-          "area_ha": 29.4
+          "ndvi_medio": 0.418,
+          "area_ha": 29.1
         },
         {
           "zona": 2,
-          "ndvi_medio": 0.667,
-          "area_ha": 40.6
+          "ndvi_medio": 0.672,
+          "area_ha": 40.5
         }
       ],
       "serie": [
         {
-          "fecha": "2025-08-18",
-          "ndvi": 0.334
+          "fecha": "2025-08-19",
+          "ndvi": 0.336
         },
         {
-          "fecha": "2025-09-17",
+          "fecha": "2025-09-18",
           "ndvi": 0.372
         },
         {
-          "fecha": "2025-10-17",
+          "fecha": "2025-10-18",
           "ndvi": 0.453
         },
         {
-          "fecha": "2025-11-16",
+          "fecha": "2025-11-17",
           "ndvi": 0.483
         },
         {
-          "fecha": "2025-12-16",
-          "ndvi": 0.44
+          "fecha": "2025-12-17",
+          "ndvi": 0.437
         },
         {
-          "fecha": "2026-01-15",
-          "ndvi": 0.431
+          "fecha": "2026-01-16",
+          "ndvi": 0.427
         },
         {
-          "fecha": "2026-02-14",
-          "ndvi": 0.366
+          "fecha": "2026-02-15",
+          "ndvi": 0.373
         },
         {
-          "fecha": "2026-03-16",
-          "ndvi": 0.447
+          "fecha": "2026-03-17",
+          "ndvi": 0.454
         },
         {
-          "fecha": "2026-04-15",
-          "ndvi": 0.473
+          "fecha": "2026-04-16",
+          "ndvi": 0.477
         },
         {
-          "fecha": "2026-05-15",
-          "ndvi": 0.462
+          "fecha": "2026-05-16",
+          "ndvi": 0.45
         },
         {
-          "fecha": "2026-06-14",
-          "ndvi": 0.4
+          "fecha": "2026-06-15",
+          "ndvi": 0.396
         },
         {
-          "fecha": "2026-07-14",
-          "ndvi": 0.389
+          "fecha": "2026-07-15",
+          "ndvi": 0.38
         }
       ],
       "centro": [

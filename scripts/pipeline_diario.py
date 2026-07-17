@@ -48,6 +48,10 @@ PALETAS = {
 }
 
 
+MAPBIOMAS_ARG_ASSET = "projects/mapbiomas-public/assets/argentina/lulc/collection2/mapbiomas_argentina_collection2_integration_v3"
+CLASES_AGRICOLAS = [18, 19, 36]  # Agricultura, cultivos temporarios, cultivos perennes (Leyenda Coleccion 2 MapBiomas Argentina)
+
+
 def indices(img):
     ndvi  = img.normalizedDifference(["nir", "red"]).rename("NDVI")
     ndwi  = img.normalizedDifference(["nir", "swir2"]).rename("NDWI")
@@ -117,20 +121,61 @@ def temperatura_goes(img):
     return img.select("CMI_C13").multiply(esc).add(off).rename("T")
 
 
+def indice_convectivo(img):
+    """C13 (10.3 um) a temperatura de brillo, y su diferencia con C15 (12.3 um).
+    Una diferencia baja o negativa indica un tope de nube muy glaciado (mucho hielo),
+    señal de conveccion mas profunda y mayor probabilidad de granizo que mirar
+    solo la temperatura de C13. Es un heuristico, no una deteccion confirmada."""
+    e13 = ee.Number(img.get("CMI_C13_scale")); o13 = ee.Number(img.get("CMI_C13_offset"))
+    e15 = ee.Number(img.get("CMI_C15_scale")); o15 = ee.Number(img.get("CMI_C15_offset"))
+    c13 = img.select("CMI_C13").multiply(e13).add(o13)
+    c15 = img.select("CMI_C15").multiply(e15).add(o15)
+    return (
+        c13.rename("T")
+        .addBands(c13.subtract(c15).rename("BTD"))
+        .addBands(c13.multiply(-1).rename("score"))
+    )
+
+
 def reporte_granizo(region, departamentos):
-    """Revisa todas las imagenes GOES-19 de ayer y marca donde el tope de nube
-    bajo de -58 C (215 K): conveccion severa con posible granizo."""
+    """Revisa todas las imagenes GOES-19 de ayer, se queda con el instante mas frio de
+    cada pixel y marca donde el tope de nube bajo de -58 C (215 K): conveccion severa
+    con posible granizo. Suma el indice de glaciacion (BTD C13-C15) como segunda señal
+    de confianza, calcula la superficie total afectada y la cruza con MapBiomas
+    Argentina (Coleccion 2) para estimar cuanta de esa superficie es agricola."""
     ayer = (HOY - dt.timedelta(days=1)).isoformat()
     col = ee.ImageCollection("NOAA/GOES/19/MCMIPF").filterDate(ayer, FIN)
+    compuesto = col.map(indice_convectivo).qualityMosaic("score").clip(region)
+    tmin = compuesto.select("T")
+    btd = compuesto.select("BTD")
+    severo = tmin.lt(215)
 
-    tmin = col.map(temperatura_goes).min().clip(region)
-    stats = tmin.reduceRegions(collection=departamentos, reducer=ee.Reducer.min(), scale=4000)
-    afectados = stats.filter(ee.Filter.lt("min", 215))
+    area_total_ha = ee.Image.pixelArea().updateMask(severo).divide(10000).reduceRegion(
+        reducer=ee.Reducer.sum(), geometry=region, scale=4000, maxPixels=1e13,
+    ).get("area")
+
+    superficie_agricola_ha = None
+    try:
+        mb = ee.Image(MAPBIOMAS_ARG_ASSET)
+        bandas = mb.bandNames()
+        cobertura = mb.select([bandas.get(bandas.length().subtract(1))]).rename("cobertura")
+        agricola = cobertura.remap(CLASES_AGRICOLAS, [1] * len(CLASES_AGRICOLAS), 0).selfMask()
+        area_agricola_ha = ee.Image.pixelArea().updateMask(agricola).updateMask(severo).divide(10000).reduceRegion(
+            reducer=ee.Reducer.sum(), geometry=region, scale=30, maxPixels=1e13,
+        ).get("area")
+        superficie_agricola_ha = area_agricola_ha.getInfo()
+    except Exception as e:
+        print("cruce con MapBiomas omitido:", e)
+
+    combinado = tmin.rename("tmin").addBands(btd.rename("btd"))
+    reducer = ee.Reducer.min().combine(ee.Reducer.mean(), sharedInputs=True)
+    stats = combinado.reduceRegions(collection=departamentos, reducer=reducer, scale=4000)
+    afectados = stats.filter(ee.Filter.lt("tmin_min", 215))
     lista = afectados.reduceColumns(
-        ee.Reducer.toList(3), ["ADM2_NAME", "ADM1_NAME", "min"]
+        ee.Reducer.toList(4), ["ADM2_NAME", "ADM1_NAME", "tmin_min", "btd_mean"]
     ).get("list").getInfo()
     url = url_tiles(
-        tmin.updateMask(tmin.lt(215)), "T",
+        tmin.updateMask(severo), "T",
         {"min": 185, "max": 215, "palette": ["ff00ff", "ff0000", "ffa500", "ffff00"]},
     )
     def severidad(t):
@@ -145,11 +190,21 @@ def reporte_granizo(region, departamentos):
             "departamento": x[0], "provincia": x[1],
             "tmin_c": round(x[2] - 273.15, 1),
             "severidad": severidad(x[2] - 273.15),
+            "btd_c": round(x[3], 1) if x[3] is not None else None,
+            "alta_confianza": x[3] is not None and x[3] <= 3,
         }
         for x in lista
     ]
     deps.sort(key=lambda d: d["tmin_c"])
-    return {"fecha": ayer, "umbral_c": -58, "departamentos": deps}, url
+    reporte = {
+        "fecha": ayer,
+        "umbral_c": -58,
+        "superficie_ha": round(area_total_ha.getInfo()),
+        "superficie_agricola_ha": round(superficie_agricola_ha) if superficie_agricola_ha is not None else None,
+        "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+        "departamentos": deps,
+    }
+    return reporte, url
 
 
 def reporte_heladas(region, departamentos):
@@ -451,7 +506,7 @@ def main():
 
     if not pathlib.Path("site/departamentos.geojson").exists():
         deptos = departamentos.map(
-            lambda f: ee.Feature(f.simplify(1000)).select(["ADM1_NAME", "ADM2_NAME"])
+            lambda f: ee.Feature(f.simplify(200)).select(["ADM1_NAME", "ADM2_NAME"])
         )
         url_geo = deptos.getDownloadURL(filetype="geojson")
         gj = requests.get(url_geo, timeout=600)

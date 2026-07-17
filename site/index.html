@@ -145,6 +145,7 @@
         <div id="grupo-granizo"></div>
         <div class="nota">Mancha donde el tope de nube bajo de -58 C durante el dia de ayer (GOES-19, una imagen cada 10 minutos): conveccion severa con posible granizo. Es un indicio para ir a revisar el lote, no una confirmacion.</div>
         <div id="badge-granizo"></div>
+<div id="superficie-granizo" class="badge" style="display:none;"></div>
         <div class="lista-alerta" id="lista-granizo"></div>
         <h2>Tiempo real GOES</h2>
         <button id="btn-goes" class="boton-accion">Cargar ultima imagen GOES</button>
@@ -465,24 +466,41 @@ async function pintarHeladas(activar) {
 
 // ---------- Granizo: reporte de ayer ----------
 function construirGranizo() {
-  const g = tilesConfig.granizo;
-  const badge = document.getElementById("badge-granizo");
-  if (!g) { badge.innerHTML = '<span class="badge">Sin reporte de granizo todavia</span>'; return; }
-  badge.innerHTML = g.departamentos.length
-    ? '<span class="badge alerta">' + g.departamentos.length + " departamentos con conveccion severa el " + g.fecha + "</span>"
-    : '<span class="badge">Sin conveccion severa detectada el ' + g.fecha + "</span>";
-  const cont = document.getElementById("lista-granizo");
-  cont.innerHTML = "";
-  g.departamentos.slice(0, 80).forEach(function (d) {
-    const fila = document.createElement("div");
-    fila.className = "item-alerta";
-    fila.innerHTML = '<span class="lugar">' + d.departamento + "<small>" + d.provincia +
-      (d.severidad ? " - " + d.severidad : "") + '</small></span><span class="dato rojo">' + d.tmin_c.toFixed(0) + " C</span>";
-    cont.appendChild(fila);
-  });
+const g = tilesConfig.granizo;
+const badge = document.getElementById("badge-granizo");
+const sup = document.getElementById("superficie-granizo");
+if (!g) {
+badge.innerHTML = '<span class="badge">Sin reporte de granizo todavia</span>';
+if (sup) sup.style.display = "none";
+return;
+}
+badge.innerHTML = g.departamentos.length
+? '<span class="badge alerta">' + g.departamentos.length + " departamentos con conveccion severa el " + g.fecha + "</span>"
+: '<span class="badge">Sin conveccion severa detectada el ' + g.fecha + "</span>";
+if (sup) {
+if (g.superficie_ha != null) {
+const ag = g.superficie_agricola_ha != null
+? g.superficie_agricola_ha.toLocaleString("es-AR") + " ha agricolas (" + (g.fuente_uso_suelo || "MapBiomas") + ")"
+: "sin cruce agricola disponible";
+sup.innerHTML = "Superficie con posible granizo: <b>" + g.superficie_ha.toLocaleString("es-AR") + " ha</b><br>De esas, " + ag;
+sup.style.display = "block";
+} else {
+sup.style.display = "none";
+}
+}
+const cont = document.getElementById("lista-granizo");
+cont.innerHTML = "";
+g.departamentos.slice(0, 80).forEach(function (d) {
+const fila = document.createElement("div");
+fila.className = "item-alerta";
+const extra = d.severidad ? " - " + d.severidad : "";
+const confianza = d.alta_confianza ? " - alta confianza (glaciacion fuerte)" : "";
+fila.innerHTML = '<span class="lugar">' + d.departamento + "<small>" + d.provincia +
+extra + confianza + '</small></span><span class="dato rojo">' + d.tmin_c.toFixed(0) + " C</span>";
+cont.appendChild(fila);
+});
 }
 
-// ---------- Inundaciones ----------
 function construirInundacion() {
   const inu = tilesConfig.inundacion;
   const badge = document.getElementById("badge-inundacion");

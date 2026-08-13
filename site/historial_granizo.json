@@ -11468,5 +11468,54 @@
         "alta_confianza": true
       }
     ]
+  },
+  {
+    "fecha": "2026-08-12",
+    "umbral_c": -58,
+    "superficie_ha": 342055,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "San Martin",
+        "provincia": "Corrientes",
+        "tmin_c": -60.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Alvear",
+        "provincia": "Corrientes",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Paso de los Libres",
+        "provincia": "Corrientes",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Mercedes",
+        "provincia": "Corrientes",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Santo Tome",
+        "provincia": "Corrientes",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

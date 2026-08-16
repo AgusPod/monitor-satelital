@@ -11558,5 +11558,94 @@
         "alta_confianza": true
       }
     ]
+  },
+  {
+    "fecha": "2026-08-15",
+    "umbral_c": -58,
+    "superficie_ha": 91261,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Gastre",
+        "provincia": "Chubut",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Martires",
+        "provincia": "Chubut",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 2.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Telsen",
+        "provincia": "Chubut",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Conesa",
+        "provincia": "Rio Negro",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Adolfo Alsina",
+        "provincia": "Rio Negro",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Avellaneda",
+        "provincia": "Rio Negro",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Florentino Ameghino",
+        "provincia": "Chubut",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 2.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Paso de Indios",
+        "provincia": "Chubut",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Roca",
+        "provincia": "Rio Negro",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Valcheta",
+        "provincia": "Rio Negro",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

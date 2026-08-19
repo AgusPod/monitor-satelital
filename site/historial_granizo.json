@@ -11647,5 +11647,686 @@
         "alta_confianza": true
       }
     ]
+  },
+  {
+    "fecha": "2026-08-18",
+    "umbral_c": -58,
+    "superficie_ha": 38154776,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Rio Chico",
+        "provincia": "Santa Cruz",
+        "tmin_c": -69.6,
+        "severidad": "granizo probable",
+        "btd_c": 2.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Lago Buenos Aires",
+        "provincia": "Santa Cruz",
+        "tmin_c": -68.8,
+        "severidad": "granizo probable",
+        "btd_c": 1.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rio Senguer",
+        "provincia": "Chubut",
+        "tmin_c": -68.6,
+        "severidad": "granizo probable",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "Chubut",
+        "tmin_c": -68.3,
+        "severidad": "granizo probable",
+        "btd_c": 1.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Deseado",
+        "provincia": "Santa Cruz",
+        "tmin_c": -68.3,
+        "severidad": "granizo probable",
+        "btd_c": 1.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Magallanes",
+        "provincia": "Santa Cruz",
+        "tmin_c": -67.8,
+        "severidad": "granizo probable",
+        "btd_c": 1.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Escalante",
+        "provincia": "Chubut",
+        "tmin_c": -67.6,
+        "severidad": "granizo probable",
+        "btd_c": 1.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Paso de Indios",
+        "provincia": "Chubut",
+        "tmin_c": -67.5,
+        "severidad": "granizo probable",
+        "btd_c": 2.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Corpen Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -67.0,
+        "severidad": "granizo probable",
+        "btd_c": 1.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Florentino Ameghino",
+        "provincia": "Chubut",
+        "tmin_c": -66.0,
+        "severidad": "granizo probable",
+        "btd_c": 2.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Martires",
+        "provincia": "Chubut",
+        "tmin_c": -65.8,
+        "severidad": "granizo probable",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Lago Argentino",
+        "provincia": "Santa Cruz",
+        "tmin_c": -65.8,
+        "severidad": "granizo probable",
+        "btd_c": 2.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Guer Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -65.4,
+        "severidad": "granizo probable",
+        "btd_c": 1.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Languineo",
+        "provincia": "Chubut",
+        "tmin_c": -65.2,
+        "severidad": "granizo probable",
+        "btd_c": 3.2,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Tehuelches",
+        "provincia": "Chubut",
+        "tmin_c": -64.8,
+        "severidad": "posible granizo",
+        "btd_c": 2.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Gastre",
+        "provincia": "Chubut",
+        "tmin_c": -64.6,
+        "severidad": "posible granizo",
+        "btd_c": 2.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "Rio Negro",
+        "tmin_c": -64.5,
+        "severidad": "posible granizo",
+        "btd_c": 3.2,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Ushuaia",
+        "provincia": "Tierra Del Fuego",
+        "tmin_c": -64.1,
+        "severidad": "posible granizo",
+        "btd_c": 2.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Cushamen",
+        "provincia": "Chubut",
+        "tmin_c": -63.3,
+        "severidad": "posible granizo",
+        "btd_c": 3.5,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Mercedes",
+        "provincia": "Corrientes",
+        "tmin_c": -63.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "9 de julio",
+        "provincia": "Rio Negro",
+        "tmin_c": -62.4,
+        "severidad": "posible granizo",
+        "btd_c": 2.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Concordia",
+        "provincia": "Entre Rios",
+        "tmin_c": -62.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Federal",
+        "provincia": "Entre Rios",
+        "tmin_c": -62.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Salvador",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Curuzu Cuatia",
+        "provincia": "Corrientes",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rio Grande",
+        "provincia": "Tierra Del Fuego",
+        "tmin_c": -61.5,
+        "severidad": "posible granizo",
+        "btd_c": 2.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "La Paz",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Biedma",
+        "provincia": "Chubut",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo",
+        "btd_c": 3.2,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Telsen",
+        "provincia": "Chubut",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo",
+        "btd_c": 3.0,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "San Javier",
+        "provincia": "Santa Fe",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Futaleufu",
+        "provincia": "Chubut",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo",
+        "btd_c": 4.2,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Garay",
+        "provincia": "Santa Fe",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Villaguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Gaiman",
+        "provincia": "Chubut",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 2.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Norquinco",
+        "provincia": "Rio Negro",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 3.4,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Valcheta",
+        "provincia": "Rio Negro",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 3.3,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Federacion",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "9 de  Julio",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Cristobal",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Jeronimo",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Justo",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Lavalle",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "La Costa",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Paso de los Libres",
+        "provincia": "Corrientes",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Vera",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Taboada",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Colon",
+        "provincia": "Entre Rios",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Parana",
+        "provincia": "Entre Rios",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Antonio",
+        "provincia": "Rio Negro",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo",
+        "btd_c": 3.1,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Tordillo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.5,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Las Colonias",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.5,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Salavina",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -59.5,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Roque Perez",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Castellanos",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Aguirre",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Mitre",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rivadavia",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Castelli",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Dolores",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Iriondo",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Lorenzo",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Belgrano",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rawson",
+        "provincia": "Chubut",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo",
+        "btd_c": 3.5,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "San Martin",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Avellaneda",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Juan F. Ibarra",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Moreno",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Esquina",
+        "provincia": "Corrientes",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Chascomus",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Uruguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Roque",
+        "provincia": "Corrientes",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Belgrano",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Las Flores",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo",
+        "btd_c": 2.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rio Seco",
+        "provincia": "Cordoba",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Chivilcoy",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Monte",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Justo",
+        "provincia": "Cordoba",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Constitucion",
+        "provincia": "Santa Fe",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Pila",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Victoria",
+        "provincia": "Entre Rios",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rosario",
+        "provincia": "Santa Fe",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Quebrachos",
+        "provincia": "Santiago Del Estero",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Navarro",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

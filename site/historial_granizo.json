@@ -12328,5 +12328,118 @@
         "alta_confianza": true
       }
     ]
+  },
+  {
+    "fecha": "2026-08-20",
+    "umbral_c": -58,
+    "superficie_ha": 1373124,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Picunches",
+        "provincia": "Neuquen",
+        "tmin_c": -63.8,
+        "severidad": "posible granizo",
+        "btd_c": 4.7,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Zapala",
+        "provincia": "Neuquen",
+        "tmin_c": -63.6,
+        "severidad": "posible granizo",
+        "btd_c": 4.0,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Loncopue",
+        "provincia": "Neuquen",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 4.3,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "El Cuy",
+        "provincia": "Rio Negro",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 4.2,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Catan Lil",
+        "provincia": "Neuquen",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo",
+        "btd_c": 7.6,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Norquin",
+        "provincia": "Neuquen",
+        "tmin_c": -61.5,
+        "severidad": "posible granizo",
+        "btd_c": 4.8,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "9 de julio",
+        "provincia": "Rio Negro",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 8.4,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "Rio Negro",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 9.9,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Avellaneda",
+        "provincia": "Rio Negro",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 4.5,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Picun Leufu",
+        "provincia": "Neuquen",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 3.7,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Confluencia",
+        "provincia": "Neuquen",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 4.5,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Anelo",
+        "provincia": "Neuquen",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 5.7,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "San Pedro",
+        "provincia": "Misiones",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

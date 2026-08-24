@@ -12449,5 +12449,38 @@
     "superficie_agricola_ha": null,
     "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
     "departamentos": []
+  },
+  {
+    "fecha": "2026-08-23",
+    "umbral_c": -58,
+    "superficie_ha": 10523,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "San Rafael",
+        "provincia": "Mendoza",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Antofagasta de la Sierra",
+        "provincia": "Catamarca",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Santa Rosa",
+        "provincia": "Mendoza",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo",
+        "btd_c": 2.9,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

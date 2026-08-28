@@ -13707,5 +13707,798 @@
         "alta_confianza": true
       }
     ]
+  },
+  {
+    "fecha": "2026-08-27",
+    "umbral_c": -58,
+    "superficie_ha": 2647646,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Uruguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -69.2,
+        "severidad": "granizo probable",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Villaguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -68.8,
+        "severidad": "granizo probable",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tala",
+        "provincia": "Entre Rios",
+        "tmin_c": -68.8,
+        "severidad": "granizo probable",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Colon",
+        "provincia": "Entre Rios",
+        "tmin_c": -67.9,
+        "severidad": "granizo probable",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Gualeguaychu",
+        "provincia": "Entre Rios",
+        "tmin_c": -63.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Nogoya",
+        "provincia": "Entre Rios",
+        "tmin_c": -63.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Avellaneda",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Berazategui",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Lanus",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Lomas de Zamora",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Quilmes",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Berisso",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.2,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Ensenada",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.2,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "La Plata",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.2,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Union",
+        "provincia": "Cordoba",
+        "tmin_c": -62.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Pilar",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Rodriguez",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Moreno",
+        "provincia": "Buenos Aires",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Iriondo",
+        "provincia": "Santa Fe",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Marcos Juarez",
+        "provincia": "Cordoba",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Concordia",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.5,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Alvarado",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.5,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Florencio Varela",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "La Costa",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Diamante",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Lujan",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.2,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Magdalena",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Lavalle",
+        "provincia": "Buenos Aires",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tandil",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Villa Gesell",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Victoria",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Ituzaingo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Juan Madariaga",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Pueyrredon",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Merlo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Jeronimo",
+        "provincia": "Santa Fe",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Moron",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Azul",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Balcarce",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "La Matanza",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Loberia",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Mar Chiquita",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Salvador",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 07",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 10",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 11",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Almirante Brown",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Olavarria",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Belgrano",
+        "provincia": "Santa Fe",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Lorenzo",
+        "provincia": "Santa Fe",
+        "tmin_c": -60.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 09",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -60.0,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tres de Febrero",
+        "provincia": "Buenos Aires",
+        "tmin_c": -60.0,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 04",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Viamonte",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Punta Indio",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Maipu",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Necochea",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Esteban Echeverria",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 05",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 06",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 15",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Exaltacion de la Cruz",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Guido",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 08",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -59.5,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Belgrano",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Andres de Giles",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Benito Juarez",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Monte",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Ezeiza",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Dolores",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Pinamar",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General San Martin",
+        "provincia": "Cordoba",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Hurlingham",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Jose C Paz",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Miguel",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Ayacucho",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tigre",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tordillo",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tres Arroyos",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 13",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 14",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Carmen de Areco",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Salto",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Presidente Peron",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Brandsen",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Chascomus",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Pila",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Gualeguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Comuna 12",
+        "provincia": "Buenos Aires D.f.",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tapalque",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Bragado",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Campana",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Castelli",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General San Martin",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rauch",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Cayetano",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Zarate",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Telsen",
+        "provincia": "Chubut",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

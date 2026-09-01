@@ -15159,5 +15159,126 @@
         "alta_confianza": true
       }
     ]
+  },
+  {
+    "fecha": "2026-08-31",
+    "umbral_c": -58,
+    "superficie_ha": 110844,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "Misiones",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Cainguas",
+        "provincia": "Misiones",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Obera",
+        "provincia": "Misiones",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Libertador General San  Martin",
+        "provincia": "Misiones",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Manuel Belgrano",
+        "provincia": "Misiones",
+        "tmin_c": -60.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Iguazu",
+        "provincia": "Misiones",
+        "tmin_c": -60.3,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Pedro",
+        "provincia": "Misiones",
+        "tmin_c": -60.2,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Guarani",
+        "provincia": "Misiones",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tornquist",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 2.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Villarino",
+        "provincia": "Buenos Aires",
+        "tmin_c": -59.7,
+        "severidad": "posible granizo",
+        "btd_c": 2.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Pedernera",
+        "provincia": "San Luis",
+        "tmin_c": -59.4,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Juan Martin de Pueyrredon",
+        "provincia": "San Luis",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Patagones",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Bahia Blanca",
+        "provincia": "Buenos Aires",
+        "tmin_c": -58.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.9,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

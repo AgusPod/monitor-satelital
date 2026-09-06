@@ -15313,5 +15313,30 @@
     "superficie_agricola_ha": null,
     "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
     "departamentos": []
+  },
+  {
+    "fecha": "2026-09-05",
+    "umbral_c": -58,
+    "superficie_ha": 296900,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Ushuaia",
+        "provincia": "Tierra Del Fuego",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo",
+        "btd_c": 4.5,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Rio Grande",
+        "provincia": "Tierra Del Fuego",
+        "tmin_c": -59.6,
+        "severidad": "posible granizo",
+        "btd_c": 3.3,
+        "alta_confianza": false
+      }
+    ]
   }
 ]

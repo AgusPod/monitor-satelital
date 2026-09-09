@@ -15371,5 +15371,54 @@
     "superficie_agricola_ha": null,
     "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
     "departamentos": []
+  },
+  {
+    "fecha": "2026-09-08",
+    "umbral_c": -58,
+    "superficie_ha": 2928036,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Lago Argentino",
+        "provincia": "Santa Cruz",
+        "tmin_c": -63.8,
+        "severidad": "posible granizo",
+        "btd_c": 2.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Guer Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 4.1,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Corpen Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 3.1,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Rio Chico",
+        "provincia": "Santa Cruz",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 2.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Magallanes",
+        "provincia": "Santa Cruz",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo",
+        "btd_c": 2.4,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

@@ -15420,5 +15420,182 @@
         "alta_confianza": true
       }
     ]
+  },
+  {
+    "fecha": "2026-09-09",
+    "umbral_c": -58,
+    "superficie_ha": 4016073,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Eldorado",
+        "provincia": "Misiones",
+        "tmin_c": -70.8,
+        "severidad": "granizo grande probable",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Iguazu",
+        "provincia": "Misiones",
+        "tmin_c": -70.2,
+        "severidad": "granizo grande probable",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Pedro",
+        "provincia": "Misiones",
+        "tmin_c": -69.3,
+        "severidad": "granizo probable",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Manuel Belgrano",
+        "provincia": "Misiones",
+        "tmin_c": -69.0,
+        "severidad": "granizo probable",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Deseado",
+        "provincia": "Santa Cruz",
+        "tmin_c": -64.2,
+        "severidad": "posible granizo",
+        "btd_c": 6.9,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Futaleufu",
+        "provincia": "Chubut",
+        "tmin_c": -63.5,
+        "severidad": "posible granizo",
+        "btd_c": 8.4,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Languineo",
+        "provincia": "Chubut",
+        "tmin_c": -63.0,
+        "severidad": "posible granizo",
+        "btd_c": 5.8,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Lago Buenos Aires",
+        "provincia": "Santa Cruz",
+        "tmin_c": -62.8,
+        "severidad": "posible granizo",
+        "btd_c": 5.8,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Paso de Indios",
+        "provincia": "Chubut",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo",
+        "btd_c": 6.5,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Rio Chico",
+        "provincia": "Santa Cruz",
+        "tmin_c": -61.5,
+        "severidad": "posible granizo",
+        "btd_c": 4.8,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Cushamen",
+        "provincia": "Chubut",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 5.1,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "Chubut",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 6.8,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Tehuelches",
+        "provincia": "Chubut",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 6.9,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Corpen Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -61.1,
+        "severidad": "posible granizo",
+        "btd_c": 3.4,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Guer Aike",
+        "provincia": "Santa Cruz",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 2.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Gastre",
+        "provincia": "Chubut",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 6.5,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Norquinco",
+        "provincia": "Rio Negro",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo",
+        "btd_c": 5.8,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Lago Argentino",
+        "provincia": "Santa Cruz",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo",
+        "btd_c": 2.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Escalante",
+        "provincia": "Chubut",
+        "tmin_c": -59.5,
+        "severidad": "posible granizo",
+        "btd_c": 4.6,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Bariloche",
+        "provincia": "Rio Negro",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 6.7,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Magallanes",
+        "provincia": "Santa Cruz",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo",
+        "btd_c": 3.3,
+        "alta_confianza": false
+      }
+    ]
   }
 ]

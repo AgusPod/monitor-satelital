@@ -17472,5 +17472,102 @@
     "superficie_agricola_ha": null,
     "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
     "departamentos": []
+  },
+  {
+    "fecha": "2026-09-26",
+    "umbral_c": -58,
+    "superficie_ha": 1974821,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "La Paz",
+        "provincia": "Entre Rios",
+        "tmin_c": -77.1,
+        "severidad": "granizo grande probable",
+        "btd_c": 2.6,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Federal",
+        "provincia": "Entre Rios",
+        "tmin_c": -72.9,
+        "severidad": "granizo grande probable",
+        "btd_c": 2.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Federacion",
+        "provincia": "Entre Rios",
+        "tmin_c": -67.4,
+        "severidad": "granizo probable",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Monte Caseros",
+        "provincia": "Corrientes",
+        "tmin_c": -67.0,
+        "severidad": "granizo probable",
+        "btd_c": 3.3,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Parana",
+        "provincia": "Entre Rios",
+        "tmin_c": -66.8,
+        "severidad": "granizo probable",
+        "btd_c": 2.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Villaguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -66.0,
+        "severidad": "granizo probable",
+        "btd_c": 3.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Feliciano",
+        "provincia": "Entre Rios",
+        "tmin_c": -64.6,
+        "severidad": "posible granizo",
+        "btd_c": 3.3,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "San Salvador",
+        "provincia": "Entre Rios",
+        "tmin_c": -64.2,
+        "severidad": "posible granizo",
+        "btd_c": 3.3,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Concordia",
+        "provincia": "Entre Rios",
+        "tmin_c": -63.9,
+        "severidad": "posible granizo",
+        "btd_c": 2.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Curuzu Cuatia",
+        "provincia": "Corrientes",
+        "tmin_c": -62.4,
+        "severidad": "posible granizo",
+        "btd_c": 3.3,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Paso de los Libres",
+        "provincia": "Corrientes",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo",
+        "btd_c": 2.7,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

@@ -18699,5 +18699,38 @@
         "alta_confianza": false
       }
     ]
+  },
+  {
+    "fecha": "2026-10-01",
+    "umbral_c": -58,
+    "superficie_ha": 234078,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Escalante",
+        "provincia": "Chubut",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 2.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Martires",
+        "provincia": "Chubut",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo",
+        "btd_c": 2.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Paso de Indios",
+        "provincia": "Chubut",
+        "tmin_c": -59.1,
+        "severidad": "posible granizo",
+        "btd_c": 2.0,
+        "alta_confianza": true
+      }
+    ]
   }
 ]

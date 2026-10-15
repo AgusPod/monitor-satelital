@@ -1,10 +1,5 @@
 [
   {
-    "fecha": "2026-07-03",
-    "umbral_c": -58,
-    "departamentos": []
-  },
-  {
     "fecha": "2026-07-04",
     "umbral_c": -58,
     "departamentos": []
@@ -23032,6 +23027,39 @@
         "tmin_c": -58.2,
         "severidad": "posible granizo",
         "btd_c": 1.0,
+        "alta_confianza": true
+      }
+    ]
+  },
+  {
+    "fecha": "2026-10-14",
+    "umbral_c": -58,
+    "superficie_ha": 3562,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "Rio Negro",
+        "tmin_c": -58.6,
+        "severidad": "posible granizo",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Guarani",
+        "provincia": "Misiones",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 2.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Pedro",
+        "provincia": "Misiones",
+        "tmin_c": -58.5,
+        "severidad": "posible granizo",
+        "btd_c": 2.2,
         "alta_confianza": true
       }
     ]

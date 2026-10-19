@@ -1,59 +1,116 @@
 {
-  "fecha": "2026-10-18",
+  "fecha": "2026-10-19",
   "ventana_dias": 15,
   "tiles": {
-    "NDVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/f1de1ea02541a498235cabde00bd9346-5e0a30a3b7db10e67850fdd67b5faa54/tiles/{z}/{x}/{y}",
-    "EVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/07a2e8005d9a2480e75d4ce6b1cfdacf-766217b7818aa64c9e9866a061dfc40f/tiles/{z}/{x}/{y}",
-    "NDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/248546b6fdfd75e92bc61ffbb5d54122-9019c0a194d094ff6b6f9875c6ff2723/tiles/{z}/{x}/{y}",
-    "MNDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/db7a997b1970d13bb9d85065591c6e2a-4107ca458d93289e77b7b1733d78de96/tiles/{z}/{x}/{y}",
-    "NDVI_modis": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/09723610329795295ed1c63a8ba6758c-0db7eb826e4effb13cf7d96bd3792919/tiles/{z}/{x}/{y}",
-    "lluvia_chirps": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/197f9333856060e3c2796b24e98e9653-b6d329cc303e901fb16eecf538cac48f/tiles/{z}/{x}/{y}",
-    "lluvia_era5": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/269045f720447395c81d124c6acc58ab-ae30ddff9441817a2943e33960effd0b/tiles/{z}/{x}/{y}",
-    "topo_elevacion": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/314302b2aa7e0e20ce776b5be0b7ae95-06b39b03e3b51c571904ddad7c8008db/tiles/{z}/{x}/{y}",
-    "topo_pendiente": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/9928522cf0f2e6b60d8ffcfd97a3c060-fd4ccf6e6dea797aa2dc835480a01392/tiles/{z}/{x}/{y}",
-    "topo_sombreado": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/4cc7879c6bfc7a0f990f556b44b4ee6e-4d163a8ac302ff949266c081de21d0af/tiles/{z}/{x}/{y}",
-    "topo_relieve": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/ed1884497a350ef4e55d89b81bf11241-8bfcfabaf7cb4d7f89ee18a2b3b25e67/tiles/{z}/{x}/{y}",
-    "granizo_ayer": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/25e72a2b2cd90f1da6cda6911ede6337-74b33ae38e3cf688da7b03744fb5af5b/tiles/{z}/{x}/{y}",
-    "lluvia_imerg72": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/30fd1a52f5189515e703f5480ee74b65-5af986014f5e3638463a51ed4a984cc5/tiles/{z}/{x}/{y}",
-    "agua_s1": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/7759f7df2cf3762c631aaaccd295def8-f44ee386cc1ac0c0b852ddcb9858fe84/tiles/{z}/{x}/{y}",
-    "agua_nueva": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/4cf4e3b4b11f40c1d0a8eef8432c9c88-0818fabfe556f7a96b9fc224676edd4d/tiles/{z}/{x}/{y}",
-    "zonas_bajas": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/763316ad6de46fb96114c4c526e1b8cc-efd734ee64db28d3f3f4679d3b242aa1/tiles/{z}/{x}/{y}"
+    "NDVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/50732915103edca13a83416293160996-57ce14191361db86bec2c9f502efa551/tiles/{z}/{x}/{y}",
+    "EVI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/18548bf35b064479f678f79b3bc00a0e-a1d724f34aa902ef8d2fef6370fdc14b/tiles/{z}/{x}/{y}",
+    "NDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/dde58db36c5e68f094e48f1b61e1c636-115036b391c8691db22445800edebe90/tiles/{z}/{x}/{y}",
+    "MNDWI_s2": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/d498d98020b6c47c0c2b81f2f688d8d9-dad7f115bbd4ed396a4334b255b3183f/tiles/{z}/{x}/{y}",
+    "NDVI_modis": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/b64b4ecca2839561107ce735069ceb39-cfe146aa073e69292896c149d26b5a15/tiles/{z}/{x}/{y}",
+    "lluvia_chirps": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/7c197fdc496705421232153676a61672-97118994cef17d86fc72b4eabe6cbb62/tiles/{z}/{x}/{y}",
+    "lluvia_era5": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/6d808ed2632c8e3e1a9b90464866c98c-1dd4043e9e85dec4bbc93d0c7722ab9a/tiles/{z}/{x}/{y}",
+    "topo_elevacion": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/314302b2aa7e0e20ce776b5be0b7ae95-d66d03ee188ee8be618be2936ef67750/tiles/{z}/{x}/{y}",
+    "topo_pendiente": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/9928522cf0f2e6b60d8ffcfd97a3c060-76c2a8ca3b107f52d98737d63ef73432/tiles/{z}/{x}/{y}",
+    "topo_sombreado": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/4cc7879c6bfc7a0f990f556b44b4ee6e-ed6203ae89087c2af8c22fd1912b1562/tiles/{z}/{x}/{y}",
+    "topo_relieve": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/ed1884497a350ef4e55d89b81bf11241-9ef4f6160e6fddf16cf590bf074f55af/tiles/{z}/{x}/{y}",
+    "granizo_ayer": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/3af0c16acb1cdcbb2c5632849d6b2972-cf34022749c992189d569b5c9b71ad82/tiles/{z}/{x}/{y}",
+    "lluvia_imerg72": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/3819025222004e5e9aba0dc80dec3977-9d2300e4743bfaadfee3413b8f64010f/tiles/{z}/{x}/{y}",
+    "agua_s1": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/502cfd61c54db7141ca5ae9bd881b877-d8d42fdb19d70e2db5c1353bf2f923a4/tiles/{z}/{x}/{y}",
+    "agua_nueva": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/5a577e843978a33ccd89258be1df784f-ae0ee0b30762e9bd843d7d01083a14d1/tiles/{z}/{x}/{y}",
+    "zonas_bajas": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/763316ad6de46fb96114c4c526e1b8cc-650b20c0d6872c4ba56d5b5b47735aa5/tiles/{z}/{x}/{y}"
   },
   "rangos": {
-    "NDVI_s2": "2026-10-03 a 2026-10-18",
-    "EVI_s2": "2026-10-03 a 2026-10-18",
-    "NDWI_s2": "2026-10-03 a 2026-10-18",
-    "MNDWI_s2": "2026-10-03 a 2026-10-18",
-    "NDVI_modis": "2026-07-30 a 2026-10-18",
-    "lluvia_chirps": "2026-08-19 a 2026-10-18",
-    "lluvia_era5": "2026-08-19 a 2026-10-18",
+    "NDVI_s2": "2026-10-04 a 2026-10-19",
+    "EVI_s2": "2026-10-04 a 2026-10-19",
+    "NDWI_s2": "2026-10-04 a 2026-10-19",
+    "MNDWI_s2": "2026-10-04 a 2026-10-19",
+    "NDVI_modis": "2026-07-31 a 2026-10-19",
+    "lluvia_chirps": "2026-08-20 a 2026-10-19",
+    "lluvia_era5": "2026-08-20 a 2026-10-19",
     "topo_elevacion": "capa estatica (Copernicus DEM 30 m)",
     "topo_pendiente": "capa estatica (Copernicus DEM 30 m)",
     "topo_sombreado": "capa estatica (Copernicus DEM 30 m)",
     "topo_relieve": "capa estatica (Copernicus DEM 30 m)",
-    "granizo_ayer": "2026-10-17",
-    "lluvia_imerg72": "2026-10-15 a 2026-10-18",
-    "agua_s1": "2026-10-06 a 2026-10-18",
-    "agua_nueva": "2026-10-06 a 2026-10-18",
+    "granizo_ayer": "2026-10-18",
+    "lluvia_imerg72": "2026-10-16 a 2026-10-19",
+    "agua_s1": "2026-10-07 a 2026-10-19",
+    "agua_nueva": "2026-10-07 a 2026-10-19",
     "zonas_bajas": "capa estatica (HAND, MERIT Hydro)"
   },
   "granizo": {
-    "fecha": "2026-10-17",
+    "fecha": "2026-10-18",
     "umbral_c": -58,
-    "superficie_ha": 0,
+    "superficie_ha": 211294,
     "superficie_agricola_ha": null,
     "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
-    "departamentos": []
+    "departamentos": [
+      {
+        "departamento": "Santa Maria",
+        "provincia": "Catamarca",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Carlos",
+        "provincia": "Salta",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 2.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Belen",
+        "provincia": "Catamarca",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 3.2,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Cafayate",
+        "provincia": "Salta",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 2.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tafi del Valle",
+        "provincia": "Tucuman",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Los Andes",
+        "provincia": "Salta",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 2.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Antofagasta de la Sierra",
+        "provincia": "Catamarca",
+        "tmin_c": -58.7,
+        "severidad": "posible granizo",
+        "btd_c": 2.5,
+        "alta_confianza": true
+      }
+    ]
   },
   "inundacion": {
-    "fecha": "2026-10-18",
+    "fecha": "2026-10-19",
     "criterio": "agua nueva >= 200 ha (Sentinel-1, ultimos 12 dias) o lluvia 72 h >= 80 mm (IMERG)",
     "departamentos": [
       {
         "departamento": "Moreno",
         "provincia": "Santiago Del Estero",
-        "agua_nueva_ha": 343755,
-        "lluvia_72h_mm": 2
+        "agua_nueva_ha": 334455,
+        "lluvia_72h_mm": 0
       },
       {
         "departamento": "Deseado",
@@ -70,7 +127,7 @@
       {
         "departamento": "Alberdi",
         "provincia": "Santiago Del Estero",
-        "agua_nueva_ha": 173070,
+        "agua_nueva_ha": 182536,
         "lluvia_72h_mm": 0
       },
       {
@@ -82,7 +139,13 @@
       {
         "departamento": "Corpen Aike",
         "provincia": "Santa Cruz",
-        "agua_nueva_ha": 151709,
+        "agua_nueva_ha": 159829,
+        "lluvia_72h_mm": 0
+      },
+      {
+        "departamento": "Almirante Brown",
+        "provincia": "Chaco",
+        "agua_nueva_ha": 151108,
         "lluvia_72h_mm": 0
       },
       {
@@ -92,15 +155,9 @@
         "lluvia_72h_mm": 1
       },
       {
-        "departamento": "Almirante Brown",
-        "provincia": "Chaco",
-        "agua_nueva_ha": 112842,
-        "lluvia_72h_mm": 0
-      },
-      {
-        "departamento": "Jachal",
-        "provincia": "San Juan",
-        "agua_nueva_ha": 110698,
+        "departamento": "Lago Argentino",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 110242,
         "lluvia_72h_mm": 0
       },
       {
@@ -110,28 +167,28 @@
         "lluvia_72h_mm": 0
       },
       {
-        "departamento": "Lago Argentino",
-        "provincia": "Santa Cruz",
-        "agua_nueva_ha": 97824,
+        "departamento": "Jachal",
+        "provincia": "San Juan",
+        "agua_nueva_ha": 95400,
         "lluvia_72h_mm": 0
-      },
-      {
-        "departamento": "Juan F. Ibarra",
-        "provincia": "Santiago Del Estero",
-        "agua_nueva_ha": 95638,
-        "lluvia_72h_mm": 2
       },
       {
         "departamento": "Lago Buenos Aires",
         "provincia": "Santa Cruz",
-        "agua_nueva_ha": 93345,
+        "agua_nueva_ha": 93498,
         "lluvia_72h_mm": 0
       },
       {
         "departamento": "Poman",
         "provincia": "Catamarca",
         "agua_nueva_ha": 89923,
-        "lluvia_72h_mm": 4
+        "lluvia_72h_mm": 0
+      },
+      {
+        "departamento": "Rio Chico",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 86731,
+        "lluvia_72h_mm": 0
       },
       {
         "departamento": "Biedma",
@@ -143,25 +200,19 @@
         "departamento": "Cushamen",
         "provincia": "Chubut",
         "agua_nueva_ha": 81893,
-        "lluvia_72h_mm": 11
+        "lluvia_72h_mm": 4
       },
       {
         "departamento": "Yavi",
         "provincia": "Jujuy",
         "agua_nueva_ha": 81808,
-        "lluvia_72h_mm": 1
-      },
-      {
-        "departamento": "Rio Chico",
-        "provincia": "Santa Cruz",
-        "agua_nueva_ha": 81598,
         "lluvia_72h_mm": 0
       },
       {
         "departamento": "Caseros",
         "provincia": "Santa Fe",
         "agua_nueva_ha": 76532,
-        "lluvia_72h_mm": 2
+        "lluvia_72h_mm": 0
       },
       {
         "departamento": "Anta",
@@ -170,40 +221,40 @@
         "lluvia_72h_mm": 0
       },
       {
-        "departamento": "Tinogasta",
-        "provincia": "Catamarca",
-        "agua_nueva_ha": 66743,
-        "lluvia_72h_mm": 2
-      },
-      {
         "departamento": "Rio Senguer",
         "provincia": "Chubut",
         "agua_nueva_ha": 66222,
-        "lluvia_72h_mm": 14
-      },
-      {
-        "departamento": "General Taboada",
-        "provincia": "Santiago Del Estero",
-        "agua_nueva_ha": 66082,
         "lluvia_72h_mm": 1
       },
       {
-        "departamento": "25 de Mayo",
-        "provincia": "San Juan",
-        "agua_nueva_ha": 64456,
-        "lluvia_72h_mm": 2
+        "departamento": "Tinogasta",
+        "provincia": "Catamarca",
+        "agua_nueva_ha": 65178,
+        "lluvia_72h_mm": 0
       },
       {
         "departamento": "Malargue",
         "provincia": "Mendoza",
         "agua_nueva_ha": 62755,
-        "lluvia_72h_mm": 13
+        "lluvia_72h_mm": 12
+      },
+      {
+        "departamento": "25 de Mayo",
+        "provincia": "San Juan",
+        "agua_nueva_ha": 61969,
+        "lluvia_72h_mm": 0
       },
       {
         "departamento": "Santa Maria",
         "provincia": "Catamarca",
         "agua_nueva_ha": 58739,
-        "lluvia_72h_mm": 1
+        "lluvia_72h_mm": 0
+      },
+      {
+        "departamento": "Juan F. Ibarra",
+        "provincia": "Santiago Del Estero",
+        "agua_nueva_ha": 56968,
+        "lluvia_72h_mm": 0
       },
       {
         "departamento": "Rinconada",
@@ -215,30 +266,24 @@
         "departamento": "Norquinco",
         "provincia": "Rio Negro",
         "agua_nueva_ha": 55149,
-        "lluvia_72h_mm": 5
+        "lluvia_72h_mm": 1
       },
       {
         "departamento": "Belen",
         "provincia": "Catamarca",
         "agua_nueva_ha": 54430,
-        "lluvia_72h_mm": 2
-      },
-      {
-        "departamento": "Caucete",
-        "provincia": "San Juan",
-        "agua_nueva_ha": 51834,
         "lluvia_72h_mm": 0
-      },
-      {
-        "departamento": "Antofagasta de la Sierra",
-        "provincia": "Catamarca",
-        "agua_nueva_ha": 51724,
-        "lluvia_72h_mm": 2
       },
       {
         "departamento": "Coronel Dorrego",
         "provincia": "Buenos Aires",
         "agua_nueva_ha": 51128,
+        "lluvia_72h_mm": 0
+      },
+      {
+        "departamento": "Antofagasta de la Sierra",
+        "provincia": "Catamarca",
+        "agua_nueva_ha": 49458,
         "lluvia_72h_mm": 0
       },
       {
@@ -248,27 +293,33 @@
         "lluvia_72h_mm": 0
       },
       {
-        "departamento": "Martires",
-        "provincia": "Chubut",
-        "agua_nueva_ha": 45313,
+        "departamento": "12 de Octubre",
+        "provincia": "Chaco",
+        "agua_nueva_ha": 45580,
         "lluvia_72h_mm": 0
       },
       {
-        "departamento": "Lavalle",
-        "provincia": "Mendoza",
-        "agua_nueva_ha": 45226,
-        "lluvia_72h_mm": 3
+        "departamento": "Martires",
+        "provincia": "Chubut",
+        "agua_nueva_ha": 45313,
+        "lluvia_72h_mm": 2
       },
       {
         "departamento": "Jimenez",
         "provincia": "Santiago Del Estero",
         "agua_nueva_ha": 43973,
-        "lluvia_72h_mm": 1
+        "lluvia_72h_mm": 0
       },
       {
         "departamento": "Susques",
         "provincia": "Jujuy",
         "agua_nueva_ha": 42044,
+        "lluvia_72h_mm": 0
+      },
+      {
+        "departamento": "Guer Aike",
+        "provincia": "Santa Cruz",
+        "agua_nueva_ha": 41016,
         "lluvia_72h_mm": 0
       },
       {
@@ -280,13 +331,19 @@
       {
         "departamento": "Los Andes",
         "provincia": "Salta",
-        "agua_nueva_ha": 40324,
-        "lluvia_72h_mm": 0
+        "agua_nueva_ha": 39471,
+        "lluvia_72h_mm": 1
       },
       {
         "departamento": "Santa Catalina",
         "provincia": "Jujuy",
         "agua_nueva_ha": 37312,
+        "lluvia_72h_mm": 0
+      },
+      {
+        "departamento": "Andalgala",
+        "provincia": "Catamarca",
+        "agua_nueva_ha": 35284,
         "lluvia_72h_mm": 0
       }
     ]

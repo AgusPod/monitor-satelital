@@ -1,10 +1,10 @@
 {
-  "fecha": "2026-10-31",
+  "fecha": "2026-11-03",
   "lotes": [
     {
       "id": "demo",
       "nombre": "Lote demo (Pampa)",
-      "tile": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/810888587a6b38c64eb2fe4996d38a85-a1aac83e67c4b482af21146c65839a33/tiles/{z}/{x}/{y}",
+      "tile": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/5fd95474447b79fccdb1c5feb5e11bec-f045226aaee16e5752e7dfbb0fc0e13f/tiles/{z}/{x}/{y}",
       "zonas": [
         {
           "zona": 0,
@@ -24,51 +24,51 @@
       ],
       "serie": [
         {
-          "fecha": "2025-12-05",
-          "ndvi": 0.454
+          "fecha": "2025-12-08",
+          "ndvi": 0.446
         },
         {
-          "fecha": "2026-01-04",
-          "ndvi": 0.431
+          "fecha": "2026-01-07",
+          "ndvi": 0.435
         },
         {
-          "fecha": "2026-02-03",
-          "ndvi": 0.391
+          "fecha": "2026-02-06",
+          "ndvi": 0.379
         },
         {
-          "fecha": "2026-03-05",
+          "fecha": "2026-03-08",
           "ndvi": 0.438
         },
         {
-          "fecha": "2026-04-04",
-          "ndvi": 0.456
+          "fecha": "2026-04-07",
+          "ndvi": 0.464
         },
         {
-          "fecha": "2026-05-04",
-          "ndvi": 0.477
+          "fecha": "2026-05-07",
+          "ndvi": 0.472
         },
         {
-          "fecha": "2026-06-03",
+          "fecha": "2026-06-06",
           "ndvi": 0.409
         },
         {
-          "fecha": "2026-07-03",
+          "fecha": "2026-07-06",
           "ndvi": 0.389
         },
         {
-          "fecha": "2026-08-02",
+          "fecha": "2026-08-05",
           "ndvi": 0.194
         },
         {
-          "fecha": "2026-09-01",
+          "fecha": "2026-09-04",
           "ndvi": 0.388
         },
         {
-          "fecha": "2026-10-01",
+          "fecha": "2026-10-04",
           "ndvi": 0.374
         },
         {
-          "fecha": "2026-10-31",
+          "fecha": "2026-11-03",
           "ndvi": 0.447
         }
       ],

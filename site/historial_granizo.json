@@ -1,134 +1,5 @@
 [
   {
-    "fecha": "2026-08-05",
-    "umbral_c": -58,
-    "superficie_ha": 214605,
-    "superficie_agricola_ha": null,
-    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
-    "departamentos": [
-      {
-        "departamento": "Federacion",
-        "provincia": "Entre Rios",
-        "tmin_c": -63.5,
-        "severidad": "posible granizo",
-        "btd_c": 0.8,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Concordia",
-        "provincia": "Entre Rios",
-        "tmin_c": -62.8,
-        "severidad": "posible granizo",
-        "btd_c": 0.8,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Federal",
-        "provincia": "Entre Rios",
-        "tmin_c": -62.8,
-        "severidad": "posible granizo",
-        "btd_c": 1.0,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "San Salvador",
-        "provincia": "Entre Rios",
-        "tmin_c": -62.5,
-        "severidad": "posible granizo",
-        "btd_c": 0.8,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Villaguay",
-        "provincia": "Entre Rios",
-        "tmin_c": -62.4,
-        "severidad": "posible granizo",
-        "btd_c": 1.0,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Colon",
-        "provincia": "Entre Rios",
-        "tmin_c": -61.7,
-        "severidad": "posible granizo",
-        "btd_c": 0.7,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Tala",
-        "provincia": "Entre Rios",
-        "tmin_c": -60.1,
-        "severidad": "posible granizo",
-        "btd_c": 3.3,
-        "alta_confianza": false
-      },
-      {
-        "departamento": "Uruguay",
-        "provincia": "Entre Rios",
-        "tmin_c": -59.7,
-        "severidad": "posible granizo",
-        "btd_c": 2.4,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Malargue",
-        "provincia": "Mendoza",
-        "tmin_c": -59.6,
-        "severidad": "posible granizo",
-        "btd_c": 1.2,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Patagones",
-        "provincia": "Buenos Aires",
-        "tmin_c": -59.0,
-        "severidad": "posible granizo",
-        "btd_c": 2.1,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Pichi Mahuida",
-        "provincia": "Rio Negro",
-        "tmin_c": -58.8,
-        "severidad": "posible granizo",
-        "btd_c": 2.1,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Nogoya",
-        "provincia": "Entre Rios",
-        "tmin_c": -58.7,
-        "severidad": "posible granizo",
-        "btd_c": 3.8,
-        "alta_confianza": false
-      },
-      {
-        "departamento": "Conesa",
-        "provincia": "Rio Negro",
-        "tmin_c": -58.5,
-        "severidad": "posible granizo",
-        "btd_c": 2.1,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Coronel Pringles",
-        "provincia": "Buenos Aires",
-        "tmin_c": -58.3,
-        "severidad": "posible granizo",
-        "btd_c": 1.6,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Avellaneda",
-        "provincia": "Rio Negro",
-        "tmin_c": -58.2,
-        "severidad": "posible granizo",
-        "btd_c": 2.3,
-        "alta_confianza": true
-      }
-    ]
-  },
-  {
     "fecha": "2026-08-09",
     "umbral_c": -58,
     "superficie_ha": 248601,
@@ -17185,6 +17056,191 @@
         "severidad": "posible granizo",
         "btd_c": 6.4,
         "alta_confianza": false
+      }
+    ]
+  },
+  {
+    "fecha": "2026-11-10",
+    "umbral_c": -58,
+    "superficie_ha": 2801260,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Villaguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Federal",
+        "provincia": "Entre Rios",
+        "tmin_c": -62.7,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rio Chico",
+        "provincia": "Santa Cruz",
+        "tmin_c": -62.0,
+        "severidad": "posible granizo",
+        "btd_c": 7.2,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Colon",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Salvador",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.6,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Tala",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.5,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Nogoya",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Parana",
+        "provincia": "Entre Rios",
+        "tmin_c": -61.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Gualeguaychu",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Uruguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 0.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Concordia",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 0.8,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Diamante",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.6,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Sarmiento",
+        "provincia": "Chubut",
+        "tmin_c": -60.4,
+        "severidad": "posible granizo",
+        "btd_c": 3.1,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "La Paz",
+        "provincia": "Entre Rios",
+        "tmin_c": -60.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.2,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Deseado",
+        "provincia": "Santa Cruz",
+        "tmin_c": -60.0,
+        "severidad": "posible granizo",
+        "btd_c": 3.7,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Victoria",
+        "provincia": "Entre Rios",
+        "tmin_c": -59.9,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Gualeguay",
+        "provincia": "Entre Rios",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Lorenzo",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.3,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "San Jeronimo",
+        "provincia": "Santa Fe",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Paso de Indios",
+        "provincia": "Chubut",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 1.9,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Lago Argentino",
+        "provincia": "Santa Cruz",
+        "tmin_c": -58.8,
+        "severidad": "posible granizo",
+        "btd_c": 3.6,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Iriondo",
+        "provincia": "Santa Fe",
+        "tmin_c": -58.4,
+        "severidad": "posible granizo",
+        "btd_c": 1.0,
+        "alta_confianza": true
       }
     ]
   }

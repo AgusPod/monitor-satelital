@@ -1,38 +1,5 @@
 [
   {
-    "fecha": "2026-08-23",
-    "umbral_c": -58,
-    "superficie_ha": 10523,
-    "superficie_agricola_ha": null,
-    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
-    "departamentos": [
-      {
-        "departamento": "San Rafael",
-        "provincia": "Mendoza",
-        "tmin_c": -58.8,
-        "severidad": "posible granizo",
-        "btd_c": 1.7,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Antofagasta de la Sierra",
-        "provincia": "Catamarca",
-        "tmin_c": -58.4,
-        "severidad": "posible granizo",
-        "btd_c": 1.8,
-        "alta_confianza": true
-      },
-      {
-        "departamento": "Santa Rosa",
-        "provincia": "Mendoza",
-        "tmin_c": -58.2,
-        "severidad": "posible granizo",
-        "btd_c": 2.9,
-        "alta_confianza": true
-      }
-    ]
-  },
-  {
     "fecha": "2026-08-26",
     "umbral_c": -58,
     "superficie_ha": 54856087,
@@ -26722,6 +26689,183 @@
         "severidad": "posible granizo",
         "btd_c": 22.8,
         "alta_confianza": false
+      }
+    ]
+  },
+  {
+    "fecha": "2026-11-21",
+    "umbral_c": -58,
+    "superficie_ha": 4737860,
+    "superficie_agricola_ha": null,
+    "fuente_uso_suelo": "MapBiomas Argentina Coleccion 2",
+    "departamentos": [
+      {
+        "departamento": "Bermejo",
+        "provincia": "Formosa",
+        "tmin_c": -86.7,
+        "severidad": "granizo grande probable",
+        "btd_c": 3.5,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Patino",
+        "provincia": "Formosa",
+        "tmin_c": -86.5,
+        "severidad": "granizo grande probable",
+        "btd_c": 3.8,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Matacos",
+        "provincia": "Formosa",
+        "tmin_c": -80.4,
+        "severidad": "granizo grande probable",
+        "btd_c": 2.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Iguazu",
+        "provincia": "Misiones",
+        "tmin_c": -79.7,
+        "severidad": "granizo grande probable",
+        "btd_c": 2.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "General Manuel Belgrano",
+        "provincia": "Misiones",
+        "tmin_c": -79.5,
+        "severidad": "granizo grande probable",
+        "btd_c": 2.4,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Eldorado",
+        "provincia": "Misiones",
+        "tmin_c": -78.4,
+        "severidad": "granizo grande probable",
+        "btd_c": 2.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Ramon Lista",
+        "provincia": "Formosa",
+        "tmin_c": -78.3,
+        "severidad": "granizo grande probable",
+        "btd_c": 3.4,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Pilagas",
+        "provincia": "Formosa",
+        "tmin_c": -77.7,
+        "severidad": "granizo grande probable",
+        "btd_c": 3.2,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Pirane",
+        "provincia": "Formosa",
+        "tmin_c": -74.6,
+        "severidad": "granizo grande probable",
+        "btd_c": 4.0,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "San Pedro",
+        "provincia": "Misiones",
+        "tmin_c": -73.2,
+        "severidad": "granizo grande probable",
+        "btd_c": 4.0,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Pilcomayo",
+        "provincia": "Formosa",
+        "tmin_c": -73.0,
+        "severidad": "granizo grande probable",
+        "btd_c": 3.8,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "General Guemes",
+        "provincia": "Chaco",
+        "tmin_c": -70.1,
+        "severidad": "granizo grande probable",
+        "btd_c": 2.1,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Montecarlo",
+        "provincia": "Misiones",
+        "tmin_c": -66.5,
+        "severidad": "granizo probable",
+        "btd_c": 6.1,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Guarani",
+        "provincia": "Misiones",
+        "tmin_c": -62.1,
+        "severidad": "posible granizo",
+        "btd_c": 7.0,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "Concepcion",
+        "provincia": "Misiones",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo",
+        "btd_c": 1.5,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Chacabuco",
+        "provincia": "San Luis",
+        "tmin_c": -61.9,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Rio Cuarto",
+        "provincia": "Cordoba",
+        "tmin_c": -60.9,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Formosa",
+        "provincia": "Formosa",
+        "tmin_c": -60.7,
+        "severidad": "posible granizo",
+        "btd_c": 4.4,
+        "alta_confianza": false
+      },
+      {
+        "departamento": "General Pedernera",
+        "provincia": "San Luis",
+        "tmin_c": -59.8,
+        "severidad": "posible granizo",
+        "btd_c": 1.7,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Calamuchita",
+        "provincia": "Cordoba",
+        "tmin_c": -59.2,
+        "severidad": "posible granizo",
+        "btd_c": 1.3,
+        "alta_confianza": true
+      },
+      {
+        "departamento": "Belgrano",
+        "provincia": "San Luis",
+        "tmin_c": -59.0,
+        "severidad": "posible granizo",
+        "btd_c": 2.2,
+        "alta_confianza": true
       }
     ]
   }

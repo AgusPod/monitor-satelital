@@ -1,10 +1,10 @@
 {
-  "fecha": "2026-11-25",
+  "fecha": "2026-11-26",
   "lotes": [
     {
       "id": "demo",
       "nombre": "Lote demo (Pampa)",
-      "tile": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/0eaba182f21f605d8e8efa9093ba1622-aece3c903037a9675ef12d8a6fc9d112/tiles/{z}/{x}/{y}",
+      "tile": "https://earthengine.googleapis.com/v1/projects/monitor-satelital-501221/maps/188a1401e75afccbcad6bdc1121ec80f-439d24566510656282543c3165aa9cb9/tiles/{z}/{x}/{y}",
       "zonas": [
         {
           "zona": 0,
@@ -24,51 +24,51 @@
       ],
       "serie": [
         {
-          "fecha": "2025-12-30",
+          "fecha": "2025-12-31",
           "ndvi": 0.436
         },
         {
-          "fecha": "2026-01-29",
+          "fecha": "2026-01-30",
           "ndvi": 0.405
         },
         {
-          "fecha": "2026-02-28",
+          "fecha": "2026-03-01",
           "ndvi": 0.396
         },
         {
-          "fecha": "2026-03-30",
+          "fecha": "2026-03-31",
           "ndvi": 0.455
         },
         {
-          "fecha": "2026-04-29",
+          "fecha": "2026-04-30",
           "ndvi": 0.477
         },
         {
-          "fecha": "2026-05-29",
+          "fecha": "2026-05-30",
           "ndvi": 0.427
         },
         {
-          "fecha": "2026-06-28",
+          "fecha": "2026-06-29",
           "ndvi": 0.401
         },
         {
-          "fecha": "2026-07-28",
+          "fecha": "2026-07-29",
           "ndvi": 0.292
         },
         {
-          "fecha": "2026-08-27",
+          "fecha": "2026-08-28",
           "ndvi": 0.386
         },
         {
-          "fecha": "2026-09-26",
+          "fecha": "2026-09-27",
           "ndvi": 0.377
         },
         {
-          "fecha": "2026-10-26",
+          "fecha": "2026-10-27",
           "ndvi": 0.409
         },
         {
-          "fecha": "2026-11-25",
+          "fecha": "2026-11-26",
           "ndvi": 0.461
         }
       ],
